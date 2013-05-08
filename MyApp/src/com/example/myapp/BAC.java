@@ -1,4 +1,5 @@
 // luke smells like puke
+// puke lickit
 package com.example.myapp;
 
 import android.app.Activity;
