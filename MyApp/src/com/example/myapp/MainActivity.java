@@ -33,13 +33,18 @@ public class MainActivity extends Activity {
     	startActivity(intent);
     }
     
-    public void goHome(View view){
+    public void goBAC(View view){
     	Intent intent=new Intent (this,BAC.class);
     	startActivity(intent);
     }
     
     public void goEntry(View view){
     	Intent intent=new Intent (this, MainActivity.class);
+    	startActivity (intent);
+    }
+    
+    public void goTools(View view){
+    	Intent intent=new Intent (this, Tools.class);
     	startActivity (intent);
     }
     

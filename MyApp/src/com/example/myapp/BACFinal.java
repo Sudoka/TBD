@@ -14,15 +14,14 @@ public class BACFinal extends Activity {
 		
 	    super.onCreate(savedInstanceState);
 
-	    // Get the message from the intent
+	    // Get variables from where they're stored
 	    Intent intent = getIntent();
-	    //Message isn't updated
 	    int weight = intent.getIntExtra(BAC.weight,0);
 	    int numOfDrinks=intent.getIntExtra(BAC.numOfDrinks,0);
 	    boolean isMale=intent.getBooleanExtra(BAC.male, true);
 	    int hours=intent.getIntExtra(BAC.hours, 0);
 	    
-	    String message="BAC: "+BAC.calcBAC(weight,isMale,numOfDrinks,2);
+	    String message="BAC: "+calcBAC(weight,isMale,numOfDrinks,hours);
 
 	    // Create the text view
 	    TextView textView = new TextView(this);
@@ -32,6 +31,33 @@ public class BACFinal extends Activity {
 	    // Set the text view as the activity layout
 	    setContentView(textView);
 	}
+    /*
+     * Takes in weight, gender, drinks consumed, and hours since having consumed alcohol
+     * and returns the blood alcohol
+     */
+    		
+
+	 public static double calcBAC(int weight, boolean male,int drinks,int hours){
+	    	double r;
+	    	if (male)
+	    	{
+	    		r=.73;
+	    	}
+	    	else
+	    	{
+	    		r=.66;
+	    	}
+	    	//calculates BAC
+	    	//TODO This doesn't calculate the BAC correctly. Figure out why
+	    	double fullBAC= ((drinks*.13)*r*5.14/weight)-(.015*hours);
+	    	if (fullBAC<0)
+	    	{
+	    		return 0;
+	    	}
+	    	
+	    	//rounds it to three decimal points
+	    	return Math.round(fullBAC*1e3)/1e3;
+	    }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

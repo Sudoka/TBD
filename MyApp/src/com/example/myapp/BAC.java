@@ -49,9 +49,9 @@ public class BAC extends Activity {
     	String message2=editText2.getText().toString();
     	intent.putExtra(numOfDrinks,Integer.parseInt(message2));
     	
-    	/*EditText editText3= (EditText) findViewById(R.id.editHours);
+    	EditText editText3= (EditText) findViewById(R.id.editHours);
     	String message3=editText3.getText().toString();
-    	intent.putExtra(hours,Integer.parseInt(message3));*/
+    	intent.putExtra(hours,Integer.parseInt(message3));
     	
     	RadioButton r=(RadioButton) findViewById(R.id.male);
     	boolean isMale=r.isChecked();
@@ -65,25 +65,5 @@ public class BAC extends Activity {
     	
     	
     }
-    /*
-     * Takes in weight, gender, ounces of alcohol consumed, and hours since having consumed alcohol
-     * and returns the blood alcohol
-     */
-    		
-    public static double calcBAC(int weight, boolean male,int drinks,double hours){
-    	double r;
-    	if (male)
-    	{
-    		r=.73;
-    	}
-    	else
-    	{
-    		r=.66;
-    	}
-    	//calculates BAC
-    	double fullBAC= ((drinks*.13)*r*5.14/weight)-.015*hours;
-    	
-    	//rounds it to three decimal points
-    	return Math.round(fullBAC*1e3)/1e3;
-    }
+
 }

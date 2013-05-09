@@ -8,10 +8,12 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="hello_world">Hey there!</string>
     <string name="title_activity_display_message">DisplayMessageActivity</string>
-    <string name="button_home">Home</string>
+    <string name="button_BAC">BAC Checker</string>
     <string name="title_activity_home">Home</string>
     <string name="bac_title">BAC Checker</string>
     <string name="entry_title">Entry</string>
     <string name="title_activity_bacfinal">BACFinal</string>
+    <string name="title_activity_tools">Tools</string>
+    <string name="button_tools">Tools</string>
 
 </resources>
