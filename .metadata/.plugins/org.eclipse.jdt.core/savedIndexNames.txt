@@ -1,4 +1,0 @@
-INDEX VERSION 1.126+C:\Users\Luke\Documents\GitHub\TBD\.metadata\.plugins\org.eclipse.jdt.core
-1924724220.index
-1722599220.index
-967211017.index
