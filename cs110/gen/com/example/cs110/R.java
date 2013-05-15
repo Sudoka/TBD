@@ -21,13 +21,14 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int logo=0x7f020001;
-        public static final int wineca=0x7f020002;
+        public static final int glass=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int logo=0x7f020002;
+        public static final int wineca=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f080019;
-        public static final int bacButtom=0x7f080017;
+        public static final int action_settings=0x7f08001a;
+        public static final int bacButtom=0x7f080018;
         public static final int editHours=0x7f08000a;
         public static final int editNumOfDrinks=0x7f080008;
         public static final int editWeight=0x7f080006;
@@ -35,11 +36,12 @@ public final class R {
         public static final int etiquetteButton=0x7f08000c;
         public static final int female=0x7f080003;
         public static final int genderChooser=0x7f080001;
+        public static final int glass=0x7f080017;
         public static final int goBACButton=0x7f080004;
         public static final int historyButton=0x7f080011;
         public static final int hours=0x7f080007;
         public static final int intro=0x7f080014;
-        public static final int locationButton=0x7f080018;
+        public static final int locationButton=0x7f080019;
         public static final int male=0x7f080002;
         public static final int numDrinks=0x7f080009;
         public static final int pairingsButton=0x7f080010;
@@ -85,6 +87,7 @@ public final class R {
         public static final int edit_message=0x7f050001;
         public static final int education=0x7f050015;
         public static final int entry_title=0x7f05000a;
+        public static final int glass=0x7f050018;
         public static final int hello_world=0x7f050005;
         public static final int intro=0x7f05000e;
         public static final int location=0x7f050011;
