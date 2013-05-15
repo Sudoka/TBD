@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Wine Application</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Send</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hey there!</string>
+    <string name="title_activity_display_message">DisplayMessageActivity</string>
+    <string name="button_BAC">BAC Checker</string>
+    <string name="title_activity_home">Home</string>
+    <string name="bac_title">BAC Checker</string>
+    <string name="entry_title">Entry</string>
+    <string name="title_activity_bacfinal">BACFinal</string>
+    <string name="title_activity_tools">Tools</string>
+    <string name="button_tools">Tools</string>
+    <string name="intro">An application for all your wine drinking needs!</string>
+    <string name="pairings">Food Pairings</string>
+    <string name="title_activity_pairings">Pairings</string>
+    <string name="location">Winery Locations</string>
+    <string name="title_activity_locations">Locations</string>
+    <string name="sex">Gender:</string>
+    <string name="settings">Settings</string>
+    <string name="education">Education</string>
+    <string name="title_activity_education">Education</string>
+    <string name="title_activity_settings">Settings</string>
+
+</resources>

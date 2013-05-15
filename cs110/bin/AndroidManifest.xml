@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cs110"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.cs110.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.cs110.DisplayMessageActivity"
+            android:label="@string/title_activity_display_message" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.BAC"
+            android:label="@string/title_activity_home" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.BACFinal"
+            android:label="@string/title_activity_bacfinal" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.Tools"
+            android:label="@string/title_activity_tools" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.Pairings"
+            android:label="@string/title_activity_pairings" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.Locations"
+            android:label="@string/title_activity_locations" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.Education"
+            android:label="@string/title_activity_education" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.Settings"
+            android:label="@string/title_activity_settings" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Education" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_above="@+id/etiquetteButton"
+        android:text="Education" />
+
+        <Button
+            android:id="@+id/etiquetteButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/regionsButton"
+            android:onClick="goBAC"
+            android:text="Etiquette" />
+        
+        <Button
+            android:id="@+id/regionsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/typesButton"
+            android:onClick="goRegions"
+            android:text="Regions" />
+   
+        <Button
+            android:id="@+id/typesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/productionButton"
+            android:onClick="goTypes"
+            android:text="Types" />
+        
+        <Button
+            android:id="@+id/productionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/pairingsButton"
+            android:onClick="goProduction"
+            android:text="Production" />
+        
+        <Button
+            android:id="@+id/pairingsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/historyButton"
+            android:onClick="goPairings"
+            android:text="@string/pairings" />
+    
+    <Button
+            android:id="@+id/historyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/pricingsButton"
+            android:onClick="goHistory"
+            android:text="History" />
+
+    <Button
+        android:id="@+id/pricingsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/historyButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="46dp"
+        android:onClick="goPricing"
+        android:text="Pricing" />
+    
+</RelativeLayout>
