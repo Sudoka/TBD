@@ -7,6 +7,8 @@
 
 package com.example.cs110;
 
+import android.view.View;
+
 public final class R {
     public static final class attr {
     }
@@ -64,6 +66,12 @@ public final class R {
         public static final int activity_pairings=0x7f030005;
         public static final int activity_settings=0x7f030006;
         public static final int activity_tools=0x7f030007;
+		public static final int activity_types=0x7f030008;
+		public static final int activity_pricing=0x7f030009;
+		public static final int activity_history=0x7f03000a;
+		public static final int activity_etiquette=0x7f03000b;
+		public static final int activity_production=0x7f03000c;
+		public static final int activity_Regions=0x7f03000c;
     }
     public static final class menu {
         public static final int bac=0x7f070000;
@@ -76,6 +84,11 @@ public final class R {
         public static final int pairings=0x7f070007;
         public static final int settings=0x7f070008;
         public static final int tools=0x7f070009;
+        public static final int types=0x7f070009;
+        public static final int pricing=0x7f070009;
+        public static final int history=0x7f070009;
+        public static final int production=0x7f070009;
+        public static final int Regions=0x7f070009;
     }
     public static final class string {
         public static final int Education=0x7f05001f;
