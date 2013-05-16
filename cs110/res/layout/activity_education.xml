@@ -11,9 +11,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_above="@+id/etiquetteButton"
-        android:text="Education" />
+        android:text="@string/education"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <Button
             android:id="@+id/etiquetteButton"
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/regionsButton"
             android:onClick="goBAC"
-            android:text="Etiquette" />
+            android:text="@string/Etiquette" />
         
         <Button
             android:id="@+id/regionsButton"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/typesButton"
             android:onClick="goRegions"
-            android:text="Regions" />
+            android:text="@string/Regions" />
    
         <Button
             android:id="@+id/typesButton"
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/productionButton"
             android:onClick="goTypes"
-            android:text="Types" />
+            android:text="@string/Types" />
         
         <Button
             android:id="@+id/productionButton"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/pairingsButton"
             android:onClick="goProduction"
-            android:text="Production" />
+            android:text="@string/Production" />
         
         <Button
             android:id="@+id/pairingsButton"
@@ -56,12 +56,12 @@
             android:text="@string/pairings" />
     
     <Button
-            android:id="@+id/historyButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/pricingsButton"
-            android:onClick="goHistory"
-            android:text="History" />
+        android:id="@+id/historyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pricingsButton"
+        android:onClick="goHistory"
+        android:text="@string/history" />
 
     <Button
         android:id="@+id/pricingsButton"
@@ -71,6 +71,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="46dp"
         android:onClick="goPricing"
-        android:text="Pricing" />
+        android:text="@string/Pricing" />
     
 </RelativeLayout>

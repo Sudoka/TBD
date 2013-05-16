@@ -78,17 +78,30 @@ public final class R {
         public static final int tools=0x7f070009;
     }
     public static final class string {
+        public static final int Education=0x7f05001f;
+        public static final int Etiquette=0x7f050020;
+        public static final int Female=0x7f05001a;
+        public static final int Hours_since=0x7f05001d;
+        public static final int Male=0x7f050019;
+        public static final int Num_of_drinks=0x7f05001c;
+        public static final int Pricing=0x7f050025;
+        public static final int Production=0x7f050023;
+        public static final int Regions=0x7f050021;
+        public static final int Types=0x7f050022;
+        public static final int Weight=0x7f05001b;
         public static final int action_settings=0x7f050003;
         public static final int app_name=0x7f050000;
         public static final int bac_title=0x7f050009;
         public static final int button_BAC=0x7f050007;
         public static final int button_send=0x7f050002;
         public static final int button_tools=0x7f05000d;
+        public static final int calculateBAC=0x7f05001e;
         public static final int edit_message=0x7f050001;
         public static final int education=0x7f050015;
         public static final int entry_title=0x7f05000a;
         public static final int glass=0x7f050018;
         public static final int hello_world=0x7f050005;
+        public static final int history=0x7f050024;
         public static final int intro=0x7f05000e;
         public static final int location=0x7f050011;
         public static final int pairings=0x7f05000f;

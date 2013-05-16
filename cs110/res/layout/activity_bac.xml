@@ -31,13 +31,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="138dp"
-            android:text="Male" />
+            android:text="@string/Male" />
 
         <RadioButton
             android:id="@+id/female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Female" />
+            android:text="@string/Female" />
     </RadioGroup>
 
     <Button
@@ -47,7 +47,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:onClick="calcBAC"
-        android:text="Calculate BAC" />
+        android:text="@string/calculateBAC" />
 
     <TextView
         android:id="@+id/weight"
@@ -56,7 +56,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/male"
         android:layout_marginTop="60dp"
-        android:text="Weight" />
+        android:text="@string/Weight" />
 
     <EditText
         android:id="@+id/editWeight"
@@ -77,7 +77,7 @@
         android:layout_alignLeft="@+id/editNumOfDrinks"
         android:layout_below="@+id/editNumOfDrinks"
         android:layout_marginTop="28dp"
-        android:text="Hours Since Drinking" />
+        android:text="@string/Hours_since" />
 
     <TextView
         android:id="@+id/numDrinks"
@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/genderChooser"
         android:layout_below="@+id/genderChooser"
-        android:text="Number of Drinks" />
+        android:text="@string/Num_of_drinks" />
 
     <EditText
         android:id="@+id/editNumOfDrinks"

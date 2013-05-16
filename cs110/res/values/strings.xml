@@ -26,5 +26,18 @@
     <string name="title_activity_education">Education</string>
     <string name="title_activity_settings">Settings</string>
     <string name="glass">glass</string>
+    <string name="Male">Male</string>
+    <string name="Female">Female</string>
+    <string name="Weight">Weight</string>
+    <string name="Num_of_drinks">Number of Drinks</string>
+    <string name="Hours_since">Hours Since Drinking</string>
+    <string name="calculateBAC">Calculate BAC</string>
+    <string name="Education">Education</string>
+    <string name="Etiquette">Etiquette</string>
+    <string name="Regions">Regions</string>
+    <string name="Types">Types</string>
+    <string name="Production">Production</string>
+    <string name="history">History</string>
+    <string name="Pricing">Pricing</string>
 
 </resources>
