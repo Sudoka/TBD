@@ -22,7 +22,10 @@
         android:id="@+id/glass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:baselineAlignBottom="false"
         android:contentDescription="@string/glass"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
         android:src="@drawable/glass" />
 
     <Button
