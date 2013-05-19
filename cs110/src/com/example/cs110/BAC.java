@@ -38,7 +38,7 @@ public class BAC extends Activity {
     public void calcBAC(){
     	double rate;
     	EditText drinks = (EditText) findViewById(R.id.editNumOfDrinks);
-    	EditText weight = (EditText) findViewById(R.id.weight);
+    	EditText weight = (EditText) findViewById(R.id.editWeight);
         EditText hours = (EditText) findViewById(R.id.editHours);
         EditText result = (EditText) findViewById(R.id.result);
         RadioButton r=(RadioButton) findViewById(R.id.male);
