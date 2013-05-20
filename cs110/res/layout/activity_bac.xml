@@ -40,15 +40,6 @@
             android:text="@string/Female" />
     </RadioGroup>
 
-    <Button
-        android:id="@+id/goBACButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:onClick="calcBAC"
-        android:text="@string/calculateBAC" />
-
     <TextView
         android:id="@+id/weight"
         android:layout_width="wrap_content"
@@ -65,7 +56,8 @@
         android:layout_alignLeft="@+id/weight"
         android:layout_below="@+id/weight"
         android:ems="3"
-        android:inputType="number" >
+        android:inputType="number"
+        android:text="200" >
 
         <requestFocus />
     </EditText>
@@ -95,7 +87,8 @@
         android:layout_alignRight="@+id/editWeight"
         android:layout_below="@+id/numDrinks"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number"
+        android:text="0" />
 
     <EditText
         android:id="@+id/editHours"
@@ -105,15 +98,37 @@
         android:layout_alignRight="@+id/editNumOfDrinks"
         android:layout_below="@+id/hours"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number"
+        android:text="0" />
 
-    <EditText
+    <Button
+        android:id="@+id/goBACButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editHours"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="19dp"
+        android:onClick="calcBAC"
+        android:text="@string/calculateBAC" />
+
+    <TextView
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/goBACButton"
+        android:layout_above="@+id/goBACButton"
+        android:layout_alignLeft="@+id/BACwarning"
+        android:layout_marginLeft="17dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/BACwarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/goBACButton"
-        android:layout_alignLeft="@+id/editHours"
-        android:ems="10" />
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/goBACButton"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
