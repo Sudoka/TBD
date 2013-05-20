@@ -22,16 +22,22 @@ public final class R {
     }
     public static final class drawable {
         public static final int bottles=0x7f020000;
-        public static final int glass=0x7f020001;
-        public static final int glasses=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int logo=0x7f020004;
-        public static final int logo1=0x7f020005;
-        public static final int wineca=0x7f020006;
+        public static final int digitalcellar=0x7f020001;
+        public static final int favorites=0x7f020002;
+        public static final int glass=0x7f020003;
+        public static final int glasses=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
+        public static final int logo=0x7f020006;
+        public static final int logo1=0x7f020007;
+        public static final int search=0x7f020008;
+        public static final int wineca=0x7f020009;
+        public static final int wishlist=0x7f02000a;
     }
     public static final class id {
-        public static final int action_settings=0x7f08001a;
+        public static final int LinearLayout01=0x7f08001d;
+        public static final int action_settings=0x7f08001e;
         public static final int bacButtom=0x7f080018;
+        public static final int digitalcellar=0x7f08001a;
         public static final int editHours=0x7f08000a;
         public static final int editNumOfDrinks=0x7f080008;
         public static final int editWeight=0x7f080006;
@@ -53,6 +59,8 @@ public final class R {
         public static final int regionsButton=0x7f08000d;
         public static final int result=0x7f08000b;
         public static final int settingsButton=0x7f080015;
+        public static final int tab2=0x7f08001b;
+        public static final int tab3=0x7f08001c;
         public static final int textView1=0x7f080000;
         public static final int toolsButton=0x7f080013;
         public static final int typesButton=0x7f08000e;
@@ -60,20 +68,21 @@ public final class R {
     }
     public static final class layout {
         public static final int activity_bac=0x7f030000;
-        public static final int activity_display_message=0x7f030001;
-        public static final int activity_education=0x7f030002;
-        public static final int activity_etiquette=0x7f030003;
-        public static final int activity_history=0x7f030004;
-        public static final int activity_locations=0x7f030005;
-        public static final int activity_main=0x7f030006;
-        public static final int activity_pairings=0x7f030007;
-        public static final int activity_pricing=0x7f030008;
-        public static final int activity_production=0x7f030009;
-        public static final int activity_regions=0x7f03000a;
-        public static final int activity_settings=0x7f03000b;
-        public static final int activity_tools=0x7f03000c;
-        public static final int activity_types=0x7f03000d;
-        public static final int activity_wine_libraries=0x7f03000e;
+        public static final int activity_digital_cellar=0x7f030001;
+        public static final int activity_display_message=0x7f030002;
+        public static final int activity_education=0x7f030003;
+        public static final int activity_etiquette=0x7f030004;
+        public static final int activity_history=0x7f030005;
+        public static final int activity_locations=0x7f030006;
+        public static final int activity_main=0x7f030007;
+        public static final int activity_pairings=0x7f030008;
+        public static final int activity_pricing=0x7f030009;
+        public static final int activity_production=0x7f03000a;
+        public static final int activity_regions=0x7f03000b;
+        public static final int activity_settings=0x7f03000c;
+        public static final int activity_tools=0x7f03000d;
+        public static final int activity_types=0x7f03000e;
+        public static final int activity_wine_libraries=0x7f03000f;
     }
     public static final class menu {
         public static final int bac=0x7f070000;
@@ -110,6 +119,7 @@ public final class R {
         public static final int button_send=0x7f050002;
         public static final int button_tools=0x7f05000d;
         public static final int calculateBAC=0x7f05001e;
+        public static final int digitalcellar=0x7f050026;
         public static final int edit_message=0x7f050001;
         public static final int education=0x7f050015;
         public static final int entry_title=0x7f05000a;

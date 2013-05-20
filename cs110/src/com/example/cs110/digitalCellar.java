@@ -11,7 +11,7 @@ public class digitalCellar extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_digital_cellar);
+		setContentView(R.layout.activity_wine_libraries);
 	}
 
 	@Override
