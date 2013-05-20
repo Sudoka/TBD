@@ -40,5 +40,7 @@
     <string name="history">History</string>
     <string name="Pricing">Pricing</string>
     <string name="digitalcellar">Digital Cellar</string>
+    <string name="button_WineLibraries">Wine Libraries</string>
+    <string name="button_add_a_wine">Add a Wine</string>
 
 </resources>

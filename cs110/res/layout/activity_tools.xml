@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:gravity="center"
+    android:gravity="bottom"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -18,10 +18,21 @@
         android:text="@string/button_tools"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <Button
+        android:id="@+id/locationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pairingsButton"
+        android:minHeight="42dip"
+        android:onClick="goLocations"
+        android:text="@string/location" />
+
     <ImageView
         android:id="@+id/glass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignParentTop="true"
         android:baselineAlignBottom="false"
         android:contentDescription="@string/glass"
         android:cropToPadding="false"
@@ -29,27 +40,33 @@
         android:src="@drawable/glass" />
 
     <Button
-        android:id="@+id/bacButtom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/locationButton"
-        android:onClick="goBAC"
-        android:text="@string/button_BAC" />
-
-    <Button
         android:id="@+id/pairingsButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/locationButton"
         android:layout_alignParentBottom="true"
+        android:minHeight="42dip"
         android:onClick="goPairings"
         android:text="@string/pairings" />
 
     <Button
-        android:id="@+id/locationButton"
+        android:id="@+id/bacButtom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/pairingsButton"
-        android:onClick="goLocations"
-        android:text="@string/location" />
+        android:layout_above="@+id/locationButton"
+        android:layout_alignLeft="@+id/locationButton"
+        android:minHeight="42dip"
+        android:onClick="goBAC"
+        android:text="@string/button_BAC" />
+
+    <Button
+        android:id="@+id/button_WineLibraries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bacButtom"
+        android:layout_alignLeft="@+id/glass"
+        android:minHeight="42dip"
+        android:onClick="goWineLibraries"
+        android:text="@string/button_WineLibraries" />
 
 </RelativeLayout>

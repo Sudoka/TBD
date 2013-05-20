@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="goDigitalCellar"
     android:orientation="vertical" >
 
     <TabHost
@@ -29,19 +30,20 @@
                 <LinearLayout
                     android:id="@+id/digitalcellar"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" 
-                    android:onClick="digitalCellar.java"
-                    android:background="@android:color/white">
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:onClick="goDigitalCellar" >
+
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/tab2"
+                    android:id="@+id/favorites"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" >
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/tab3"
+                    android:id="@+id/wishlist"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" >
                 </LinearLayout>
