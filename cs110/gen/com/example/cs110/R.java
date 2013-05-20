@@ -73,6 +73,7 @@ public final class R {
         public static final int activity_settings=0x7f03000b;
         public static final int activity_tools=0x7f03000c;
         public static final int activity_types=0x7f03000d;
+        public static final int activity_wine_libraries=0x7f03000e;
     }
     public static final class menu {
         public static final int bac=0x7f070000;
