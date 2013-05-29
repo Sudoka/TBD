@@ -17,7 +17,7 @@ public class Tools extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.tools, menu);
+		getMenuInflater().inflate(R.menu.home, menu);
 		return true;
 	}
 	public void goBAC(View view){
@@ -36,7 +36,7 @@ public class Tools extends Activity {
     }
     
     public void goWineLibraries(View view) {
-    	Intent intent=new Intent (this, WineLibraries.class);
+    	Intent intent=new Intent (this, WineLibrariesActivity.class);
     	startActivity(intent);
     }
 }

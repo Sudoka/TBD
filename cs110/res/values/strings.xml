@@ -42,5 +42,16 @@
     <string name="digitalcellar">Digital Cellar</string>
     <string name="button_WineLibraries">Wine Libraries</string>
     <string name="button_add_a_wine">Add a Wine</string>
+    <string name="title_activity_sample">SampleActivity</string>
+    <string name="favorites">Favorites</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="search_wines">Search Wines</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_wine_libraries">WineLibrariesActivity</string>
+    <string name="title_activity_digital_cellar">DigitalCellarActivity</string>
+    <string name="title_activity_favorites">FavoritesActivity</string>
+    <string name="title_activity_wishlist">WishlistActivity</string>
+    <string name="title_activity_search_wines">SearchWinesActivity</string>
+    <string name="tbd">TBD</string>
 
 </resources>

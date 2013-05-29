@@ -2,22 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="horizontal"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity"
-    android:background="@drawable/logo" >
-
-
-        <Button
-            android:id="@+id/toolsButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/intro"
-            android:onClick="goTools"
-            android:text="@string/button_tools" />
+    tools:context=".MainActivity" >
 
         <Button
             android:id="@+id/settingsButton"
@@ -42,6 +33,23 @@
             android:text="@string/intro"
             android:textColor="#900"
             android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/toolsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/educationButton"
+            android:layout_alignLeft="@+id/imageView1"
+            android:onClick="goTools"
+            android:text="@string/button_tools" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/intro"
+            android:layout_below="@+id/intro"
+            android:src="@drawable/logo" />
 
 </RelativeLayout>
 

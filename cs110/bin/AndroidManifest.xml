@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="17" />
 
     <application
@@ -53,6 +53,34 @@
         <activity
             android:name="com.example.cs110.Settings"
             android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.SampleActivity"
+            android:label="@string/title_activity_sample" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.TestActivity"
+            android:label="@string/title_activity_test" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.WineLibrariesActivity"
+            android:label="@string/title_activity_wine_libraries" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.DigitalCellarActivity"
+            android:label="@string/title_activity_digital_cellar" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.FavoritesActivity"
+            android:label="@string/title_activity_favorites" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.WishlistActivity"
+            android:label="@string/title_activity_wishlist" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.SearchWinesActivity"
+            android:label="@string/title_activity_search_wines" >
         </activity>
     </application>
 

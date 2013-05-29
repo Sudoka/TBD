@@ -17,7 +17,7 @@ public class Education extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.education, menu);
+		getMenuInflater().inflate(R.menu.home, menu);
 		return true;
 	}
 	public void goRegions(View view){

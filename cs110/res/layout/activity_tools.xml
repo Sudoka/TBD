@@ -40,17 +40,6 @@
         android:src="@drawable/glass" />
 
     <Button
-<<<<<<< HEAD
-        android:id="@+id/bacButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/locationButton"
-        android:onClick="goBAC"
-        android:text="@string/button_BAC" />
-
-    <Button
-=======
->>>>>>> 2d1f4339286e8fb63a4cf3ddf15abd4cf765af2c
         android:id="@+id/pairingsButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

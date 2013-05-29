@@ -22,52 +22,64 @@ public final class R {
     }
     public static final class drawable {
         public static final int bottles=0x7f020000;
-        public static final int digitalcellar=0x7f020001;
-        public static final int favorites=0x7f020002;
-        public static final int glass=0x7f020003;
-        public static final int glasses=0x7f020004;
-        public static final int ic_launcher=0x7f020005;
-        public static final int logo=0x7f020006;
-        public static final int logo1=0x7f020007;
-        public static final int search=0x7f020008;
-        public static final int wineca=0x7f020009;
-        public static final int wishlist=0x7f02000a;
+        public static final int digital_cellar=0x7f020001;
+        public static final int digitalcellar=0x7f020002;
+        public static final int favorites=0x7f020003;
+        public static final int glass=0x7f020004;
+        public static final int glasses=0x7f020005;
+        public static final int go_back=0x7f020006;
+        public static final int ic_action_home=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int icon_digitalcellar=0x7f020009;
+        public static final int icon_favorites=0x7f02000a;
+        public static final int icon_search=0x7f02000b;
+        public static final int logo=0x7f02000c;
+        public static final int logo1=0x7f02000d;
+        public static final int search=0x7f02000e;
+        public static final int search_dark=0x7f02000f;
+        public static final int search_light=0x7f020010;
+        public static final int white_wine_color=0x7f020011;
+        public static final int wineca=0x7f020012;
+        public static final int wishlist=0x7f020013;
     }
     public static final class id {
-        public static final int LinearLayout01=0x7f080020;
-        public static final int action_settings=0x7f080021;
+        public static final int BACwarning=0x7f08000c;
+        public static final int RelativeLayout1=0x7f08001d;
+        public static final int action_back=0x7f080023;
+        public static final int action_home=0x7f080024;
+        public static final int action_settings=0x7f080022;
         public static final int bacButtom=0x7f08001b;
         public static final int button_WineLibraries=0x7f08001c;
-        public static final int button_add_a_wine=0x7f08000c;
-        public static final int digitalcellar=0x7f08001d;
-        public static final int editHours=0x7f08000a;
-        public static final int editNumOfDrinks=0x7f080008;
-        public static final int editWeight=0x7f080006;
-        public static final int educationButton=0x7f080018;
-        public static final int etiquetteButton=0x7f08000e;
-        public static final int favorites=0x7f08001e;
+        public static final int digital_cellar_button=0x7f08001e;
+        public static final int editHours=0x7f080009;
+        public static final int editNumOfDrinks=0x7f080007;
+        public static final int editWeight=0x7f080005;
+        public static final int educationButton=0x7f080015;
+        public static final int etiquetteButton=0x7f08000d;
+        public static final int favorites_button=0x7f08001f;
         public static final int female=0x7f080003;
         public static final int genderChooser=0x7f080001;
         public static final int glass=0x7f08001a;
-        public static final int goBACButton=0x7f080004;
-        public static final int historyButton=0x7f080013;
-        public static final int hours=0x7f080007;
+        public static final int goBACButton=0x7f08000a;
+        public static final int historyButton=0x7f080012;
+        public static final int hours=0x7f080006;
+        public static final int imageView1=0x7f080018;
         public static final int intro=0x7f080016;
         public static final int locationButton=0x7f080019;
         public static final int male=0x7f080002;
-        public static final int numDrinks=0x7f080009;
-        public static final int pairingsButton=0x7f080012;
-        public static final int pricingsButton=0x7f080014;
-        public static final int productionButton=0x7f080011;
-        public static final int regionsButton=0x7f08000f;
+        public static final int numDrinks=0x7f080008;
+        public static final int pairingsButton=0x7f080011;
+        public static final int pricingsButton=0x7f080013;
+        public static final int productionButton=0x7f080010;
+        public static final int regionsButton=0x7f08000e;
         public static final int result=0x7f08000b;
-        public static final int scrollView1=0x7f08000d;
-        public static final int settingsButton=0x7f080017;
+        public static final int search_wines_button=0x7f080020;
+        public static final int settingsButton=0x7f080014;
         public static final int textView1=0x7f080000;
-        public static final int toolsButton=0x7f080015;
-        public static final int typesButton=0x7f080010;
-        public static final int weight=0x7f080005;
-        public static final int wishlist=0x7f08001f;
+        public static final int toolsButton=0x7f080017;
+        public static final int typesButton=0x7f08000f;
+        public static final int weight=0x7f080004;
+        public static final int wishlist_button=0x7f080021;
     }
     public static final class layout {
         public static final int activity_bac=0x7f030000;
@@ -75,17 +87,20 @@ public final class R {
         public static final int activity_display_message=0x7f030002;
         public static final int activity_education=0x7f030003;
         public static final int activity_etiquette=0x7f030004;
-        public static final int activity_history=0x7f030005;
-        public static final int activity_locations=0x7f030006;
-        public static final int activity_main=0x7f030007;
-        public static final int activity_pairings=0x7f030008;
-        public static final int activity_pricing=0x7f030009;
-        public static final int activity_production=0x7f03000a;
-        public static final int activity_regions=0x7f03000b;
-        public static final int activity_settings=0x7f03000c;
-        public static final int activity_tools=0x7f03000d;
-        public static final int activity_types=0x7f03000e;
-        public static final int activity_wine_libraries=0x7f03000f;
+        public static final int activity_favorites=0x7f030005;
+        public static final int activity_history=0x7f030006;
+        public static final int activity_locations=0x7f030007;
+        public static final int activity_main=0x7f030008;
+        public static final int activity_pairings=0x7f030009;
+        public static final int activity_pricing=0x7f03000a;
+        public static final int activity_production=0x7f03000b;
+        public static final int activity_regions=0x7f03000c;
+        public static final int activity_search_wines=0x7f03000d;
+        public static final int activity_settings=0x7f03000e;
+        public static final int activity_tools=0x7f03000f;
+        public static final int activity_types=0x7f030010;
+        public static final int activity_wine_libraries=0x7f030011;
+        public static final int activity_wishlist=0x7f030012;
     }
     public static final class menu {
         public static final int bac=0x7f070000;
@@ -93,17 +108,22 @@ public final class R {
         public static final int digital_cellar=0x7f070002;
         public static final int display_message=0x7f070003;
         public static final int education=0x7f070004;
-        public static final int history=0x7f070005;
-        public static final int home=0x7f070006;
-        public static final int locations=0x7f070007;
-        public static final int main=0x7f070008;
-        public static final int pairings=0x7f070009;
-        public static final int pricing=0x7f07000a;
-        public static final int regions=0x7f07000b;
-        public static final int settings=0x7f07000c;
-        public static final int tools=0x7f07000d;
-        public static final int types=0x7f07000e;
-        public static final int wine_libraries=0x7f07000f;
+        public static final int favorites=0x7f070005;
+        public static final int history=0x7f070006;
+        public static final int home=0x7f070007;
+        public static final int locations=0x7f070008;
+        public static final int main=0x7f070009;
+        public static final int pairings=0x7f07000a;
+        public static final int pricing=0x7f07000b;
+        public static final int regions=0x7f07000c;
+        public static final int sample=0x7f07000d;
+        public static final int search_wines=0x7f07000e;
+        public static final int settings=0x7f07000f;
+        public static final int test=0x7f070010;
+        public static final int tools=0x7f070011;
+        public static final int types=0x7f070012;
+        public static final int wine_libraries=0x7f070013;
+        public static final int wishlist=0x7f070014;
     }
     public static final class string {
         public static final int Education=0x7f05001f;
@@ -130,23 +150,34 @@ public final class R {
         public static final int edit_message=0x7f050001;
         public static final int education=0x7f050015;
         public static final int entry_title=0x7f05000a;
+        public static final int favorites=0x7f05002a;
         public static final int glass=0x7f050018;
         public static final int hello_world=0x7f050005;
         public static final int history=0x7f050024;
         public static final int intro=0x7f05000e;
         public static final int location=0x7f050011;
         public static final int pairings=0x7f05000f;
+        public static final int search_wines=0x7f05002c;
         public static final int settings=0x7f050014;
         public static final int sex=0x7f050013;
+        public static final int tbd=0x7f050033;
         public static final int title_activity_bacfinal=0x7f05000b;
+        public static final int title_activity_digital_cellar=0x7f05002f;
         public static final int title_activity_display_message=0x7f050006;
         public static final int title_activity_education=0x7f050016;
+        public static final int title_activity_favorites=0x7f050030;
         public static final int title_activity_home=0x7f050008;
         public static final int title_activity_locations=0x7f050012;
         public static final int title_activity_main=0x7f050004;
         public static final int title_activity_pairings=0x7f050010;
+        public static final int title_activity_sample=0x7f050029;
+        public static final int title_activity_search_wines=0x7f050032;
         public static final int title_activity_settings=0x7f050017;
+        public static final int title_activity_test=0x7f05002d;
         public static final int title_activity_tools=0x7f05000c;
+        public static final int title_activity_wine_libraries=0x7f05002e;
+        public static final int title_activity_wishlist=0x7f050031;
+        public static final int wishlist=0x7f05002b;
     }
     public static final class style {
         /** 
@@ -172,8 +203,10 @@ public final class R {
          */
         public static final int AppBaseTheme=0x7f060000;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        /**  style for the action bar backgrounds 
+         */
+        public static final int MyActionBar=0x7f060002;
     }
 }
