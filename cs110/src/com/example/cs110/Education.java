@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 public class Education extends Activity {
@@ -20,6 +21,26 @@ public class Education extends Activity {
 		getMenuInflater().inflate(R.menu.home, menu);
 		return true;
 	}
+	
+	@Override
+	  public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	    case R.id.action_back:
+	      Intent intent=new Intent(this, MainActivity.class);
+	      startActivity(intent);
+	      break;
+	    case R.id.action_home:
+		  Intent intent2=new Intent(this, MainActivity.class);
+		  startActivity(intent2);
+	      break;
+
+	    default:
+	      break;
+	    }
+
+	    return true;
+	  }
+	
 	public void goRegions(View view){
     	Intent intent=new Intent (this, Regions.class);
     	startActivity (intent);

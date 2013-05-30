@@ -2,7 +2,9 @@ package com.example.cs110;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 
 public class WishlistActivity extends Activity {
 
@@ -18,5 +20,24 @@ public class WishlistActivity extends Activity {
 		getMenuInflater().inflate(R.menu.home, menu);
 		return true;
 	}
+	
+	@Override
+	  public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	    case R.id.action_back:
+	      Intent intent=new Intent(this, WineLibrariesActivity.class);
+	      startActivity(intent);
+	      break;
+	    case R.id.action_home:
+		  Intent intent2=new Intent(this, MainActivity.class);
+		  startActivity(intent2);
+	      break;
+
+	    default:
+	      break;
+	    }
+
+	    return true;
+	  }
 
 }

@@ -2,7 +2,9 @@ package com.example.cs110;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 
 public class Pairings extends Activity {
 
@@ -19,4 +21,23 @@ public class Pairings extends Activity {
 		return true;
 	}
 
+	@Override
+	  public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	    case R.id.action_back:
+	      Intent intent=new Intent(this, Education.class);
+	      startActivity(intent);
+	      break;
+	    case R.id.action_home:
+		  Intent intent2=new Intent(this, MainActivity.class);
+		  startActivity(intent2);
+	      break;
+
+	    default:
+	      break;
+	    }
+
+	    return true;
+	  }
+	
 }
