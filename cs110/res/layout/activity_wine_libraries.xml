@@ -16,7 +16,6 @@
         android:layout_marginRight="15dp"
         android:layout_marginTop="35dp"
         android:drawableTop="@drawable/digital_cellar"
-        android:onClick="goDigitalCellar"
         android:text="@string/digitalcellar" />
 
     <Button

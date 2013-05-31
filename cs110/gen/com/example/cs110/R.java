@@ -191,6 +191,7 @@ public final class R {
         public static final int homebutton=0x7f020008;
         public static final int ic_action_home=0x7f020009;
         public static final int ic_launcher=0x7f02000a;
+<<<<<<< HEAD
         public static final int icon_digitalcellar=0x7f02000b;
         public static final int icon_favorites=0x7f02000c;
         public static final int icon_search=0x7f02000d;
@@ -232,12 +233,61 @@ public final class R {
         public static final int buttonPinot=0x7f09003c;
         public static final int buttonRed=0x7f090038;
         public static final int buttonVeggie=0x7f090018;
+=======
+        public static final int ic_search=0x7f02000b;
+        public static final int icon_digitalcellar=0x7f02000c;
+        public static final int icon_favorites=0x7f02000d;
+        public static final int icon_search=0x7f02000e;
+        public static final int logo=0x7f02000f;
+        public static final int logo1=0x7f020010;
+        public static final int search=0x7f020011;
+        public static final int search_dark=0x7f020012;
+        public static final int search_light=0x7f020013;
+        public static final int white_wine_color=0x7f020014;
+        public static final int wineca=0x7f020015;
+        public static final int wishlist=0x7f020016;
+    }
+    public static final class id {
+        public static final int AbsoluteLayout1=0x7f090015;
+        public static final int BACwarning=0x7f09000c;
+        public static final int Button01=0x7f090025;
+        public static final int Button02=0x7f090039;
+        public static final int ButtonCab=0x7f09003b;
+        public static final int ButtonFish=0x7f09001d;
+        public static final int ButtonWhite=0x7f090037;
+        public static final int Cheese=0x7f09001c;
+        public static final int Meat=0x7f09001e;
+        public static final int Other=0x7f09003d;
+        public static final int Pasta=0x7f09001f;
+        public static final int Red=0x7f09003e;
+        public static final int RelativeLayout1=0x7f090017;
+        public static final int RelativeLayout2=0x7f09001a;
+        public static final int Veggie=0x7f09001b;
+        public static final int White=0x7f09003f;
+        public static final int action_back=0x7f090041;
+        public static final int action_home=0x7f090042;
+        public static final int action_search_wines=0x7f090043;
+        public static final int action_settings=0x7f090040;
+        public static final int bacButtom=0x7f09002b;
+        public static final int backToEducationButton=0x7f090028;
+        public static final int button1=0x7f090026;
+        public static final int buttonCheese=0x7f090018;
+        public static final int buttonMeat=0x7f090016;
+        public static final int buttonMerlot=0x7f09003a;
+        public static final int buttonPinot=0x7f09003c;
+        public static final int buttonRed=0x7f090038;
+        public static final int buttonVeggie=0x7f090019;
+>>>>>>> 1c8e180e7aff0e3f6c2c659b9b419b849bca59e8
         public static final int button_WineLibraries=0x7f09002c;
         public static final int digital_cellar_button=0x7f090033;
         public static final int editHours=0x7f090009;
         public static final int editNumOfDrinks=0x7f090007;
         public static final int editWeight=0x7f090005;
+<<<<<<< HEAD
         public static final int educationButton=0x7f090020;
+=======
+        public static final int educationButton=0x7f090021;
+>>>>>>> 1c8e180e7aff0e3f6c2c659b9b419b849bca59e8
         public static final int etiquetteButton=0x7f09000d;
         public static final int favorites_button=0x7f090034;
         public static final int female=0x7f090003;
@@ -246,14 +296,21 @@ public final class R {
         public static final int goBACButton=0x7f09000a;
         public static final int historyButton=0x7f090012;
         public static final int hours=0x7f090006;
+<<<<<<< HEAD
         public static final int imageView1=0x7f090023;
         public static final int intro=0x7f090021;
+=======
+        public static final int imageView1=0x7f090024;
+        public static final int intro=0x7f090022;
+        public static final int listviewMy=0x7f090014;
+>>>>>>> 1c8e180e7aff0e3f6c2c659b9b419b849bca59e8
         public static final int locationButton=0x7f090029;
         public static final int male=0x7f090002;
         public static final int numDrinks=0x7f090008;
         public static final int pairingsButton=0x7f090011;
         public static final int pricingsButton=0x7f090013;
         public static final int productionButton=0x7f090010;
+<<<<<<< HEAD
         public static final int questionDisplay=0x7f090032;
         public static final int quizDisplay=0x7f09002e;
         public static final int redButton=0x7f090030;
@@ -269,6 +326,22 @@ public final class R {
         public static final int typesButton=0x7f09000f;
         public static final int weight=0x7f090004;
         public static final int whiteButton=0x7f09002f;
+=======
+        public static final int quizDisplay=0x7f09002f;
+        public static final int redButton=0x7f090031;
+        public static final int regionsButton=0x7f09000e;
+        public static final int result=0x7f09000b;
+        public static final int scoreDisplay=0x7f09002e;
+        public static final int search_wines_button=0x7f090035;
+        public static final int settingsButton=0x7f090020;
+        public static final int startButton=0x7f090032;
+        public static final int textView1=0x7f090000;
+        public static final int textView2=0x7f090027;
+        public static final int toolsButton=0x7f090023;
+        public static final int typesButton=0x7f09000f;
+        public static final int weight=0x7f090004;
+        public static final int whiteButton=0x7f090030;
+>>>>>>> 1c8e180e7aff0e3f6c2c659b9b419b849bca59e8
         public static final int wineDisplay=0x7f09002d;
         public static final int wishlist_button=0x7f090036;
     }
@@ -291,6 +364,7 @@ public final class R {
         public static final int activity_pricing=0x7f03000f;
         public static final int activity_production=0x7f030010;
         public static final int activity_quiz_result=0x7f030011;
+<<<<<<< HEAD
         public static final int activity_quiz_result1=0x7f030012;
         public static final int activity_regions=0x7f030013;
         public static final int activity_search_wines=0x7f030014;
@@ -305,6 +379,20 @@ public final class R {
         public static final int activity_winetofood_red=0x7f03001d;
         public static final int activity_winetofood_white=0x7f03001e;
         public static final int activity_wishlist=0x7f03001f;
+=======
+        public static final int activity_regions=0x7f030012;
+        public static final int activity_search_wines=0x7f030013;
+        public static final int activity_settings=0x7f030014;
+        public static final int activity_tools=0x7f030015;
+        public static final int activity_types=0x7f030016;
+        public static final int activity_types_quiz=0x7f030017;
+        public static final int activity_wine_libraries=0x7f030018;
+        public static final int activity_wineto_food=0x7f030019;
+        public static final int activity_winetofood_other=0x7f03001a;
+        public static final int activity_winetofood_red=0x7f03001b;
+        public static final int activity_winetofood_white=0x7f03001c;
+        public static final int activity_wishlist=0x7f03001d;
+>>>>>>> 1c8e180e7aff0e3f6c2c659b9b419b849bca59e8
     }
     public static final class menu {
         public static final int bac=0x7f080000;
@@ -324,6 +412,7 @@ public final class R {
         public static final int pair__meat=0x7f08000e;
         public static final int pairings=0x7f08000f;
         public static final int pricing=0x7f080010;
+<<<<<<< HEAD
         public static final int quiz_result1=0x7f080011;
         public static final int regions=0x7f080012;
         public static final int sample=0x7f080013;
@@ -340,6 +429,22 @@ public final class R {
         public static final int winetofood_red=0x7f08001e;
         public static final int winetofood_white=0x7f08001f;
         public static final int wishlist=0x7f080020;
+=======
+        public static final int regions=0x7f080011;
+        public static final int sample=0x7f080012;
+        public static final int search_wines=0x7f080013;
+        public static final int settings=0x7f080014;
+        public static final int test=0x7f080015;
+        public static final int tools=0x7f080016;
+        public static final int types=0x7f080017;
+        public static final int wine_libraries=0x7f080018;
+        public static final int wine_pair=0x7f080019;
+        public static final int wineto_food=0x7f08001a;
+        public static final int winetofood_other=0x7f08001b;
+        public static final int winetofood_red=0x7f08001c;
+        public static final int winetofood_white=0x7f08001d;
+        public static final int wishlist=0x7f08001e;
+>>>>>>> 1c8e180e7aff0e3f6c2c659b9b419b849bca59e8
     }
     public static final class string {
         public static final int Education=0x7f06001f;
@@ -412,15 +517,24 @@ public final class R {
         public static final int title_activity_home=0x7f060008;
         public static final int title_activity_locations=0x7f060012;
         public static final int title_activity_main=0x7f060004;
+<<<<<<< HEAD
         public static final int title_activity_pair__meat=0x7f060034;
         public static final int title_activity_pairings=0x7f060010;
         public static final int title_activity_quiz_result1=0x7f06005a;
+=======
+        public static final int title_activity_my_wines=0x7f060059;
+        public static final int title_activity_pair__meat=0x7f060034;
+        public static final int title_activity_pairings=0x7f060010;
+>>>>>>> 1c8e180e7aff0e3f6c2c659b9b419b849bca59e8
         public static final int title_activity_sample=0x7f060029;
         public static final int title_activity_search_wines=0x7f060032;
         public static final int title_activity_settings=0x7f060017;
         public static final int title_activity_test=0x7f06002d;
         public static final int title_activity_tools=0x7f06000c;
+<<<<<<< HEAD
         public static final int title_activity_types_quiz1=0x7f060059;
+=======
+>>>>>>> 1c8e180e7aff0e3f6c2c659b9b419b849bca59e8
         public static final int title_activity_wine_libraries=0x7f06002e;
         public static final int title_activity_wineto_food=0x7f060047;
         public static final int title_activity_winetofood_other=0x7f060058;

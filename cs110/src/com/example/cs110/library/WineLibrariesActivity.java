@@ -1,17 +1,24 @@
-package com.example.cs110;
+package com.example.cs110.library;
 
-import android.os.Bundle;
+import com.example.cs110.MainActivity;
+import com.example.cs110.R;
+import com.example.cs110.Tools;
+
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-public class Pairings extends Activity {
+public class WineLibrariesActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_pairings);
+		setContentView(R.layout.activity_wine_libraries);
+
+
 	}
 
 	@Override
@@ -20,12 +27,13 @@ public class Pairings extends Activity {
 		getMenuInflater().inflate(R.menu.home, menu);
 		return true;
 	}
-
+	
+	
 	@Override
 	  public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
 	    case R.id.action_back:
-	      Intent intent=new Intent(this, Education.class);
+	      Intent intent=new Intent(this, Tools.class);
 	      startActivity(intent);
 	      break;
 	    case R.id.action_home:
@@ -39,5 +47,19 @@ public class Pairings extends Activity {
 
 	    return true;
 	  }
+	
+	
+	public void goWishlist(View view){
+    	Intent intent=new Intent (this,WishlistActivity.class);
+    	startActivity(intent);
+    }
+	public void goFavorites(View view){
+    	Intent intent=new Intent (this,FavoritesActivity.class);
+    	startActivity(intent);
+    }
+	public void goSearchWines(View view){
+    	Intent intent=new Intent (this,SearchWinesActivity.class);
+    	startActivity(intent);
+    }
 	
 }

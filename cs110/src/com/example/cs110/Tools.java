@@ -1,5 +1,9 @@
 package com.example.cs110;
 
+
+import com.example.cs110.library.WineLibrariesActivity;
+import com.example.cs110.pairing.Pairings;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -53,6 +57,11 @@ public class Tools extends Activity {
     
     public void goLocations(View view){
     	Intent intent=new Intent (this, Locations.class);
+    	startActivity (intent);
+    }
+    
+    public void goWineLibraries(View view){
+    	Intent intent=new Intent (this, WineLibrariesActivity.class);
     	startActivity (intent);
     }
     
