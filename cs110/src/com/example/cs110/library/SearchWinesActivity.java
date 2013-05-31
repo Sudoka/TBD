@@ -17,6 +17,9 @@ import android.widget.EditText;
 
 public class SearchWinesActivity extends Activity {
 
+	private String search_term;
+	private int call_display;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -43,6 +46,9 @@ public class SearchWinesActivity extends Activity {
 	      break;
 	    case R.id.action_search_wines:
 	    	searchWineDialog();
+	    	if(call_display==1) {
+	    		SearchResults sr = new SearchResults(search_term);
+	    	}
 		    break;
 
 	    default:
@@ -54,6 +60,7 @@ public class SearchWinesActivity extends Activity {
 
 	private void searchWineDialog() {
 		// TODO Auto-generated method stub
+		call_display = 0;
 		AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
 		alert.setTitle("Search for Wines");
@@ -65,8 +72,9 @@ public class SearchWinesActivity extends Activity {
 
 		alert.setPositiveButton("Search", new DialogInterface.OnClickListener() {
 		public void onClick(DialogInterface dialog, int whichButton) {
-		  String value = input.getText().toString();
+		  search_term = input.getText().toString();
 		  // Do something with value!
+		  call_display = 1;
 		  }
 		});
 
@@ -78,5 +86,6 @@ public class SearchWinesActivity extends Activity {
 
 		alert.show();
 	}
+	
 	
 }

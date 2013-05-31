@@ -18,6 +18,7 @@ public class MainActivity extends Activity {
 	private Button tools;
 	private Button settings;
 	private Button education;
+	public static DBAdapter db1; // used for access by other classes
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +93,8 @@ public class MainActivity extends Activity {
         		"Dude",
         		"522",
         		"522");
+        
+        db1 = db; // so other classes can access database
         
         Cursor c = db.getAllWines();
         Cursor u = udb.getAllUsers();

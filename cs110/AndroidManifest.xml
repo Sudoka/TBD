@@ -138,6 +138,10 @@
             android:name="com.example.cs110.QuizResult"
             android:label="@string/title_activity_quiz_result1" >
         </activity>
+        <activity
+            android:name="com.example.cs110.library.DisplaySearch"
+            android:label="@string/title_activity_display_search" >
+        </activity>
     </application>
 
 </manifest>

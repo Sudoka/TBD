@@ -402,6 +402,7 @@ public final class R {
         public static final int title_activity_bacfinal=0x7f06000b;
         public static final int title_activity_digital_cellar=0x7f06002f;
         public static final int title_activity_display_message=0x7f060006;
+        public static final int title_activity_display_search=0x7f06005c;
         public static final int title_activity_education=0x7f060016;
         public static final int title_activity_favorites=0x7f060030;
         public static final int title_activity_foodto_wine=0x7f060055;

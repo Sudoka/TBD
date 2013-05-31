@@ -93,5 +93,6 @@
     <string name="title_activity_my_wines">MyWines</string>
     <string name="title_activity_types_quiz1">TypesQuiz</string>
     <string name="title_activity_quiz_result1">QuizResult</string>
+    <string name="title_activity_display_search">DisplaySearch</string>
 
 </resources>
