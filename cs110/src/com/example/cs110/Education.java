@@ -50,7 +50,7 @@ public class Education extends Activity {
     	startActivity (intent);
     }
 	public void goTypes(View view){
-    	Intent intent=new Intent (this, TypesQuiz.class);
+    	Intent intent=new Intent (this, TypesQuiz1.class);
     	startActivity (intent);
     }
 	public void goPricing(View view){

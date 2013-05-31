@@ -39,7 +39,7 @@
             android:label="@string/title_activity_tools" >
         </activity>
         <activity
-            android:name="com.example.cs110.Pairings"
+            android:name="com.example.cs110.pairing.Pairings"
             android:label="@string/title_activity_pairings" >
         </activity>
         <activity
@@ -81,6 +81,62 @@
         <activity
             android:name="com.example.cs110.SearchWinesActivity"
             android:label="@string/title_activity_search_wines" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.pairing.FoodtowineMeat"
+            android:label="@string/title_activity_foodtowine_meat"
+            android:parentActivityName="com.example.cs110.pairing.FoodtoWine" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.cs110.FoodtoWine" />
+        </activity>
+        <activity
+            android:name="com.example.cs110.pairing.FoodtoWine"
+            android:label="@string/title_activity_foodto_wine" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.pairing.FoodtowinePasta"
+            android:label="@string/title_activity_foodtowine_pasta"
+            android:parentActivityName="com.example.cs110.pairing.FoodtoWine" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.cs110.pairing.FoodtoWine" />
+        </activity>
+        <activity
+            android:name="com.example.cs110.pairing.Foodtowine_Veggie"
+            android:label="@string/title_activity_foodtowine__veggie" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.pairing.FoodtowineCheese"
+            android:label="@string/title_activity_foodtowine_cheese"
+            android:parentActivityName="com.example.cs110.pairing.FoodtowineMeat" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.cs110.pairing.FoodtowineMeat" />
+        </activity>
+        <activity
+            android:name="com.example.cs110.pairing.WinetoFood"
+            android:label="@string/title_activity_wineto_food" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.pairing.WinetofoodWhite"
+            android:label="@string/title_activity_winetofood_white" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.pairing.WinetofoodRed"
+            android:label="@string/title_activity_winetofood_red" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.pairing.WinetofoodOther"
+            android:label="@string/title_activity_winetofood_other" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.TypesQuiz1"
+            android:label="@string/title_activity_types_quiz1" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.QuizResult"
+            android:label="@string/title_activity_quiz_result1" >
         </activity>
     </application>
 

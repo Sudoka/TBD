@@ -15,13 +15,6 @@ public class Quiz_Result extends Activity {
 		
 		Intent intent = getIntent();
 	    String message = intent.getStringExtra("com.example.cs110.MESSAGE");
-	    
-	    
-
-		
-		
-		
-		
 		setContentView(R.layout.activity_quiz_result);
 		TextView scoreView=(TextView) findViewById(R.id.scoreDisplay);
 	    scoreView.setText(message);

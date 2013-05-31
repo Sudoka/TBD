@@ -90,5 +90,7 @@
     <string name="title_activity_winetofood_white">Find Food</string>
     <string name="title_activity_winetofood_red">Find Food</string>
     <string name="title_activity_winetofood_other">Find Food</string>
+    <string name="title_activity_types_quiz1">TypesQuiz1</string>
+    <string name="title_activity_quiz_result1">QuizResult1</string>
 
 </resources>
