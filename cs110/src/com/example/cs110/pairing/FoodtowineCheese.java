@@ -26,6 +26,8 @@ public class FoodtowineCheese extends Activity {
 		setContentView(R.layout.activity_foodtowine_cheese);
 		// Show the Up button in the action bar.
 		setupActionBar();
+		
+
 	}
 	public void goHome(View view){
 		Intent intent=new Intent (this,MainActivity.class);

@@ -1,22 +1,25 @@
-package com.example.cs110;
+package com.example.cs110.library;
 
+import com.example.cs110.MainActivity;
+import com.example.cs110.R;
+import com.example.cs110.Tools;
+import com.example.cs110.WishlistActivity;
 
-import com.example.cs110.library.WineLibrariesActivity;
-import com.example.cs110.pairing.Pairings;
-
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-//test
-public class Tools extends Activity {
+
+public class WineLibrariesActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_tools);
+		setContentView(R.layout.activity_wine_libraries);
+
+
 	}
 
 	@Override
@@ -26,11 +29,12 @@ public class Tools extends Activity {
 		return true;
 	}
 	
+	
 	@Override
 	  public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
 	    case R.id.action_back:
-	      Intent intent=new Intent(this, MainActivity.class);
+	      Intent intent=new Intent(this, Tools.class);
 	      startActivity(intent);
 	      break;
 	    case R.id.action_home:
@@ -45,24 +49,14 @@ public class Tools extends Activity {
 	    return true;
 	  }
 	
-	public void goBAC(View view){
-    	Intent intent=new Intent (this,BAC.class);
+	
+	public void goDigitalCellar(View view){
+    	Intent intent=new Intent (this,DigitalCellarActivity.class);
     	startActivity(intent);
     }
-
-    public void goPairings(View view){
-    	Intent intent=new Intent (this, Pairings.class);
-    	startActivity (intent);
+	public void goFavorites(View view){
+    	Intent intent=new Intent (this,FavoritesActivity.class);
+    	startActivity(intent);
     }
-    
-    public void goLocations(View view){
-    	Intent intent=new Intent (this, Locations.class);
-    	startActivity (intent);
-    }
-    
-    public void goWineLibraries(View view){
-    	Intent intent=new Intent (this, WineLibrariesActivity.class);
-    	startActivity (intent);
-    }
-    
+	
 }
