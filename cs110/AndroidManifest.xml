@@ -131,7 +131,7 @@
             android:label="@string/title_activity_winetofood_other" >
         </activity>
         <activity
-            android:name="com.example.cs110.TypesQuiz1"
+            android:name="com.example.cs110.TypesQuiz"
             android:label="@string/title_activity_types_quiz1" >
         </activity>
         <activity

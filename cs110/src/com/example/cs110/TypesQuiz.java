@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class TypesQuiz1 extends Activity {
+public class TypesQuiz extends Activity {
 	
 	static int number=0;
 	public static int score=0;
@@ -23,7 +23,7 @@ public class TypesQuiz1 extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_types_quiz1);
+		setContentView(R.layout.activity_types_quiz);
 		db = new DBAdapter(this);
 		db.open();
 		c = db.getAllWines();
