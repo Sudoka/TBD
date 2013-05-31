@@ -50,7 +50,7 @@
         android:text="@string/pairings" />
 
     <Button
-        android:id="@+id/bacButtom"
+        android:id="@+id/bacButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/locationButton"
@@ -63,7 +63,7 @@
         android:id="@+id/button_WineLibraries"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bacButtom"
+        android:layout_above="@+id/bacButton"
         android:layout_alignLeft="@+id/glass"
         android:minHeight="42dip"
         android:onClick="goWineLibraries"

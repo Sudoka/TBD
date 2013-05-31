@@ -6,17 +6,38 @@ import com.example.cs110.Tools;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 public class WineLibrariesActivity extends Activity {
 
+	private Button cellar;
+	private Button favorites;
+	private Button wishlist;
+	private Button search;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_wine_libraries);
+		
+		// initialize font
+        Typeface font = Typeface.createFromAsset(getAssets(), "bless.otf");
+        
+        // find buttons
+        cellar = (Button) findViewById(R.id.digital_cellar_button); 
+        favorites = (Button) findViewById(R.id.favorites_button); 
+        wishlist = (Button) findViewById(R.id.wishlist_button); 
+        search = (Button) findViewById(R.id.search_wines_button); 
+        
+        // set button fonts
+        cellar.setTypeface(font);
+        favorites.setTypeface(font);
+        wishlist.setTypeface(font);
+        search.setTypeface(font);
 
 
 	}

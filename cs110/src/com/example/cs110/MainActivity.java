@@ -3,19 +3,42 @@ package com.example.cs110;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 //import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	public final static String EXTRA_MESSAGE="com.example.myfirstapp.MESSAGE";
+	private TextView intro;
+	private Button tools;
+	private Button settings;
+	private Button education;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        // initialize font
+        Typeface font = Typeface.createFromAsset(getAssets(), "bless.otf");
+        
+        // find buttons
+        intro = (TextView) findViewById(R.id.intro); 
+        tools = (Button) findViewById(R.id.toolsButton); 
+        settings = (Button) findViewById(R.id.settingsButton); 
+        education = (Button) findViewById(R.id.educationButton); 
+        
+        // set button fonts
+        intro.setTypeface(font);
+        tools.setTypeface(font);
+        settings.setTypeface(font);
+        education.setTypeface(font);
+        
         DBAdapter db = new DBAdapter(this);
         UserAdapter udb = new UserAdapter(this);
         

@@ -10,6 +10,7 @@
     android:background="@drawable/bottles">
 
     <TextView
+        android:id="@+id/eduTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/etiquetteButton"
