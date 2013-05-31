@@ -82,7 +82,6 @@
             android:name="com.example.cs110.SearchWinesActivity"
             android:label="@string/title_activity_search_wines" >
         </activity>
-        
         <activity
             android:name="com.example.cs110.pairing.FoodtowineMeat"
             android:label="@string/title_activity_foodtowine_meat"
@@ -130,6 +129,14 @@
         <activity
             android:name="com.example.cs110.pairing.WinetofoodOther"
             android:label="@string/title_activity_winetofood_other" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.TypesQuiz1"
+            android:label="@string/title_activity_types_quiz1" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.QuizResult"
+            android:label="@string/title_activity_quiz_result1" >
         </activity>
     </application>
 
