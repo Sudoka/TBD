@@ -56,8 +56,4 @@ public class Tools extends Activity {
     	startActivity (intent);
     }
     
-    public void goWineLibraries(View view) {
-    	Intent intent=new Intent (this, WineLibrariesActivity.class);
-    	startActivity(intent);
-    }
 }
