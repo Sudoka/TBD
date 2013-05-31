@@ -18,7 +18,7 @@ public class FavoritesActivity extends Activity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_my_wines);
+    setContentView(R.layout.activity_favorites);
 
     final ListView listview = (ListView) findViewById(R.id.listviewMy);
     String[] values = new String[] { "Android", "iPhone", "WindowsMobile",

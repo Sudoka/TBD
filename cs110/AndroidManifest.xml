@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="12"
         android:targetSdkVersion="17" />
 
     <application
@@ -63,23 +63,23 @@
             android:label="@string/title_activity_test" >
         </activity>
         <activity
-            android:name="com.example.cs110.WineLibrariesActivity"
+            android:name="com.example.cs110.library.WineLibrariesActivity"
             android:label="@string/title_activity_wine_libraries" >
         </activity>
         <activity
-            android:name="com.example.cs110.DigitalCellarActivity"
+            android:name="com.example.cs110.library.DigitalCellarActivity"
             android:label="@string/title_activity_digital_cellar" >
         </activity>
         <activity
-            android:name="com.example.cs110.FavoritesActivity"
+            android:name="com.example.cs110.library.FavoritesActivity"
             android:label="@string/title_activity_favorites" >
         </activity>
         <activity
-            android:name="com.example.cs110.WishlistActivity"
+            android:name="com.example.cs110.library.WishlistActivity"
             android:label="@string/title_activity_wishlist" >
         </activity>
         <activity
-            android:name="com.example.cs110.SearchWinesActivity"
+            android:name="com.example.cs110.library.SearchWinesActivity"
             android:label="@string/title_activity_search_wines" >
         </activity>
         

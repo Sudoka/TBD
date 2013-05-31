@@ -3,7 +3,6 @@ package com.example.cs110.library;
 import com.example.cs110.MainActivity;
 import com.example.cs110.R;
 import com.example.cs110.Tools;
-import com.example.cs110.WishlistActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -50,12 +49,16 @@ public class WineLibrariesActivity extends Activity {
 	  }
 	
 	
-	public void goDigitalCellar(View view){
-    	Intent intent=new Intent (this,DigitalCellarActivity.class);
+	public void goWishlist(View view){
+    	Intent intent=new Intent (this,WishlistActivity.class);
     	startActivity(intent);
     }
 	public void goFavorites(View view){
     	Intent intent=new Intent (this,FavoritesActivity.class);
+    	startActivity(intent);
+    }
+	public void goSearchWines(View view){
+    	Intent intent=new Intent (this,SearchWinesActivity.class);
     	startActivity(intent);
     }
 	
