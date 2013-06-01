@@ -91,4 +91,8 @@ public class Education extends Activity {
     	Intent intent=new Intent(this, Pricing.class);
     	startActivity (intent);
     }
+	public void goPairings(View view){
+		Intent intent= new Intent(this,PairingQuiz.class);
+		startActivity(intent);
+	}
 }

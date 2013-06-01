@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
 import android.widget.TextView;
 
 public class QuizResult extends Activity {
@@ -25,5 +26,10 @@ public class QuizResult extends Activity {
 		getMenuInflater().inflate(R.menu.quiz_result1, menu);
 		return true;
 	}
+	
+	public void goEducation(View view){
+    	Intent intent=new Intent (this, Education.class);
+    	startActivity (intent);
+    }
 
 }

@@ -144,7 +144,9 @@
         </activity>
         <activity
             android:name="com.example.cs110.library.ViewWine"
-            android:label="@string/title_activity_view_wine" >
+            android:label="@string/title_activity_view_wine"
+            android:name="com.example.cs110.PairingQuiz"
+            android:label="@string/title_activity_pairing_quiz" >
         </activity>
     </application>
 

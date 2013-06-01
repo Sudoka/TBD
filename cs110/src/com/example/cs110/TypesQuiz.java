@@ -24,6 +24,9 @@ public class TypesQuiz extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_types_quiz);
+		
+		number=0;
+		score=0;
 		db = new DBAdapter(this);
 		db.open();
 		c = db.getAllWines();
