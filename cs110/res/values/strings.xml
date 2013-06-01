@@ -94,5 +94,6 @@
     <string name="title_activity_types_quiz1">TypesQuiz</string>
     <string name="title_activity_quiz_result1">QuizResult</string>
     <string name="title_activity_display_search">DisplaySearch</string>
+    <string name="title_activity_view_wine">ViewWine</string>
 
 </resources>

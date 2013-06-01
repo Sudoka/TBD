@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.example.cs110.DBAdapter;
+import com.example.cs110.Education;
 import com.example.cs110.MainActivity;
 import com.example.cs110.R;
 import com.example.cs110.R.id;
@@ -35,15 +36,16 @@ public class SearchWinesActivity extends Activity {
 	private String search_term;
 	private int call_display;
 	DBAdapter db;
-	private int dialog_count;
+	private ArrayList<Integer> keys_list;
     
+
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_search_wines);
-		
-		   
+		  keys_list = new ArrayList<Integer>();
+		  // keys_list.clear();
 		    ArrayList<String> list;
 		    list = new ArrayList<String>();
 		    db = new DBAdapter(this);
@@ -53,6 +55,7 @@ public class SearchWinesActivity extends Activity {
 		    while(c.moveToNext())
 		    {
 		      list.add(c.getString(1)+" - "+c.getString(2));
+		      keys_list.add(c.getInt(0));
 		    }
 		    displayList(list);
 		    
@@ -76,9 +79,13 @@ public void displayList(final ArrayList<String> list) {
             .withEndAction(new Runnable() {
               @Override
               public void run() {
-                list.remove(item);
+            	  Intent view_wine = new Intent(SearchWinesActivity.this, ViewWine.class);
+                view_wine.putExtra("rowId", keys_list.get(list.indexOf(item)));
+                
+                startActivity (view_wine);
+            	/*  list.remove(item);
                 adapter.notifyDataSetChanged();
-                view.setAlpha(1);
+                view.setAlpha(1);*/
               }
             });
       }
@@ -178,6 +185,7 @@ public void displayList(final ArrayList<String> list) {
 
 
 public ArrayList<String> SearchResults1(String searched){
+	keys_list.clear();
 	ArrayList<String> search_list = new ArrayList<String>();
 	db = new DBAdapter(this);
 	db.open();
@@ -189,8 +197,9 @@ public ArrayList<String> SearchResults1(String searched){
 /*			Toast.makeText(this, 
 	                "SEARCHED:"+searched+"S2"+s2,
 	                Toast.LENGTH_LONG).show();*/
-			if(s2.contains(searched)) {
+			if(s2.contains(searched.toLowerCase())) {
 				search_list.add(c.getString(1)+" - "+c.getString(2));
+				keys_list.add(c.getInt(0));
 			}
 		}
 	}

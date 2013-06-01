@@ -142,6 +142,10 @@
             android:name="com.example.cs110.library.DisplaySearch"
             android:label="@string/title_activity_display_search" >
         </activity>
+        <activity
+            android:name="com.example.cs110.library.ViewWine"
+            android:label="@string/title_activity_view_wine" >
+        </activity>
     </application>
 
 </manifest>
