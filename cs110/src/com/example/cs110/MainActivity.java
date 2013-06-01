@@ -3,102 +3,57 @@ package com.example.cs110;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-//import android.widget.EditText;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	public final static String EXTRA_MESSAGE="com.example.myfirstapp.MESSAGE";
-	private TextView intro;
-	private Button tools;
-	private Button settings;
-	private Button education;
-	public static DBAdapter db1; // used for access by other classes
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
-        // initialize font
-        Typeface font = Typeface.createFromAsset(getAssets(), "bless.otf");
-        
-        // find buttons
-        intro = (TextView) findViewById(R.id.intro); 
-        tools = (Button) findViewById(R.id.toolsButton); 
-        settings = (Button) findViewById(R.id.settingsButton); 
-        education = (Button) findViewById(R.id.educationButton); 
-        
-        // set button fonts
-        intro.setTypeface(font);
-        tools.setTypeface(font);
-        settings.setTypeface(font);
-        education.setTypeface(font);
-        
         DBAdapter db = new DBAdapter(this);
         UserAdapter udb = new UserAdapter(this);
         
-        db.open();
         udb.open();
-        db.insertWine(
-        		"Chardonnay",
-        		"White",
-        		"California");        
-        db.insertWine(
-        		"Pinot Noir",
-        		"Red",
-        		"Temecula");
-        db.insertWine(
-        		"Cabernet Sauvignon",
-        		"Red",
-        		"Napa");
-        db.insertWine(
-        		"Pinot Blanc",
-        		"White",
-        		"Bernardo Winery");
-        db.insertWine(
-        		"Merlot",
-        		"Red",
-        		"Spain");
-        db.insertWine(
-        		"Port",
-        		"Red",
-        		"Temecula");
-        db.insertWine(
-        		"Pinot Noir",
-        		"Red",
-        		"San Bernardino");
-        db.insertWine(
-        		"Muscat",
-        		"White",
-        		"France");
-        db.insertWine(
-        		"Cabernet Sauvignon",
-        		"Red",
-        		"Santa Ynez");
-        db.insertWine(
-        		"Pinot Noir",
-        		"Red",
-        		"Willow Creek");
-        udb.insertUser(
-        		"Bob",
-        		"204",
-        		"20");
-        udb.insertUser(
-        		"Dude",
-        		"522",
-        		"522");
-        
-        db1 = db; // so other classes can access database
+        db.open();
+        db.deleteAllWines();
+        db.populateDatabase();
         
         Cursor c = db.getAllWines();
-        Cursor u = udb.getAllUsers();
         if (c.moveToFirst())  {      
+            displayWine(c);
+        	c.moveToNext();
+        	displayWine(c);
+        	c.moveToNext();
+        	displayWine(c);
+        	c.moveToNext();
+        	displayWine(c);
+        }
+        else
+            Toast.makeText(this, "No wine found", 
+            		Toast.LENGTH_LONG).show();
+        db.close();
+        udb.close();
+        //db.populateDatabase();
+        /*
+        db.insertWine("Yes", "Red", "Here", "Hi");
+
+        udb.insertUser(
+                "Bob",
+                "204",
+                "20");
+        udb.insertUser(
+                "Dude",
+                "522",
+                "522");
+        
+       Cursor c = db.getAllWines();
+       if (c.moveToFirst())  {      
             displayWine(c);
         	c.moveToNext();
         	c.moveToNext();
@@ -108,16 +63,8 @@ public class MainActivity extends Activity {
         else
             Toast.makeText(this, "No wine found", 
             		Toast.LENGTH_LONG).show();
-        if (u.moveToFirst())  {      
-            displayUser(u);
-        	u.moveToNext();
-        	displayUser(u);
-        }
-        else
-            Toast.makeText(this, "No wine found", 
-            		Toast.LENGTH_LONG).show();
         db.close();
-        udb.close();
+        udb.close();*/
     }
 
 
@@ -128,8 +75,15 @@ public class MainActivity extends Activity {
         return true;
     }
     
-
-    
+ /*   public void sendMessage (View view)
+    {
+   // 	Intent intent = new Intent(this, DisplayMessageActivity.class);
+    	EditText editText = (EditText) findViewById(R.id.edit_message);
+    	String message = editText.getText().toString();
+    	intent.putExtra(EXTRA_MESSAGE, message); 
+  //  	startActivity(intent);
+    }
+    */
     public void goBAC(View view){
     	Intent intent=new Intent (this,BAC.class);
     	startActivity(intent);
@@ -162,7 +116,9 @@ public class MainActivity extends Activity {
                 "id: " + c.getString(0) + "\n" +
                 "WINE NAME: " + c.getString(1) + "\n" +
                 "WINE TYPE: " + c.getString(2) + "\n" +
-                "WINE ORIGIN:  " + c.getString(3),
+                "WINE ORIGIN:  " + c.getString(3) + "\n" +
+                "Description: " + c.getString(4) + "\n" +
+                "COUNT: " + c.getCount(),
                 Toast.LENGTH_LONG).show();        
     } 
     

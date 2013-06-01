@@ -1,5 +1,8 @@
 package com.example.cs110.library;
 
+import java.util.ArrayList;
+
+import com.example.cs110.DBAdapter;
 import com.example.cs110.MainActivity;
 import com.example.cs110.R;
 import com.example.cs110.R.layout;
@@ -9,23 +12,35 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.database.Cursor;
 import android.view.Menu;
+import android.widget.Toast;
+import android.widget.Toast;
+import android.widget.Toast;
 
 public class SearchResults {
   private String s1;
-  public SearchResults(String s1) { 
+  DBAdapter db;
+  public SearchResults(String s1, DBAdapter db) { 
 		
 		s1 = s1.toLowerCase();
+		this.db = db;
+
   }
   
-  public void getNarrowedResults() {
-		Cursor c = MainActivity.db1.getAllWines();
+  public ArrayList<String> getNarrowedResults() {
+	  db.open();
+	  ArrayList<String> search_list = new ArrayList<String>();
+		Cursor c = db.getAllWines();
 		c.moveToFirst();
 		while(c.moveToNext()) {
 			for(int i = 1; i <=3; i++) {
+				
 				String s2 = c.getString(i).toLowerCase();
-				if(s1.equals(s2));
+				if(s1.equals(s2)) {
+					search_list.add(c.getString(1));
+				}
 			}
 		}
-
+		db.close();
+		return search_list;
   }
 }

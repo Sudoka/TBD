@@ -53,7 +53,7 @@ public class FavoritesActivity extends Activity {
     });
   }
 
-  private class StableArrayAdapter extends ArrayAdapter<String> {
+  public class StableArrayAdapter extends ArrayAdapter<String> {
 
     HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
 
