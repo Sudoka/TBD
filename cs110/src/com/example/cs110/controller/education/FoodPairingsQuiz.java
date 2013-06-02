@@ -8,6 +8,7 @@ package com.example.cs110.controller.education;
 
 import java.util.Random;
 
+import com.example.cs110.MainActivity;
 import com.example.cs110.R;
 import com.example.cs110.model.data.DBAdapter;
 
@@ -16,6 +17,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -44,9 +46,28 @@ public class FoodPairingsQuiz extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.food_pairings_quiz, menu);
+		getMenuInflater().inflate(R.menu.home, menu);
 		return true;
 	}
+	
+	@Override
+	  public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	    case R.id.action_back:
+	      Intent intent=new Intent(this, Quiz.class);
+	      startActivity(intent);
+	      break;
+	    case R.id.action_home:
+		  Intent intent2=new Intent(this, MainActivity.class);
+		  startActivity(intent2);
+	      break;
+
+	    default:
+	      break;
+	    }
+
+	    return true;
+	  }
 	
 	private void getRandomWine()
 	{
