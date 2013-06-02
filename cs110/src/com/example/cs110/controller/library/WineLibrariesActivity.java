@@ -70,5 +70,10 @@ public class WineLibrariesActivity extends Activity {
     	Intent intent=new Intent (this,SearchWinesActivity.class);
     	startActivity(intent);
     }
+	public void goAddWine(View view){
+    	Intent intent=new Intent (this,AddWine.class);
+    	startActivity(intent);
+    }
+	
 	
 }

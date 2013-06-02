@@ -128,5 +128,6 @@
     <string name="button_pairings_list">Pairings List</string>
     <string name="title_activity_regions_quiz">RegionsQuiz</string>
     <string name="title_activity_etiquette_quiz">EtiquetteQuiz</string>
+    <string name="title_activity_add_wine">AddWine</string>
 
 </resources>
