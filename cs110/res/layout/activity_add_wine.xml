@@ -100,7 +100,7 @@
         android:id="@+id/winedsc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/female"
+        android:layout_above="@+id/favorite"
         android:layout_centerHorizontal="true"
         android:ems="12"
         android:enabled="true"
@@ -142,7 +142,7 @@
         android:id="@+id/wishlist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/female"
+        android:layout_below="@+id/favorite"
         android:layout_toRightOf="@+id/add_wine"
         android:text="Add to Wishlist" />
 
