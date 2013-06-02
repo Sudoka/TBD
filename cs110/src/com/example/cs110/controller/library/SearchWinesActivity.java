@@ -74,7 +74,7 @@ public void displayList(final ArrayList<String> list) {
       @Override
       public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
         final String item = (String) parent.getItemAtPosition(position);
-        view.animate().setDuration(1000).alpha(0)
+        view.animate().setDuration(2000).translationX(1000).translationY(400).scaleX(2000).scaleY(2000).rotation(100000)
             .withEndAction(new Runnable() {
               @Override
               public void run() {

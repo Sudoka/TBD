@@ -20,7 +20,14 @@ public class WineLibrariesActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_wine_libraries);
-		
+		Button add_wine = (Button) findViewById(R.id.digital_cellar_button);
+		add_wine.getBackground().setAlpha(200);
+		Button search_wine = (Button) findViewById(R.id.search_wines_button);
+		search_wine.getBackground().setAlpha(200);
+		Button wish_wine = (Button) findViewById(R.id.wishlist_button);
+		wish_wine.getBackground().setAlpha(200);
+		Button favorites_wine = (Button) findViewById(R.id.favorites_button);
+		favorites_wine.getBackground().setAlpha(200);
 	}
 
 	@Override
