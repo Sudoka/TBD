@@ -17,10 +17,11 @@ public class Quiz extends Activity {
 		setContentView(R.layout.activity_quiz);
 	}
 	
+	
 	public void goEtiquetteQuiz(View view)
 	{
-		/*Intent intent = new Intent(this,EtiquetteQuiz.class)
-		startActivity(intent);*/
+		Intent intent = new Intent(this, EtiquetteQuiz.class);
+		startActivity(intent);
 	}
 	
 	public void goRegionsQuiz(View view){
@@ -61,7 +62,7 @@ public class Quiz extends Activity {
 	  public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
 	    case R.id.action_back:
-	      Intent intent=new Intent(this, Learn.class);
+	      Intent intent=new Intent(this, Education.class);
 	      startActivity(intent);
 	      break;
 	    case R.id.action_home:

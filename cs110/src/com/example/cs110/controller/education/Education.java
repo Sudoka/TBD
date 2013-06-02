@@ -25,23 +25,24 @@ public class Education extends Activity {
 	}
 	
 	@Override
-	  public boolean onOptionsItemSelected(MenuItem item) {
-	    switch (item.getItemId()) {
-	    case R.id.action_back:
-	      Intent intent=new Intent(this, MainActivity.class);
-	      startActivity(intent);
-	      break;
-	    case R.id.action_home:
-		  Intent intent2=new Intent(this, MainActivity.class);
-		  startActivity(intent2);
-	      break;
+	public boolean onOptionsItemSelected(MenuItem item) {
+	  switch (item.getItemId()) {
+	  case R.id.action_back:
+	    Intent intent=new Intent(this, MainActivity.class);
+	    startActivity(intent);
+	    break;
+	  case R.id.action_home:
+		Intent intent2=new Intent(this, MainActivity.class);
+		startActivity(intent2);
+	    break;
 
-	    default:
-	      break;
-	    }
-
-	    return true;
+	  default:
+	    break;
 	  }
+
+      return true;
+	}
+	
 	
 	public void goLearn(View view){
     	Intent intent=new Intent (this, Learn.class);

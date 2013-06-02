@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".RegionsQuiz" >
+    tools:context=".TypesQuiz" >
 
     <TextView
         android:id="@+id/scoreDisplay"
@@ -18,62 +18,69 @@
         android:text="Score: 0" />
 
     <Button
-        android:id="@+id/Button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/scoreDisplay"
-        android:layout_marginBottom="36dp"
-        android:layout_toRightOf="@+id/scoreDisplay"
-        android:onClick="checkAnswer"
-        android:text="US" />
-
-    <Button
-        android:id="@+id/Button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/Button2"
-        android:layout_alignBottom="@+id/Button2"
-        android:layout_toLeftOf="@+id/questionDisplay"
-        android:onClick="checkAnswer"
-        android:text="France" />
-
-    <Button
         android:id="@+id/Button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/Button3"
         android:layout_alignBottom="@+id/Button3"
-        android:layout_alignLeft="@+id/Button4"
+        android:layout_toLeftOf="@+id/scoreDisplay"
+        android:minLines="3"
         android:onClick="checkAnswer"
-        android:text="Italy" />
+        android:text="Burgundy"
+        android:width="120dp" />
 
-    <TextView
-        android:id="@+id/wineDisplay"
+    <Button
+        android:id="@+id/Button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/Button3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="22dp"
+        android:layout_alignRight="@+id/Button1"
+        android:layout_below="@+id/Button3"
+        android:minLines="3"
+        android:onClick="checkAnswer"
         android:text="Bordeaux"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:width="120dp" />
 
     <TextView
         android:id="@+id/questionDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_above="@+id/wineDisplay"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp"
+        android:layout_marginBottom="23dp"
         android:text="Question: 1/10" />
+
+    <TextView
+        android:id="@+id/wineDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Button1"
+        android:layout_alignRight="@+id/scoreDisplay"
+        android:layout_marginBottom="32dp"
+        android:text="Merlot"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
         android:id="@+id/Button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/Button2"
-        android:layout_marginBottom="46dp"
-        android:layout_toRightOf="@+id/scoreDisplay"
+        android:layout_marginBottom="51dp"
+        android:layout_toRightOf="@+id/wineDisplay"
+        android:minLines="3"
         android:onClick="checkAnswer"
-        android:text="Spain" />
+        android:text="Germany"
+        android:width="120dp" />
+
+    <Button
+        android:id="@+id/Button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scoreDisplay"
+        android:layout_alignLeft="@+id/Button3"
+        android:layout_marginBottom="38dp"
+        android:minLines="3"
+        android:onClick="checkAnswer"
+        android:text="California"
+        android:width="120dp" />
 
 </RelativeLayout>
