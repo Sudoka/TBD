@@ -93,14 +93,6 @@ public class FoodPairingsQuiz extends Activity {
 		String buttonText = b.getText().toString();
 		//answer = getQuestionText(number);
 		boolean isRight = answer.equalsIgnoreCase(buttonText);
-		answer = getQuestionText(number);
-		System.out.println("START");
-		System.out.println("Number: " +number);
-		System.out.println("Answer: "+answer);
-		System.out.println("Clicked Button: "+buttonText);
-		System.out.println(isRight);
-		System.out.println("END");
-		
 		TextView scoreDisplay=(TextView) findViewById(R.id.scoreDisplay);
 		
     	if (isRight)

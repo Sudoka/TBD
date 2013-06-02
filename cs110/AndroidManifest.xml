@@ -172,7 +172,7 @@
             android:name="com.example.cs110.controller.education.ProductionLearn"
             android:label="@string/title_activity_production_learn" >
         </activity>
-        <activity          
+        <activity
             android:name="com.example.cs110.controller.education.RegionsLearn"
             android:label="@string/title_activity_regions_learn" >
         </activity>
@@ -191,6 +191,10 @@
         <activity
             android:name="com.example.cs110.controller.education.RegionsQuiz"
             android:label="@string/title_activity_regions_quiz" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.controller.education.EtiquetteQuiz"
+            android:label="@string/title_activity_etiquette_quiz" >
         </activity>
     </application>
 

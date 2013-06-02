@@ -127,5 +127,6 @@
     <string name="foodpairings_info">Wine and food pairing have always been a very important aspect of enjoying wine. Wine can enhance certain food\'s flavors and vice versa. The idea is similar to drinking a very sour lemonade, and then drinking a sweet orange juice, the sour lemonade makes the sweet orange juice sweeter. People have been experimenting wines with foods to find good pairings. Many fine restaurants reccomend wines that go well with the food ordered to enhance the dining experience. Unlike other aspects of wine, wine pairing is relative. There are certain conventions when it comes to good food and wine pairings, but it is completely personal. When unsure, the conventions are good to fall back on, but finding your own set of wine and food pairing is much more important, and also much more fun.</string>
     <string name="button_pairings_list">Pairings List</string>
     <string name="title_activity_regions_quiz">RegionsQuiz</string>
+    <string name="title_activity_etiquette_quiz">EtiquetteQuiz</string>
 
 </resources>
