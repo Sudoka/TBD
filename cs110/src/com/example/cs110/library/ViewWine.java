@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,10 +33,11 @@ private int rowId;
 	    String id = intent.getStringExtra("rowId");
 	    rowId = Integer.parseInt(id);
 	    Cursor c = db.getWine(rowId);
-		
+	    
+        Typeface font = Typeface.createFromAsset(getAssets(), "bless.otf");
 		EditText name = (EditText) findViewById(R.id.winename);
 		EditText description = (EditText) findViewById(R.id.winedsc);
-		
+		name.setTypeface(font);
         name.setText(c.getString(1));
         description.setText(c.getString(4));
        

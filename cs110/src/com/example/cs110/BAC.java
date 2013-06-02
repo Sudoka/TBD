@@ -14,14 +14,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class BAC extends Activity {
-	private TextView gender;
-	private RadioButton male;
-	private RadioButton female;
-	private TextView weight;
-	private TextView hours;
-	private TextView drinks;
-	private Button BAC;
-	private TextView warning;
+
 	/*public final static String weight="com.example.MyApp.weight";
 	public final static String numOfDrinks="com.example.MyApp.numOfDrinks";
 	public final static String male="com.example.MyApp.male";
@@ -33,28 +26,6 @@ public class BAC extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_bac);
 		
-		// initialize font
-        Typeface font = Typeface.createFromAsset(getAssets(), "bless.otf");
-        
-        // find buttons
-        gender = (TextView) findViewById(R.id.textView1); 
-        male = (RadioButton) findViewById(R.id.male); 
-        female = (RadioButton) findViewById(R.id.female); 
-        weight = (TextView) findViewById(R.id.weight); 
-        hours = (TextView) findViewById(R.id.hours); 
-        drinks = (TextView) findViewById(R.id.numDrinks); 
-        BAC = (Button) findViewById(R.id.goBACButton); 
-        warning = (TextView) findViewById(R.id.BACwarning); 
-        
-        // set button fonts
-        gender.setTypeface(font);
-        male.setTypeface(font);
-        female.setTypeface(font);
-        weight.setTypeface(font);
-        hours.setTypeface(font);
-        drinks.setTypeface(font);
-        BAC.setTypeface(font);
-        warning.setTypeface(font);
 	}
 
 	@Override
