@@ -6,73 +6,28 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Education" 
-    android:background="@drawable/bottles">
-
+    tools:context=".Education" >
+    
     <TextView
-        android:id="@+id/eduTitle"
-        android:layout_width="wrap_content"
+        android:id="@+id/education_text"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/etiquetteButton"
-        android:text="@string/education"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <Button
-            android:id="@+id/etiquetteButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/regionsButton"
-            android:onClick="goBAC"
-            android:text="@string/Etiquette" />
-        
-        <Button
-            android:id="@+id/regionsButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/typesButton"
-            android:onClick="goRegions"
-            android:text="@string/Regions" />
-   
-        <Button
-            android:id="@+id/typesButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/productionButton"
-            android:onClick="goTypes"
-            android:text="@string/Types" />
-        
-        <Button
-            android:id="@+id/productionButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/pairingsButton"
-            android:onClick="goProduction"
-            android:text="@string/Production" />
-        
-        <Button
-            android:id="@+id/pairingsButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/historyButton"
-            android:onClick="goPairings"
-            android:text="@string/pairings" />
+        android:hint="@string/education_text"/>
     
     <Button
-        android:id="@+id/historyButton"
+        android:id="@+id/learning_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/pricingsButton"
-        android:onClick="goHistory"
-        android:text="@string/history" />
-
+        android:layout_below="@+id/education_text"
+        android:onClick="goLearn"
+        android:text="@string/Learning" />
+    	
     <Button
-        android:id="@+id/pricingsButton"
+        android:id="@+id/quiz_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/historyButton"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="46dp"
-        android:onClick="goPricing"
-        android:text="@string/Pricing" />
+        android:layout_below="@+id/learning_button"
+        android:onClick="goQuiz"
+        android:text="@string/Quiz" />
     
 </RelativeLayout>

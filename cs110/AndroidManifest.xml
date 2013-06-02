@@ -3,6 +3,8 @@
     package="com.example.cs110"
     android:versionCode="1"
     android:versionName="1.0" >
+    
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-sdk
         android:minSdkVersion="12"
@@ -157,6 +159,39 @@
         <activity
             android:name="com.example.cs110.library.ViewWishWine"
             android:label="@string/title_activity_view_wish_wine" >
+        </activity>
+        //start kevin
+        <activity
+            android:name="com.example.cs110.EtiquetteLearn"
+            android:label="@string/title_activity_etiquette_learn" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.HistoryLearn"
+            android:label="@string/title_activity_history_learn" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.ProductionLearn"
+            android:label="@string/title_activity_production_learn" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.RegionsLearn"
+            android:label="@string/title_activity_regions_learn" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.TypesLearn"
+            android:label="@string/title_activity_types_learn" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.FoodPairingsLearn"
+            android:label="@string/title_activity_food_pairings_learn" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.Learn"
+            android:label="@string/title_activity_learn" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.Quiz"
+            android:label="@string/title_activity_quiz" >
         </activity>
     </application>
 
