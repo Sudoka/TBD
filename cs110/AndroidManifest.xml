@@ -196,6 +196,10 @@
             android:name="com.example.cs110.controller.education.EtiquetteQuiz"
             android:label="@string/title_activity_etiquette_quiz" >
         </activity>
+        <activity
+            android:name="com.example.cs110.controller.library.AddWine"
+            android:label="@string/title_activity_add_wine" >
+        </activity>
     </application>
 
 </manifest>

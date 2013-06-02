@@ -1,0 +1,149 @@
+<!-- TODO Write all strings into strings.xml for better MVC? -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/glasses"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".BAC" >
+
+    <RadioGroup
+        android:id="@+id/genderChooser"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+    <RadioButton
+        android:id="@+id/female"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/result"
+        android:text="White" />
+    </RadioGroup>
+    
+    <TextView
+        android:id="@+id/numDrinks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/genderChooser"
+        android:layout_below="@+id/genderChooser"
+        android:text="Wine Name:" />
+
+    <EditText
+        android:id="@+id/wine_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/numDrinks"
+        android:layout_alignRight="@+id/wine_region"
+        android:layout_below="@+id/numDrinks"
+        android:ems="20"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/add_wine"
+        android:layout_alignLeft="@+id/BACwarning"
+        android:layout_marginLeft="17dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/BACwarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/add_wine"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/add_wine"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+    <EditText
+        android:id="@+id/wine_region"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/wine_color"
+        android:layout_below="@+id/hours"
+        android:ems="20"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/numDrinks"
+        android:layout_below="@+id/wine_region"
+        android:text="Region wine is from:" />
+
+    <EditText
+        android:id="@+id/wine_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/weight"
+        android:layout_below="@+id/weight"
+        android:ems="20"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/wine_name"
+        android:layout_below="@+id/wine_name"
+        android:text="Wine Color:" />
+
+    <EditText
+        android:id="@+id/winedsc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/female"
+        android:layout_centerHorizontal="true"
+        android:ems="12"
+        android:enabled="true"
+        android:includeFontPadding="false"
+        android:inputType="textMultiLine"
+        android:maxHeight="@android:dimen/notification_large_icon_height"
+        android:maxLines="5"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:selectAllOnFocus="false"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textColorHint="@color/Black"
+        android:textColorLink="@color/Black"
+        android:typeface="normal" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/add_wine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/wine_color"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:onClick="addWine"
+        android:text="Add Wine!" />
+
+    <RadioButton
+        android:id="@+id/favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/result"
+        android:layout_toRightOf="@+id/add_wine"
+        android:text="Add to Favorite" />
+
+    <RadioButton
+        android:id="@+id/wishlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/female"
+        android:layout_toRightOf="@+id/add_wine"
+        android:text="Add to Wishlist" />
+
+</RelativeLayout>
