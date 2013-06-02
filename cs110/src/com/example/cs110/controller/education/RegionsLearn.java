@@ -1,8 +1,7 @@
-package com.example.cs110;
+package com.example.cs110.controller.education;
 
-import com.example.cs110.controller.pairing.Pairings;
-import com.example.cs110.controller.quiz.Quiz;
-
+import com.example.cs110.MainActivity;
+import com.example.cs110.R;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -11,12 +10,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 
-public class FoodPairingsLearn extends Activity {
+public class RegionsLearn extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_food_pairings_learn);
+		setContentView(R.layout.activity_regions_learn);
 	}
 	
 	public void goToQuiz(View view) {
@@ -29,15 +28,10 @@ public class FoodPairingsLearn extends Activity {
 		startActivity(intent);
 	}
 	
-	public void PairingsList(View view) {
-		Intent intent = new Intent(this, Pairings.class);
-		startActivity(intent);
-	}
-	
 	public void loadUrl(View view)
 	{
 		WebView webview = new WebView(this);
-		webview.loadUrl("https://en.wikipedia.org/wiki/Food_%26_Wine");
+		webview.loadUrl("http://en.wikipedia.org/wiki/List_of_wine-producing_regions");
 	}
 
 	@Override

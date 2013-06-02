@@ -49,7 +49,7 @@
             android:label="@string/title_activity_locations" >
         </activity>
         <activity
-            android:name="com.example.cs110.Education"
+            android:name="com.example.cs110.controller.education.Education"
             android:label="@string/title_activity_education" >
         </activity>
         <activity
@@ -59,10 +59,6 @@
         <activity
             android:name="com.example.cs110.SampleActivity"
             android:label="@string/title_activity_sample" >
-        </activity>
-        <activity
-            android:name="com.example.cs110.TestActivity"
-            android:label="@string/title_activity_test" >
         </activity>
         <activity
             android:name="com.example.cs110.controller.library.WineLibrariesActivity"
@@ -133,11 +129,11 @@
             android:label="@string/title_activity_winetofood_other" >
         </activity>
         <activity
-            android:name="com.example.cs110.controller.quiz.TypesQuiz"
+            android:name="com.example.cs110.controller.education.TypesQuiz"
             android:label="@string/title_activity_types_quiz1" >
         </activity>
         <activity
-            android:name="com.example.cs110.controller.quiz.QuizResult"
+            android:name="com.example.cs110.controller.education.QuizResult"
             android:label="@string/title_activity_quiz_result1" >
         </activity>
         <activity
@@ -149,8 +145,8 @@
             android:label="@string/title_activity_view_wine" >
         </activity>
         <activity
-            android:name="com.example.cs110.controller.quiz.PairingQuiz"
-            android:label="@string/title_activity_pairing_quiz" >
+            android:name="com.example.cs110.controller.education.FoodPairingsQuiz"
+            android:label="@string/title_activity_food_pairings_quiz" >
         </activity>
         <activity
             android:name="com.example.cs110.controller.library.ViewFavWine"
@@ -160,41 +156,40 @@
             android:name="com.example.cs110.controller.library.ViewWishWine"
             android:label="@string/title_activity_view_wish_wine" >
         </activity>
-        //start kevin
         <activity
-            android:name="com.example.cs110.EtiquetteLearn"
-            android:label="@string/title_activity_etiquette_learn" >
-        </activity>
-        <activity
-            android:name="com.example.cs110.HistoryLearn"
-            android:label="@string/title_activity_history_learn" >
-        </activity>
-        <activity
-            android:name="com.example.cs110.ProductionLearn"
-            android:label="@string/title_activity_production_learn" >
-        </activity>
-        <activity
-            android:name="com.example.cs110.RegionsLearn"
-            android:label="@string/title_activity_regions_learn" >
-        </activity>
-        <activity
-            android:name="com.example.cs110.TypesLearn"
-            android:label="@string/title_activity_types_learn" >
-        </activity>
-        <activity
-            android:name="com.example.cs110.FoodPairingsLearn"
-            android:label="@string/title_activity_food_pairings_learn" >
-        </activity>
-        <activity
-            android:name="com.example.cs110.Learn"
+            android:name="com.example.cs110.controller.education.Learn"
             android:label="@string/title_activity_learn" >
         </activity>
         <activity
-            android:name="com.example.cs110.controller.quiz.Quiz"
+            android:name="com.example.cs110.controller.education.EtiquetteLearn"
+            android:label="@string/title_activity_etiquette_learn" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.controller.education.HistoryLearn"
+            android:label="@string/title_activity_history_learn" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.controller.education.ProductionLearn"
+            android:label="@string/title_activity_production_learn" >
+        </activity>
+        <activity          
+            android:name="com.example.cs110.controller.education.RegionsLearn"
+            android:label="@string/title_activity_regions_learn" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.controller.education.TypesLearn"
+            android:label="@string/title_activity_types_learn" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.controller.education.FoodPairingsLearn"
+            android:label="@string/title_activity_food_pairings_learn" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.controller.education.Quiz"
             android:label="@string/title_activity_quiz" >
         </activity>
         <activity
-            android:name="com.example.cs110.controller.quiz.RegionsQuiz"
+            android:name="com.example.cs110.controller.education.RegionsQuiz"
             android:label="@string/title_activity_regions_quiz" >
         </activity>
     </application>

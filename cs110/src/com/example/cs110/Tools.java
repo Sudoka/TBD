@@ -13,7 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-//test
+
 public class Tools extends Activity {
 
 
@@ -21,8 +21,6 @@ public class Tools extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tools);
-		
-        
 	}
 
 	@Override

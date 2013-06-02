@@ -1,17 +1,22 @@
-package com.example.cs110;
 
+
+package com.example.cs110.controller.education;
+
+import com.example.cs110.MainActivity;
+import com.example.cs110.R;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class Pricing extends Activity {
+
+public class Regions extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_pricing);
+		setContentView(R.layout.activity_regions);
 	}
 
 	@Override
@@ -20,7 +25,7 @@ public class Pricing extends Activity {
 		getMenuInflater().inflate(R.menu.home, menu);
 		return true;
 	}
-
+	
 	@Override
 	  public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {

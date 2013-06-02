@@ -1,7 +1,7 @@
-package com.example.cs110;
+package com.example.cs110.controller.education;
 
-import com.example.cs110.controller.quiz.Quiz;
-
+import com.example.cs110.MainActivity;
+import com.example.cs110.R;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -10,12 +10,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 
-public class TypesLearn extends Activity {
+public class EtiquetteLearn extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_types_learn);
+		setContentView(R.layout.activity_etiquette_learn);
 	}
 	
 	public void goToQuiz(View view) {
@@ -31,7 +31,7 @@ public class TypesLearn extends Activity {
 	public void loadUrl(View view)
 	{
 		WebView webview = new WebView(this);
-		webview.loadUrl("http://en.wikipedia.org/wiki/Varietal");
+		webview.loadUrl("https://en.wikipedia.org/wiki/Wine_tasting");
 	}
 
 	@Override
@@ -40,7 +40,7 @@ public class TypesLearn extends Activity {
 		getMenuInflater().inflate(R.menu.home, menu);
 		return true;
 	}
-	
+
 	@Override
 	  public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
@@ -59,5 +59,5 @@ public class TypesLearn extends Activity {
 
 	    return true;
 	  }
-
+	
 }

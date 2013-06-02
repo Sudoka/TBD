@@ -95,7 +95,7 @@
     <string name="title_activity_quiz_result1">QuizResult</string>
     <string name="title_activity_display_search">DisplaySearch</string>
     <string name="title_activity_view_wine">View Wine</string>
-    <string name="title_activity_pairing_quiz">PairingQuiz</string>
+    <string name="title_activity_food_pairings_quiz">FoodPairingsQuiz</string>
     <string name="title_activity_view_fav_wine">ViewFavWine</string>
     <string name="title_activity_view_wish_wine">ViewWishWine</string>
     <string name="button_more_information">More Information</string>

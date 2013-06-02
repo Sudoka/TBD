@@ -1,6 +1,8 @@
-package com.example.cs110;
+package com.example.cs110.controller.education;
 
-import com.example.cs110.controller.quiz.Quiz;
+import com.example.cs110.MainActivity;
+import com.example.cs110.R;
+import com.example.cs110.controller.pairing.Pairings;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -10,14 +12,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 
-public class HistoryLearn extends Activity {
+public class FoodPairingsLearn extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_history_learn);
+		setContentView(R.layout.activity_food_pairings_learn);
 	}
-
+	
 	public void goToQuiz(View view) {
 		Intent intent = new Intent(this, Quiz.class);
 		startActivity(intent);
@@ -28,12 +30,17 @@ public class HistoryLearn extends Activity {
 		startActivity(intent);
 	}
 	
+	public void PairingsList(View view) {
+		Intent intent = new Intent(this, Pairings.class);
+		startActivity(intent);
+	}
+	
 	public void loadUrl(View view)
 	{
 		WebView webview = new WebView(this);
-		webview.loadUrl("http://en.wikipedia.org/wiki/History_of_wine");
+		webview.loadUrl("https://en.wikipedia.org/wiki/Food_%26_Wine");
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

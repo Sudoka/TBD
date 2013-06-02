@@ -45,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/historyButton"
-            android:onClick="goPairingsQuiz"
+            android:onClick="goFoodPairingsQuiz"
             android:text="@string/pairings" />
     
     <Button

@@ -1,26 +1,43 @@
-package com.example.cs110;
+package com.example.cs110.controller.education;
 
-import com.example.cs110.controller.quiz.Quiz;
-
+import com.example.cs110.MainActivity;
+import com.example.cs110.R;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 
-public class Education extends Activity {
+public class TypesLearn extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_education);
+		setContentView(R.layout.activity_types_learn);
+	}
+	
+	public void goToQuiz(View view) {
+		Intent intent = new Intent(this, Quiz.class);
+		startActivity(intent);
+	}
+	
+	public void goToEducation(View view) {
+		Intent intent = new Intent(this, Education.class);
+		startActivity(intent);
+	}
+	
+	public void loadUrl(View view)
+	{
+		WebView webview = new WebView(this);
+		webview.loadUrl("http://en.wikipedia.org/wiki/Varietal");
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.education, menu);
+		getMenuInflater().inflate(R.menu.home, menu);
 		return true;
 	}
 	
@@ -28,7 +45,7 @@ public class Education extends Activity {
 	  public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
 	    case R.id.action_back:
-	      Intent intent=new Intent(this, MainActivity.class);
+	      Intent intent=new Intent(this, Learn.class);
 	      startActivity(intent);
 	      break;
 	    case R.id.action_home:
@@ -42,16 +59,5 @@ public class Education extends Activity {
 
 	    return true;
 	  }
-	
-	public void goLearn(View view){
-    	Intent intent=new Intent (this, Learn.class);
-    	startActivity (intent);
-    }
-	
-	public void goQuiz(View view){
-		Intent intent = new Intent (this, Quiz.class);
-		startActivity (intent);
-	}
-	
-	
+
 }

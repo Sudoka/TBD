@@ -1,7 +1,6 @@
-package com.example.cs110.controller.quiz;
+package com.example.cs110.controller.education;
 
 import java.util.HashSet;
-import java.util.Locale;
 import java.util.Random;
 
 import com.example.cs110.R;

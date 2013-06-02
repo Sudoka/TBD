@@ -1,4 +1,4 @@
-package com.example.cs110.controller.quiz;
+package com.example.cs110.controller.education;
 
 import java.util.Random;
 

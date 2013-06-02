@@ -1,6 +1,5 @@
-package com.example.cs110.controller.quiz;
+package com.example.cs110.controller.education;
 
-import com.example.cs110.Education;
 import com.example.cs110.R;
 
 import android.os.Bundle;
@@ -15,7 +14,7 @@ public class QuizResult extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_quiz_result1);
+		setContentView(R.layout.activity_quiz_result);
 		
 		Intent intent = getIntent();
 	    String message = intent.getStringExtra("com.example.cs110.MESSAGE");
@@ -26,7 +25,7 @@ public class QuizResult extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.quiz_result1, menu);
+		getMenuInflater().inflate(R.menu.quiz_result, menu);
 		return true;
 	}
 	

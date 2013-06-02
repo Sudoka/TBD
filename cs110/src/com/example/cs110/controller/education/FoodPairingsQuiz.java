@@ -4,7 +4,7 @@
  */
 
 
-package com.example.cs110.controller.quiz;
+package com.example.cs110.controller.education;
 
 import java.util.Random;
 
@@ -20,7 +20,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class PairingQuiz extends Activity {
+public class FoodPairingsQuiz extends Activity {
 
 	static int number=0;
 	public static int score=0;
@@ -32,7 +32,7 @@ public class PairingQuiz extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_pairing_quiz);
+		setContentView(R.layout.activity_food_pairings_quiz);
 		
 		db = new DBAdapter(this);
 		db.open();
@@ -44,7 +44,7 @@ public class PairingQuiz extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.pairing_quiz, menu);
+		getMenuInflater().inflate(R.menu.food_pairings_quiz, menu);
 		return true;
 	}
 	

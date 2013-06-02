@@ -1,4 +1,4 @@
-package com.example.cs110.controller.quiz;
+package com.example.cs110.controller.education;
 
 import com.example.cs110.R;
 import android.os.Bundle;
@@ -43,8 +43,8 @@ public class Quiz extends Activity {
 		startActivity (intent);*/
 	}
 	
-	public void goPairingQuiz(View view) {
-		Intent intent = new Intent (this, PairingQuiz.class);
+	public void goFoodPairingsQuiz(View view) {
+		Intent intent = new Intent (this, FoodPairingsQuiz.class);
 		startActivity (intent);
 	}
 

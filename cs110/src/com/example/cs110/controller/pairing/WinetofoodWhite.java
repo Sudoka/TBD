@@ -3,11 +3,6 @@ package com.example.cs110.controller.pairing;
 
 import com.example.cs110.MainActivity;
 import com.example.cs110.R;
-import com.example.cs110.R.id;
-import com.example.cs110.R.layout;
-import com.example.cs110.R.menu;
-import com.example.cs110.R.string;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;

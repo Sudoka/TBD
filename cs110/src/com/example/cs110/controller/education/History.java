@@ -1,6 +1,8 @@
 
-package com.example.cs110;
+package com.example.cs110.controller.education;
 
+import com.example.cs110.MainActivity;
+import com.example.cs110.R;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
