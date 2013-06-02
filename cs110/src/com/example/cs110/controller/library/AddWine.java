@@ -9,6 +9,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.TextView;
 
 public class AddWine extends Activity {
 
@@ -20,7 +23,12 @@ public class AddWine extends Activity {
 
 	
 	public void addWine(View view){
-    	
+		EditText wine_name = (EditText) findViewById(R.id.editNumOfDrinks);
+    	EditText wine_region = (EditText) findViewById(R.id.editWeight);
+        EditText wine_description = (EditText) findViewById(R.id.editHours);
+        TextView result = (TextView) findViewById(R.id.result);
+        TextView warning= (TextView) findViewById(R.id.BACwarning);
+        RadioButton r=(RadioButton) findViewById(R.id.male);
     }
 	
 	@Override

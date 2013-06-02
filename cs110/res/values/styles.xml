@@ -19,9 +19,18 @@
     </style>
 
     <!-- style for the action bar backgrounds -->
-    <style name="MyActionBar" parent="@android:style/Widget.Holo.ActionBar">
-        <item name="android:background">@android:color/white</item>
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.ActionBar.Solid">
+        <item name="android:titleTextStyle">@style/MyActionBar.TitleText</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:subtitleTextStyle">@style/MyActionBar.SubTitleText</item>
     </style>
     
+    <style name="MyActionBar.TitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    
+    <style name="MyActionBar.SubTitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Subtitle">
+        <item name="android:textColor">@color/Gray</item>
+    </style>
     
 </resources>
