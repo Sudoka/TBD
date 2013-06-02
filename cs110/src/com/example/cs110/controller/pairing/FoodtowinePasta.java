@@ -1,4 +1,4 @@
-package com.example.cs110.pairing;
+package com.example.cs110.controller.pairing;
 
 
 import com.example.cs110.MainActivity;
@@ -18,15 +18,19 @@ import android.view.View;
 import android.widget.EditText;
 import android.support.v4.app.NavUtils;
 
-public class FoodtowineCheese extends Activity {
+public class FoodtowinePasta extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_foodtowine_cheese);
+		setContentView(R.layout.activity_foodtowine_pasta);
 		// Show the Up button in the action bar.
 		setupActionBar();
-		
+	}
+	public void pickTomato(View view){
+		EditText display = (EditText) findViewById(R.id.Pasta);
+
+  	display.setText(getResources().getString(R.string.tomato));
 
 	}
 	public void goHome(View view){
@@ -34,22 +38,10 @@ public class FoodtowineCheese extends Activity {
     	startActivity(intent);
 
 	}
-	public void pickHard(View view){
-		EditText display = (EditText) findViewById(R.id.Cheese);
+	public void pickWhite(View view){
+		EditText display = (EditText) findViewById(R.id.Pasta);
 
-  	display.setText(getResources().getString(R.string.hard));
-
-	}
-	public void pickSoft(View view){
-		EditText display = (EditText) findViewById(R.id.Cheese);
-
-  	display.setText(getResources().getString(R.string.soft));
-
-	}
-	public void pickBlue(View view){
-		EditText display = (EditText) findViewById(R.id.Cheese);
-
-  	display.setText(getResources().getString(R.string.bleu));
+  	display.setText(getResources().getString(R.string.cream));
 
 	}
 	

@@ -1,4 +1,7 @@
-package com.example.cs110;
+package com.example.cs110.controller.quiz;
+
+import com.example.cs110.Education;
+import com.example.cs110.R;
 
 import android.os.Bundle;
 import android.app.Activity;

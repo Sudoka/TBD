@@ -1,4 +1,4 @@
-package com.example.cs110.pairing;
+package com.example.cs110.controller.pairing;
 
 import com.example.cs110.R;
 import com.example.cs110.R.layout;

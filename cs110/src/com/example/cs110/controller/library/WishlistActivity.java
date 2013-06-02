@@ -1,17 +1,17 @@
-package com.example.cs110.library;
+package com.example.cs110.controller.library;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.example.cs110.DBAdapter;
 import com.example.cs110.Education;
 import com.example.cs110.MainActivity;
 import com.example.cs110.R;
 import com.example.cs110.R.id;
 import com.example.cs110.R.layout;
 import com.example.cs110.R.menu;
+import com.example.cs110.model.data.DBAdapter;
 
 
 import android.R.string;

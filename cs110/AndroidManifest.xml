@@ -3,7 +3,7 @@
     package="com.example.cs110"
     android:versionCode="1"
     android:versionName="1.0" >
-    
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-sdk
@@ -41,7 +41,7 @@
             android:label="@string/title_activity_tools" >
         </activity>
         <activity
-            android:name="com.example.cs110.pairing.Pairings"
+            android:name="com.example.cs110.controller.pairing.Pairings"
             android:label="@string/title_activity_pairings" >
         </activity>
         <activity
@@ -65,99 +65,99 @@
             android:label="@string/title_activity_test" >
         </activity>
         <activity
-            android:name="com.example.cs110.library.WineLibrariesActivity"
+            android:name="com.example.cs110.controller.library.WineLibrariesActivity"
             android:label="@string/title_activity_wine_libraries" >
         </activity>
         <activity
-            android:name="com.example.cs110.library.DigitalCellarActivity"
+            android:name="com.example.cs110.controller.library.DigitalCellarActivity"
             android:label="@string/title_activity_digital_cellar" >
         </activity>
         <activity
-            android:name="com.example.cs110.library.FavoritesActivity"
+            android:name="com.example.cs110.controller.library.FavoritesActivity"
             android:label="@string/title_activity_favorites" >
         </activity>
         <activity
-            android:name="com.example.cs110.library.WishlistActivity"
+            android:name="com.example.cs110.controller.library.WishlistActivity"
             android:label="@string/title_activity_wishlist" >
         </activity>
         <activity
-            android:name="com.example.cs110.library.SearchWinesActivity"
+            android:name="com.example.cs110.controller.library.SearchWinesActivity"
             android:label="@string/title_activity_search_wines" >
         </activity>
         <activity
-            android:name="com.example.cs110.pairing.FoodtowineMeat"
+            android:name="com.example.cs110.controller.pairing.FoodtowineMeat"
             android:label="@string/title_activity_foodtowine_meat"
-            android:parentActivityName="com.example.cs110.pairing.FoodtoWine" >
+            android:parentActivityName="com.example.cs110.controller.pairing.FoodtoWine" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.cs110.FoodtoWine" />
         </activity>
         <activity
-            android:name="com.example.cs110.pairing.FoodtoWine"
+            android:name="com.example.cs110.controller.pairing.FoodtoWine"
             android:label="@string/title_activity_foodto_wine" >
         </activity>
         <activity
-            android:name="com.example.cs110.pairing.FoodtowinePasta"
+            android:name="com.example.cs110.controller.pairing.FoodtowinePasta"
             android:label="@string/title_activity_foodtowine_pasta"
-            android:parentActivityName="com.example.cs110.pairing.FoodtoWine" >
+            android:parentActivityName="com.example.cs110.controller.pairing.FoodtoWine" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.cs110.pairing.FoodtoWine" />
         </activity>
         <activity
-            android:name="com.example.cs110.pairing.Foodtowine_Veggie"
+            android:name="com.example.cs110.controller.pairing.Foodtowine_Veggie"
             android:label="@string/title_activity_foodtowine__veggie" >
         </activity>
         <activity
-            android:name="com.example.cs110.pairing.FoodtowineCheese"
+            android:name="com.example.cs110.controller.pairing.FoodtowineCheese"
             android:label="@string/title_activity_foodtowine_cheese"
-            android:parentActivityName="com.example.cs110.pairing.FoodtowineMeat" >
+            android:parentActivityName="com.example.cs110.controller.pairing.FoodtowineMeat" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.cs110.pairing.FoodtowineMeat" />
         </activity>
         <activity
-            android:name="com.example.cs110.pairing.WinetoFood"
+            android:name="com.example.cs110.controller.pairing.WinetoFood"
             android:label="@string/title_activity_wineto_food" >
         </activity>
         <activity
-            android:name="com.example.cs110.pairing.WinetofoodWhite"
+            android:name="com.example.cs110.controller.pairing.WinetofoodWhite"
             android:label="@string/title_activity_winetofood_white" >
         </activity>
         <activity
-            android:name="com.example.cs110.pairing.WinetofoodRed"
+            android:name="com.example.cs110.controller.pairing.WinetofoodRed"
             android:label="@string/title_activity_winetofood_red" >
         </activity>
         <activity
-            android:name="com.example.cs110.pairing.WinetofoodOther"
+            android:name="com.example.cs110.controller.pairing.WinetofoodOther"
             android:label="@string/title_activity_winetofood_other" >
         </activity>
         <activity
-            android:name="com.example.cs110.TypesQuiz"
+            android:name="com.example.cs110.controller.quiz.TypesQuiz"
             android:label="@string/title_activity_types_quiz1" >
         </activity>
         <activity
-            android:name="com.example.cs110.QuizResult"
+            android:name="com.example.cs110.controller.quiz.QuizResult"
             android:label="@string/title_activity_quiz_result1" >
         </activity>
         <activity
-            android:name="com.example.cs110.library.DisplaySearch"
+            android:name="com.example.cs110.controller.library.DisplaySearch"
             android:label="@string/title_activity_display_search" >
         </activity>
         <activity
-            android:name="com.example.cs110.library.ViewWine"
+            android:name="com.example.cs110.controller.library.ViewWine"
             android:label="@string/title_activity_view_wine" >
         </activity>
         <activity
-            android:name="com.example.cs110.PairingQuiz"
+            android:name="com.example.cs110.controller.quiz.PairingQuiz"
             android:label="@string/title_activity_pairing_quiz" >
         </activity>
         <activity
-            android:name="com.example.cs110.library.ViewFavWine"
+            android:name="com.example.cs110.controller.library.ViewFavWine"
             android:label="@string/title_activity_view_fav_wine" >
         </activity>
         <activity
-            android:name="com.example.cs110.library.ViewWishWine"
+            android:name="com.example.cs110.controller.library.ViewWishWine"
             android:label="@string/title_activity_view_wish_wine" >
         </activity>
         //start kevin
@@ -190,8 +190,12 @@
             android:label="@string/title_activity_learn" >
         </activity>
         <activity
-            android:name="com.example.cs110.Quiz"
+            android:name="com.example.cs110.controller.quiz.Quiz"
             android:label="@string/title_activity_quiz" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.controller.quiz.RegionsQuiz"
+            android:label="@string/title_activity_regions_quiz" >
         </activity>
     </application>
 

@@ -1,4 +1,4 @@
-package com.example.cs110.pairing;
+package com.example.cs110.controller.pairing;
 
 
 import com.example.cs110.MainActivity;
@@ -7,6 +7,7 @@ import com.example.cs110.R.id;
 import com.example.cs110.R.layout;
 import com.example.cs110.R.menu;
 import com.example.cs110.R.string;
+
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -17,37 +18,15 @@ import android.view.View;
 import android.widget.EditText;
 import android.support.v4.app.NavUtils;
 
-public class FoodtowineMeat extends Activity {
+public class FoodtowineCheese extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_foodtowine_meat);
+		setContentView(R.layout.activity_foodtowine_cheese);
 		// Show the Up button in the action bar.
 		setupActionBar();
-	}
-	public void pickPork(View view){
-		EditText display = (EditText) findViewById(R.id.Meat);
-
-  	display.setText(getResources().getString(R.string.pork));
-
-	}
-	public void pickFish(View view){
-		EditText display = (EditText) findViewById(R.id.Meat);
-
-  	display.setText(getResources().getString(R.string.fish));
-
-	}
-	public void pickBeef(View view){
-		EditText display = (EditText) findViewById(R.id.Meat);
-
-  	display.setText(getResources().getString(R.string.beef));
-
-	}
-	public void pickChicken(View view){
-		EditText display = (EditText) findViewById(R.id.Meat);
-
-  	display.setText(getResources().getString(R.string.chicken));
+		
 
 	}
 	public void goHome(View view){
@@ -55,6 +34,25 @@ public class FoodtowineMeat extends Activity {
     	startActivity(intent);
 
 	}
+	public void pickHard(View view){
+		EditText display = (EditText) findViewById(R.id.Cheese);
+
+  	display.setText(getResources().getString(R.string.hard));
+
+	}
+	public void pickSoft(View view){
+		EditText display = (EditText) findViewById(R.id.Cheese);
+
+  	display.setText(getResources().getString(R.string.soft));
+
+	}
+	public void pickBlue(View view){
+		EditText display = (EditText) findViewById(R.id.Cheese);
+
+  	display.setText(getResources().getString(R.string.bleu));
+
+	}
+	
 	/**
 	 * Set up the {@link android.app.ActionBar}.
 	 */

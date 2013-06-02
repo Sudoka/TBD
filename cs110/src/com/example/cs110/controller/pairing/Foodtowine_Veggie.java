@@ -1,47 +1,37 @@
-package com.example.cs110.pairing;
+package com.example.cs110.controller.pairing;
 
 
-import com.example.cs110.MainActivity;
+
 import com.example.cs110.R;
 import com.example.cs110.R.id;
 import com.example.cs110.R.layout;
-import com.example.cs110.R.menu;
 import com.example.cs110.R.string;
-
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.support.v4.app.NavUtils;
 
-public class FoodtowinePasta extends Activity {
+public class Foodtowine_Veggie extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_foodtowine_pasta);
+		setContentView(R.layout.activity_foodtowine__veggie);
 		// Show the Up button in the action bar.
 		setupActionBar();
 	}
-	public void pickTomato(View view){
-		EditText display = (EditText) findViewById(R.id.Pasta);
-
-  	display.setText(getResources().getString(R.string.tomato));
-
+	public void pickGreen(View view){
+		EditText display = (EditText) findViewById(R.id.Veggie);
+  	display.setText(getResources().getString(R.string.green));
 	}
-	public void goHome(View view){
-		Intent intent=new Intent (this,MainActivity.class);
-    	startActivity(intent);
+	public void pickMush(View view){
+		EditText display = (EditText) findViewById(R.id.Veggie);
 
-	}
-	public void pickWhite(View view){
-		EditText display = (EditText) findViewById(R.id.Pasta);
-
-  	display.setText(getResources().getString(R.string.cream));
+  	display.setText(getResources().getString(R.string.mush));
 
 	}
 	
@@ -57,7 +47,7 @@ public class FoodtowinePasta extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.foodtowine_meat, menu);
+	//	getMenuInflater().inflate(R.menu.foodtowine__veggie, menu);
 		return true;
 	}
 

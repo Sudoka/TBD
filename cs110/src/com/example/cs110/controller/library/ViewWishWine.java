@@ -1,8 +1,8 @@
-package com.example.cs110.library;
+package com.example.cs110.controller.library;
 
-import com.example.cs110.DBAdapter;
 import com.example.cs110.MainActivity;
 import com.example.cs110.R;
+import com.example.cs110.model.data.DBAdapter;
 
 
 import android.os.Bundle;
@@ -16,7 +16,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class ViewWine extends Activity {
+public class ViewWishWine extends Activity {
 private int rowId;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +33,12 @@ private int rowId;
 	    String id = intent.getStringExtra("rowId");
 	    rowId = Integer.parseInt(id);
 	    Cursor c = db.getWine(rowId);
-	    
-        Typeface font = Typeface.createFromAsset(getAssets(), "bless.otf");
+		
 		EditText name = (EditText) findViewById(R.id.winename);
 		EditText description = (EditText) findViewById(R.id.winedsc);
+		Typeface font = Typeface.createFromAsset(getAssets(), "bless.otf");
 		name.setTypeface(font);
+		
         name.setText(c.getString(1));
         description.setText(c.getString(4));
        
@@ -122,7 +123,7 @@ private int rowId;
 	  public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
 	    case R.id.action_back:
-	      Intent intent=new Intent(this, SearchWinesActivity.class);
+	      Intent intent=new Intent(this, WishlistActivity.class);
 	      startActivity(intent);
 	      break;
 	    case R.id.action_home:

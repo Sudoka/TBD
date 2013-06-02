@@ -1,4 +1,4 @@
-package com.example.cs110.pairing;
+package com.example.cs110.controller.pairing;
 
 
 import com.example.cs110.MainActivity;
@@ -17,25 +17,19 @@ import android.view.View;
 import android.widget.EditText;
 import android.support.v4.app.NavUtils;
 
-public class WinetofoodWhite extends Activity {
+public class WinetofoodOther extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_winetofood_white);
+		setContentView(R.layout.activity_winetofood_other);
 		// Show the Up button in the action bar.
 		setupActionBar();
 	}
-	public void pickChardonnay(View view){
-		EditText display = (EditText) findViewById(R.id.White);
+	public void pickPink(View view){
+		EditText display = (EditText) findViewById(R.id.Other);
 
-  	display.setText(getResources().getString(R.string.chardonnay));
-
-	}
-	public void pickSauvBlanc(View view){
-		EditText display = (EditText) findViewById(R.id.White);
-
-  	display.setText(getResources().getString(R.string.sauvignon));
+  	display.setText(getResources().getString(R.string.pink));
 
 	}
 	public void goHome(View view){
@@ -43,24 +37,31 @@ public class WinetofoodWhite extends Activity {
     	startActivity(intent);
 
 	}
-	public void pickChenin(View view){
-		EditText display = (EditText) findViewById(R.id.White);
+	public void pickBrut(View view){
+		EditText display = (EditText) findViewById(R.id.Other);
 
-  	display.setText(getResources().getString(R.string.chenin));
-
-	}
-	public void pickGewur(View view){
-		EditText display = (EditText) findViewById(R.id.White);
-
-  	display.setText(getResources().getString(R.string.gewur));
+  	display.setText(getResources().getString(R.string.brut));
 
 	}
-	public void pickRiesling(View view){
-		EditText display = (EditText) findViewById(R.id.White);
+	public void pickBlancdeNoir(View view){
+		EditText display = (EditText) findViewById(R.id.Other);
 
-  	display.setText(getResources().getString(R.string.riesling));
+  	display.setText(getResources().getString(R.string.blancdenoir));
 
 	}
+	public void pickBlancdeBlanc(View view){
+		EditText display = (EditText) findViewById(R.id.Other);
+
+  	display.setText(getResources().getString(R.string.blancdeblanc));
+
+	}
+	public void pickPinot(View view){
+		EditText display = (EditText) findViewById(R.id.Other);
+
+  	display.setText(getResources().getString(R.string.pinot));
+
+	}
+	
 	/**
 	 * Set up the {@link android.app.ActionBar}.
 	 */

@@ -1,6 +1,9 @@
-package com.example.cs110;
+package com.example.cs110.controller.quiz;
 
 import java.util.Random;
+
+import com.example.cs110.R;
+import com.example.cs110.model.data.DBAdapter;
 
 import android.os.Bundle;
 import android.app.Activity;

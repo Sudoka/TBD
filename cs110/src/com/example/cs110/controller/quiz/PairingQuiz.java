@@ -4,11 +4,12 @@
  */
 
 
-package com.example.cs110;
+package com.example.cs110.controller.quiz;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
+
+import com.example.cs110.R;
+import com.example.cs110.model.data.DBAdapter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -62,7 +63,6 @@ public class PairingQuiz extends Activity {
 	private void nextQuestion()
 	{
 		TextView scoreDisplay=(TextView) findViewById(R.id.scoreDisplay);
-		TextView wineDisplay=(TextView) findViewById(R.id.wineDisplay);
 		TextView questionDisplay=(TextView) findViewById(R.id.questionDisplay);
 		
 		if (9 < number)
@@ -110,32 +110,16 @@ public class PairingQuiz extends Activity {
     	}
     	
 		nextQuestion();
-		
-		/*switch(view.getId())
-    	{
-    	case R.id.whiteButton://if white,
-    		score++;
-    		break;
-    	case R.id.redButton://if red,
-    		score++;
-    		break;
-    	default:
-    		break;
-    	}*/
-    	
 	}
 	
 	public String getQuestionText(int number)
 	{
-		TextView scoreDisplay=(TextView) findViewById(R.id.scoreDisplay);
 		TextView wineDisplay=(TextView) findViewById(R.id.wineDisplay);
-		TextView questionDisplay=(TextView) findViewById(R.id.questionDisplay);
 		
 		Button b1=(Button) findViewById(R.id.Button1);
 		Button b2=(Button) findViewById(R.id.Button2);
 		Button b3=(Button) findViewById(R.id.Button3);
 		Button b4=(Button) findViewById(R.id.Button4);
-		
 		
 		String answer;
 		switch(number)

@@ -1,4 +1,4 @@
-package com.example.cs110.pairing;
+package com.example.cs110.controller.pairing;
 
 
 import com.example.cs110.MainActivity;
@@ -17,45 +17,44 @@ import android.view.View;
 import android.widget.EditText;
 import android.support.v4.app.NavUtils;
 
-public class WinetofoodRed extends Activity {
+public class FoodtowineMeat extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_winetofood_red);
+		setContentView(R.layout.activity_foodtowine_meat);
 		// Show the Up button in the action bar.
 		setupActionBar();
+	}
+	public void pickPork(View view){
+		EditText display = (EditText) findViewById(R.id.Meat);
+
+  	display.setText(getResources().getString(R.string.pork));
+
+	}
+	public void pickFish(View view){
+		EditText display = (EditText) findViewById(R.id.Meat);
+
+  	display.setText(getResources().getString(R.string.fish));
+
+	}
+	public void pickBeef(View view){
+		EditText display = (EditText) findViewById(R.id.Meat);
+
+  	display.setText(getResources().getString(R.string.beef));
+
+	}
+	public void pickChicken(View view){
+		EditText display = (EditText) findViewById(R.id.Meat);
+
+  	display.setText(getResources().getString(R.string.chicken));
+
 	}
 	public void goHome(View view){
 		Intent intent=new Intent (this,MainActivity.class);
     	startActivity(intent);
 
 	}
-	public void pickCabernet(View view){
-		EditText display = (EditText) findViewById(R.id.Red);
-
-  	display.setText(getResources().getString(R.string.cabernet));
-
-	}
-	public void pickMerlot(View view){
-		EditText display = (EditText) findViewById(R.id.Red);
-
-  	display.setText(getResources().getString(R.string.merlot));
-
-	}
-	public void pickZinfandel(View view){
-		EditText display = (EditText) findViewById(R.id.Red);
-
-  	display.setText(getResources().getString(R.string.zinfandel));
-
-	}
-	public void pickPinot(View view){
-		EditText display = (EditText) findViewById(R.id.Red);
-
-  	display.setText(getResources().getString(R.string.pinot));
-
-	}
-	
 	/**
 	 * Set up the {@link android.app.ActionBar}.
 	 */

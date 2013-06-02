@@ -1,4 +1,4 @@
-package com.example.cs110.pairing;
+package com.example.cs110.controller.pairing;
 
 
 import com.example.cs110.MainActivity;
@@ -17,46 +17,40 @@ import android.view.View;
 import android.widget.EditText;
 import android.support.v4.app.NavUtils;
 
-public class WinetofoodOther extends Activity {
+public class WinetofoodRed extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_winetofood_other);
+		setContentView(R.layout.activity_winetofood_red);
 		// Show the Up button in the action bar.
 		setupActionBar();
-	}
-	public void pickPink(View view){
-		EditText display = (EditText) findViewById(R.id.Other);
-
-  	display.setText(getResources().getString(R.string.pink));
-
 	}
 	public void goHome(View view){
 		Intent intent=new Intent (this,MainActivity.class);
     	startActivity(intent);
 
 	}
-	public void pickBrut(View view){
-		EditText display = (EditText) findViewById(R.id.Other);
+	public void pickCabernet(View view){
+		EditText display = (EditText) findViewById(R.id.Red);
 
-  	display.setText(getResources().getString(R.string.brut));
-
-	}
-	public void pickBlancdeNoir(View view){
-		EditText display = (EditText) findViewById(R.id.Other);
-
-  	display.setText(getResources().getString(R.string.blancdenoir));
+  	display.setText(getResources().getString(R.string.cabernet));
 
 	}
-	public void pickBlancdeBlanc(View view){
-		EditText display = (EditText) findViewById(R.id.Other);
+	public void pickMerlot(View view){
+		EditText display = (EditText) findViewById(R.id.Red);
 
-  	display.setText(getResources().getString(R.string.blancdeblanc));
+  	display.setText(getResources().getString(R.string.merlot));
+
+	}
+	public void pickZinfandel(View view){
+		EditText display = (EditText) findViewById(R.id.Red);
+
+  	display.setText(getResources().getString(R.string.zinfandel));
 
 	}
 	public void pickPinot(View view){
-		EditText display = (EditText) findViewById(R.id.Other);
+		EditText display = (EditText) findViewById(R.id.Red);
 
   	display.setText(getResources().getString(R.string.pinot));
 

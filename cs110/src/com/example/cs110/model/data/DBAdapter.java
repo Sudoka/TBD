@@ -1,4 +1,4 @@
-package com.example.cs110;
+package com.example.cs110.model.data;
 
 import android.content.ContentValues;
 import android.content.Context;

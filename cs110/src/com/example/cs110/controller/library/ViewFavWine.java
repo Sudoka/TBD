@@ -1,8 +1,8 @@
-package com.example.cs110.library;
+package com.example.cs110.controller.library;
 
-import com.example.cs110.DBAdapter;
 import com.example.cs110.MainActivity;
 import com.example.cs110.R;
+import com.example.cs110.model.data.DBAdapter;
 
 
 import android.os.Bundle;
@@ -16,7 +16,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class ViewWishWine extends Activity {
+public class ViewFavWine extends Activity {
 private int rowId;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -123,7 +123,7 @@ private int rowId;
 	  public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
 	    case R.id.action_back:
-	      Intent intent=new Intent(this, WishlistActivity.class);
+	      Intent intent=new Intent(this, FavoritesActivity.class);
 	      startActivity(intent);
 	      break;
 	    case R.id.action_home:

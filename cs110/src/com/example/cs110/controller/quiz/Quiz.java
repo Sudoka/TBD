@@ -1,5 +1,6 @@
-package com.example.cs110;
+package com.example.cs110.controller.quiz;
 
+import com.example.cs110.R;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -21,16 +22,16 @@ public class Quiz extends Activity {
 	}
 	
 	public void goRegionsQuiz(View view){
-    	/*Intent intent=new Intent (this, RegionsQuiz.class);
-    	startActivity (intent);*/
+    	Intent intent=new Intent (this, RegionsQuiz.class);
+    	startActivity (intent);
     }
 	public void goHistoryQuiz(View view){
     	/*Intent intent=new Intent (this, HistoryQuiz.class);
     	startActivity (intent);*/
     }
 	public void goTypesQuiz(View view){
-    	/*Intent intent=new Intent (this, TypesQuiz.class);
-    	startActivity (intent);*/
+    	Intent intent=new Intent (this, TypesQuiz.class);
+    	startActivity (intent);
     }
 	public void goPricingQuiz(View view){
     	/*Intent intent=new Intent(this, PricingQuiz.class);
@@ -40,6 +41,11 @@ public class Quiz extends Activity {
 	public void goProductionQuiz(View view){
 		/*Intent intent = new Intent (this, ProductionQuiz.class);
 		startActivity (intent);*/
+	}
+	
+	public void goPairingQuiz(View view) {
+		Intent intent = new Intent (this, PairingQuiz.class);
+		startActivity (intent);
 	}
 
 	@Override

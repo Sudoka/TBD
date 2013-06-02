@@ -1,6 +1,7 @@
 package com.example.cs110;
 
-import com.example.cs110.pairing.Pairings;
+import com.example.cs110.controller.pairing.Pairings;
+import com.example.cs110.controller.quiz.Quiz;
 
 import android.os.Bundle;
 import android.app.Activity;
