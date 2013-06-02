@@ -10,10 +10,10 @@
     tools:context=".WinePair" >
 
     <Button
-        android:id="@+id/Button01"
+        android:id="@+id/ButtonRemoveFav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
+        android:layout_alignLeft="@+id/buttonAddFav"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="146dp"
         android:background="@color/Tan"
@@ -25,10 +25,10 @@
         android:typeface="serif" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/buttonAddFav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/Button01"
+        android:layout_above="@+id/ButtonRemoveFav"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="62dp"
         android:background="@color/Tan"

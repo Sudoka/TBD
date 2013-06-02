@@ -3,34 +3,72 @@ package com.example.cs110.library;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import com.example.cs110.DBAdapter;
+import com.example.cs110.Education;
+import com.example.cs110.MainActivity;
 import com.example.cs110.R;
-import android.app.Activity;
-import android.content.Context;
+import com.example.cs110.R.id;
+import com.example.cs110.R.layout;
+import com.example.cs110.R.menu;
+
+
+import android.R.string;
 import android.os.Bundle;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.database.Cursor;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
-import android.view.View;
+import android.widget.Toast;
 
 public class FavoritesActivity extends Activity {
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_favorites);
+	private String search_term;
+	private int call_display;
+	DBAdapter db;
+	private ArrayList<Integer> keys_list;
+    
 
-    final ListView listview = (ListView) findViewById(R.id.listviewMy);
-    String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
-        "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-        "Linux", "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux",
-        "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
-        "Android", "iPhone", "WindowsMobile" };
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_search_wines);
+		  keys_list = new ArrayList<Integer>();
+		  // keys_list.clear();
+		    ArrayList<String> list;
+		    list = new ArrayList<String>();
+		    db = new DBAdapter(this);
+		    db.open();
+		    Cursor c = db.getAllWines();
+		    c.moveToFirst();
+		    while(c.moveToNext())
+		    {
+		    if(c.getInt(5)==1){
+		    	list.add(c.getString(1)+" - "+c.getString(2));
+				keys_list.add(c.getInt(0));
+		    	}
+		    }
+		    displayList(list);
+		    
+		    
+		    
+		    db.close();
+	}
+	
+public void displayList(final ArrayList<String> list) {
+	 final ListView listview = (ListView) findViewById(R.id.listviewMy);
 
-    final ArrayList<String> list = new ArrayList<String>();
-    for (int i = 0; i < values.length; ++i) {
-      list.add(values[i]);
-    }
     final StableArrayAdapter adapter = new StableArrayAdapter(this, android.R.layout.simple_list_item_1, list);
     listview.setAdapter(adapter);
 
@@ -39,13 +77,17 @@ public class FavoritesActivity extends Activity {
       @Override
       public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
         final String item = (String) parent.getItemAtPosition(position);
-        view.animate().setDuration(2000).alpha(0)
+        view.animate().setDuration(1000).alpha(0)
             .withEndAction(new Runnable() {
               @Override
               public void run() {
-                list.remove(item);
+            	  Intent view_wine = new Intent(FavoritesActivity.this, ViewFavWine.class);
+                view_wine.putExtra("rowId", keys_list.get(list.indexOf(item))+"");
+                
+                startActivity (view_wine);
+            	/*  list.remove(item);
                 adapter.notifyDataSetChanged();
-                view.setAlpha(1);
+                view.setAlpha(1);*/
               }
             });
       }
@@ -53,7 +95,7 @@ public class FavoritesActivity extends Activity {
     });
   }
 
-  public class StableArrayAdapter extends ArrayAdapter<String> {
+  private class StableArrayAdapter extends ArrayAdapter<String> {
 
     HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
 
@@ -76,6 +118,95 @@ public class FavoritesActivity extends Activity {
       return true;
     }
 
-  }
+}
 
-} 
+
+	
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.search_wines, menu);
+		return true;
+	}
+
+	@Override
+	  public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	    case R.id.action_back:
+	      Intent intent=new Intent(this, WineLibrariesActivity.class);
+	      startActivity(intent);
+	      break;
+	    case R.id.action_home:
+		  Intent intent2=new Intent(this, MainActivity.class);
+		  startActivity(intent2);
+	      break;
+	    case R.id.action_search_wines:
+	    	searchWineDialog();
+   		 //Toast.makeText(this, "FART", Toast.LENGTH_LONG).show();
+	    	
+		    break;
+
+	    default:
+	      break;
+	    }
+
+	    return true;
+	  }
+	String search_input;
+	private void searchWineDialog() {
+		// TODO Auto-generated method stub
+		call_display = 0;
+		AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+		alert.setTitle("Search for Wines");
+		alert.setMessage("Enter varietal, color, or region");
+
+		// Set an EditText view to get user input 
+		final EditText input = new EditText(this);
+		alert.setView(input);
+
+		alert.setPositiveButton("Search", new DialogInterface.OnClickListener() {
+		public void onClick(DialogInterface dialog, int whichButton) {
+		    
+		  search_input = input.getText().toString();
+		  displayList(SearchResults1(search_input));
+		  }
+		});
+
+		alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+		  public void onClick(DialogInterface dialog, int whichButton) {
+		    // Canceled.
+				
+		  }
+		});
+		
+		alert.show();
+		
+	}
+
+
+public ArrayList<String> SearchResults1(String searched){
+	keys_list.clear();
+	ArrayList<String> search_list = new ArrayList<String>();
+	db = new DBAdapter(this);
+	db.open();
+	Cursor c = db.getAllWines();
+	c.moveToFirst();
+	while(c.moveToNext()) {
+		for(int i = 1; i <=3; i++) {
+			String s2 = c.getString(i).toLowerCase();
+/*			Toast.makeText(this, 
+	                "SEARCHED:"+searched+"S2"+s2,
+	                Toast.LENGTH_LONG).show();*/
+			if((c.getInt(5)==1)&&s2.contains(searched.toLowerCase())) {
+				search_list.add(c.getString(1)+" - "+c.getString(2));
+				keys_list.add(c.getInt(0));
+			}
+		}
+	}
+	db.close();
+	return search_list;
+
+	}
+}

@@ -19,15 +19,15 @@ public class MyListAdapter
     public static final String KEY_WISH = "wish";
     private static final String TAG = "DBAdapter";
     
-    private static final String DATABASE_NAME = "wine";
-    private static final String DATABASE_TABLE = "wines";
+    private static final String DATABASE_NAME = "list";
+    private static final String DATABASE_TABLE = "lists";
     private static final int DATABASE_VERSION = 1;
 
     private static final String DATABASE_CREATE =
-        "create table wines (_id integer primary key autoincrement, "
+        "create table lists (_id integer primary key autoincrement, "
         + "name text not null, type text not null, " 
         + "origin text not null, description text not null, "
-        + "favorites text not null, wish text not null);";
+        + "favorites integer not null, wish integer not null);";
         
     private final Context context; 
     
@@ -60,7 +60,7 @@ public class MyListAdapter
             Log.w(TAG, "Upgrading database from version " + oldVersion 
                     + " to "
                     + newVersion + ", which will destroy all old data");
-            db.execSQL("DROP TABLE IF EXISTS wines");
+            db.execSQL("DROP TABLE IF EXISTS lists");
             onCreate(db);
         }
     }    
@@ -119,7 +119,7 @@ public class MyListAdapter
                 null, 
                 null, 
                 null, 
-                null);
+                KEY_NAME + " ASC");
     }
 
     //retrieves a particular wine
@@ -160,5 +160,17 @@ public class MyListAdapter
         args.put(KEY_WISH, wish);
         return db.update(DATABASE_TABLE, args, 
                          KEY_ROWID + "=" + rowId, null) > 0;
+    }
+    
+    //Add current wine to favorites
+    public long addToList(Cursor f, int favorites, int myWish){
+    	ContentValues initialValues = new ContentValues();
+        initialValues.put(KEY_NAME, f.getString(1));
+        initialValues.put(KEY_TYPE, f.getString(2));
+        initialValues.put(KEY_ORIGIN, f.getString(3));
+        initialValues.put(KEY_DESCRIPTION, f.getString(4));
+        initialValues.put(KEY_FAVORITES, favorites);
+        initialValues.put(KEY_WISH, myWish);
+        return db.insert(DATABASE_TABLE, null, initialValues);
     }
 }

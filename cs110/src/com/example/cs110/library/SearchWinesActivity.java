@@ -12,7 +12,6 @@ import com.example.cs110.R;
 import com.example.cs110.R.id;
 import com.example.cs110.R.layout;
 import com.example.cs110.R.menu;
-import com.example.cs110.library.FavoritesActivity.StableArrayAdapter;
 
 import android.R.string;
 import android.os.Bundle;
@@ -75,12 +74,12 @@ public void displayList(final ArrayList<String> list) {
       @Override
       public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
         final String item = (String) parent.getItemAtPosition(position);
-        view.animate().setDuration(2000).alpha(0)
+        view.animate().setDuration(1000).alpha(0)
             .withEndAction(new Runnable() {
               @Override
               public void run() {
             	  Intent view_wine = new Intent(SearchWinesActivity.this, ViewWine.class);
-                view_wine.putExtra("rowId", keys_list.get(list.indexOf(item)));
+                view_wine.putExtra("rowId", keys_list.get(list.indexOf(item))+"");
                 
                 startActivity (view_wine);
             	/*  list.remove(item);

@@ -51,7 +51,7 @@
     <string name="title_activity_digital_cellar">DigitalCellarActivity</string>
     <string name="title_activity_favorites">FavoritesActivity</string>
     <string name="title_activity_wishlist">WishlistActivity</string>
-    <string name="title_activity_search_wines">SearchWinesActivity</string>
+    <string name="title_activity_search_wines">Search</string>
     <string name="tbd">TBD</string>
     <string name="title_activity_pair__meat">Find Wine</string>
     <string name="title_section1">Section 1</string>
@@ -90,11 +90,13 @@
     <string name="title_activity_winetofood_white">Find Food</string>
     <string name="title_activity_winetofood_red">Find Food</string>
     <string name="title_activity_winetofood_other">Find Food</string>
-    <string name="title_activity_my_wines">MyWines</string>
+    <string name="title_activity_my_wines">My Wines</string>
     <string name="title_activity_types_quiz1">TypesQuiz</string>
     <string name="title_activity_quiz_result1">QuizResult</string>
     <string name="title_activity_display_search">DisplaySearch</string>
-    <string name="title_activity_view_wine">ViewWine</string>
+    <string name="title_activity_view_wine">View Wine</string>
     <string name="title_activity_pairing_quiz">PairingQuiz</string>
+    <string name="title_activity_view_fav_wine">ViewFavWine</string>
+    <string name="title_activity_view_wish_wine">ViewWishWine</string>
 
 </resources>

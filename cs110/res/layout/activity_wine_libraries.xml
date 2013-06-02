@@ -15,8 +15,9 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="15dp"
         android:layout_marginTop="35dp"
-        android:drawableTop="@drawable/digital_cellar"
-        android:text="@string/digitalcellar" />
+        android:drawableTop="@drawable/ic_addwine"
+        android:onClick="goAddWine"
+        android:text="Add a Wine" />
 
     <Button
         android:id="@+id/favorites_button"
@@ -25,7 +26,7 @@
         android:layout_alignBaseline="@+id/digital_cellar_button"
         android:layout_alignBottom="@+id/digital_cellar_button"
         android:layout_toRightOf="@+id/digital_cellar_button"
-        android:drawableTop="@drawable/favorites"
+        android:drawableTop="@drawable/ic_favorites"
         android:onClick="goFavorites"
         android:text="@string/favorites" />
 
@@ -36,9 +37,9 @@
         android:layout_below="@+id/favorites_button"
         android:layout_marginTop="21dp"
         android:layout_toRightOf="@+id/digital_cellar_button"
-        android:drawableTop="@drawable/search"
+        android:drawableTop="@drawable/ic_search"
         android:onClick="goSearchWines"
-        android:text="@string/search_wines" />
+        android:text="Search Wine" />
 
     <Button
         android:id="@+id/wishlist_button"
@@ -47,7 +48,7 @@
         android:layout_alignBaseline="@+id/search_wines_button"
         android:layout_alignBottom="@+id/search_wines_button"
         android:layout_alignLeft="@+id/digital_cellar_button"
-        android:drawableTop="@drawable/wishlist"
+        android:drawableTop="@drawable/ic_wishlist"
         android:onClick="goWishlist"
         android:text="@string/wishlist" />
 

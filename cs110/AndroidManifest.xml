@@ -145,10 +145,18 @@
         <activity
             android:name="com.example.cs110.library.ViewWine"
             android:label="@string/title_activity_view_wine" >
-            </activity>
+        </activity>
         <activity
             android:name="com.example.cs110.PairingQuiz"
             android:label="@string/title_activity_pairing_quiz" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.library.ViewFavWine"
+            android:label="@string/title_activity_view_fav_wine" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.library.ViewWishWine"
+            android:label="@string/title_activity_view_wish_wine" >
         </activity>
     </application>
 

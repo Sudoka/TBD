@@ -113,14 +113,14 @@ public class MainActivity extends Activity {
     //displays a wine
     public void displayWine(Cursor c)
     {
-        Toast.makeText(this, 
+        /*Toast.makeText(this, 
                 "id: " + c.getString(0) + "\n" +
                 "WINE NAME: " + c.getString(1) + "\n" +
                 "WINE TYPE: " + c.getString(2) + "\n" +
                 "WINE ORIGIN:  " + c.getString(3) + "\n" +
                 "Description: " + c.getString(4) + "\n" +
                 "COUNT: " + c.getCount(),
-                Toast.LENGTH_LONG).show();        
+                Toast.LENGTH_LONG).show();     */   
     } 
     
     //displays a user

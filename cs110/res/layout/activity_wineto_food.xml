@@ -37,7 +37,7 @@
         android:typeface="serif" />
 
     <Button
-        android:id="@+id/Button02"
+        android:id="@+id/ButtonRemoveWish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/ButtonWhite"

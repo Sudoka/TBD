@@ -15,7 +15,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class ViewWine extends Activity {
+public class ViewFavWine extends Activity {
 private int rowId;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -120,7 +120,7 @@ private int rowId;
 	  public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
 	    case R.id.action_back:
-	      Intent intent=new Intent(this, SearchWinesActivity.class);
+	      Intent intent=new Intent(this, FavoritesActivity.class);
 	      startActivity(intent);
 	      break;
 	    case R.id.action_home:
