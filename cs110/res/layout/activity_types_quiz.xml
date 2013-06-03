@@ -6,6 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/blank_blackboard"
     tools:context=".TypesQuiz" >
 
     <TextView
@@ -15,6 +16,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="65dp"
+        android:textColor="@color/AntiqueWhite"
         android:text="Score: 0" />
 
     <TextView
@@ -24,6 +26,7 @@
         android:layout_above="@+id/whiteButton"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="42dp"
+        android:textColor="@color/AntiqueWhite"
         android:text=""
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -34,6 +37,7 @@
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/questionDisplay"
         android:onClick="checkAnswer"
+        android:textColor="@color/AntiqueWhite"
         android:text="Red" />
 
     <Button
@@ -43,6 +47,7 @@
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/questionDisplay"
         android:onClick="checkAnswer"
+        android:textColor="@color/AntiqueWhite"
         android:text="White" />
 
     <TextView
@@ -52,6 +57,7 @@
         android:layout_above="@+id/wineDisplay"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="56dp"
+        android:textColor="@color/AntiqueWhite"
         android:text="Question: 1/10" />
 
 </RelativeLayout>

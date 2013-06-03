@@ -131,5 +131,6 @@
     <string name="title_activity_add_wine">AddWine</string>
     <string name="title_activity_history_quiz">HistoryQuiz</string>
     <string name="title_activity_production_quiz">ProductionQuiz</string>
+    <string name="title_activity_user_stats">UserStats</string>
 
 </resources>

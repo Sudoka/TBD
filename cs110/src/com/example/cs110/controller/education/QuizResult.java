@@ -2,6 +2,7 @@ package com.example.cs110.controller.education;
 
 import com.example.cs110.MainActivity;
 import com.example.cs110.R;
+import com.example.cs110.model.data.UserAdapter;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -20,6 +21,9 @@ public class QuizResult extends Activity {
 		
 		Intent intent = getIntent();
 	    String message = intent.getStringExtra("com.example.cs110.MESSAGE");
+	    
+	    UserAdapter u=new UserAdapter(this);
+	    
 		TextView scoreView=(TextView) findViewById(R.id.scoreDisplay);
 	    scoreView.setText(message);
 	}

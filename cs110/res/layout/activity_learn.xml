@@ -6,64 +6,81 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/old_book_bindings"
     tools:context=".Learn" >
-    
-    <TextView
-        android:id="@+id/education_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:gravity="center"
-        android:hint="@string/learn_text"
-        android:textSize="30sp" />
-    
-    <Button
-            android:id="@+id/etiquetteButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/education_text"
-            android:onClick="goEtiquetteLearn"
-            android:text="@string/Etiquette" />
-        
-        <Button
-            android:id="@+id/regionsButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/etiquetteButton"
-            android:onClick="goRegionsLearn"
-            android:text="@string/Regions" />
-   
-        <Button
-            android:id="@+id/typesButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/regionsButton"
-            android:onClick="goTypesLearn"
-            android:text="@string/Types" />
-        
-        <Button
-            android:id="@+id/productionButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/typesButton"
-            android:onClick="goProductionLearn"
-            android:text="@string/Production" />
-        
-        <Button
-            android:id="@+id/pairingsButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/productionButton"
-            android:onClick="goFoodPairingsLearn"
-            android:text="@string/pairings" />
-    
+
     <Button
         android:id="@+id/historyButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/pairingsButton"
+        android:layout_alignLeft="@+id/pairingsButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
         android:onClick="goHistoryLearn"
-        android:text="@string/history" />
+        android:text="@string/history"
+        android:textColor="@color/Gold" />
 
+    <Button
+        android:id="@+id/pairingsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/historyButton"
+        android:layout_alignLeft="@+id/productionButton"
+        android:onClick="goFoodPairingsLearn"
+        android:text="@string/pairings"
+        android:textColor="@color/Gold" />
+
+    <Button
+        android:id="@+id/productionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pairingsButton"
+        android:layout_alignLeft="@+id/typesButton"
+        android:onClick="goProductionLearn"
+        android:text="@string/Production"
+        android:textColor="@color/Gold" />
+
+    <Button
+        android:id="@+id/typesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/productionButton"
+        android:layout_alignLeft="@+id/regionsButton"
+        android:onClick="goTypesLearn"
+        android:text="@string/Types"
+        android:textColor="@color/Gold" />
+
+    <Button
+        android:id="@+id/regionsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/typesButton"
+        android:layout_alignLeft="@+id/etiquetteButton"
+        android:onClick="goRegionsLearn"
+        android:text="@string/Regions"
+        android:textColor="@color/Gold" />
+
+    <Button
+        android:id="@+id/etiquetteButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/regionsButton"
+        android:layout_alignLeft="@+id/education_text"
+        android:onClick="goEtiquetteLearn"
+        android:text="@string/Etiquette"
+        android:textColor="@color/Gold" />
+
+    <TextView
+        android:id="@+id/education_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etiquetteButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:hint="@string/learn_text"
+        android:textColor="@color/Gold"
+        android:textColorHint="@color/Gold"
+        android:textSize="30sp" />
 
 </RelativeLayout>

@@ -41,6 +41,7 @@ public class EtiquetteQuiz extends Activity {
 		c = db.getAllWines();
         getRandomWine();
         nextQuestion();
+        number = 0;
 	}
 
 	@Override
@@ -91,6 +92,7 @@ public class EtiquetteQuiz extends Activity {
 			Intent intent=new Intent (this, QuizResult.class);
 	    	String message=scoreDisplay.getText().toString();
 	    	intent.putExtra(SCORE_MESSAGE,message);
+	    	number = score = 0;
 	    	startActivity (intent);
 		}
 		else
@@ -131,9 +133,13 @@ public class EtiquetteQuiz extends Activity {
 		TextView wineDisplay=(TextView) findViewById(R.id.wineDisplay);
 		
 		Button b1=(Button) findViewById(R.id.Button1);
+		b1.setAlpha(200);
 		Button b2=(Button) findViewById(R.id.Button2);
+		b2.setAlpha(200);
 		Button b3=(Button) findViewById(R.id.Button3);
+		b3.setAlpha(200);
 		Button b4=(Button) findViewById(R.id.Button4);
+		b4.setAlpha(200);
 		
 		String answer;
 		switch(number)

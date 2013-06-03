@@ -3,6 +3,7 @@ package com.example.cs110;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
@@ -68,30 +69,48 @@ public class BAC extends Activity {
     	boolean male=r.isChecked();
 
     	//calculates BAC
-    	
-    	int d=Integer.parseInt(drinks.getText().toString());
-    	int w=Integer.parseInt(weight.getText().toString());
-    	int h=Integer.parseInt(hours.getText().toString());
-    	
+    	int d,w,h;
+    	try{
+    		d=Integer.parseInt(drinks.getText().toString());
+    	}
+    	catch(Exception e)
+    	{
+    		d=0;
+    	}
+    	try{
+    		w=Integer.parseInt(weight.getText().toString());
+    	}
+    	catch (Exception e)
+    	{
+    		w=0;
+    	}
+    	try{
+    		h=Integer.parseInt(hours.getText().toString());
+    	}
+    	catch (Exception e)
+    	{
+    		h=0;
+    	}
     	double fullBAC = calculateBAC(w,d,h,male);
     	String BACstring=String.format("%.3g%n", fullBAC);
+    	if (w==0){BACstring="0.00";}
     	result.setText(BACstring);
     	//TODO fix the warning system
-    	if (fullBAC<.08)
+    	if (fullBAC>.08)
     	{
     		warning.setText("DO NOT DRIVE");
-    		warning.setTextColor(0xFF0000);
+    		warning.setTextColor(Color.RED);
     		return;
     	}
-    	else if (fullBAC>0)
+    	else if (fullBAC>0.01)
     	{
     		warning.setText("Impaired");
-    		warning.setTextColor(0xFFFF00);
+    		warning.setTextColor(Color.YELLOW);
     	}
     	else
     	{
     		warning.setText("Sober");
-    		warning.setTextColor(0x00FF00);
+    		warning.setTextColor(Color.GREEN);
     	}
 
     }

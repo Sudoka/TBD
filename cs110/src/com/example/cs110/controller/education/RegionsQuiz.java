@@ -162,6 +162,7 @@ public class RegionsQuiz extends Activity {
 			Intent intent=new Intent (this, QuizResult.class);
 	    	String message=scoreDisplay.getText().toString();
 	    	intent.putExtra(SCORE_MESSAGE,message);
+	    	number = score = 0;
 	    	startActivity (intent);
 		}
 		else

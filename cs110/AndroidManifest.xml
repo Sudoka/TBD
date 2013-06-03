@@ -208,6 +208,10 @@
             android:name="com.example.cs110.controller.education.ProductionQuiz"
             android:label="@string/title_activity_production_quiz" >
         </activity>
+        <activity
+            android:name="com.example.cs110.UserStats"
+            android:label="@string/title_activity_user_stats" >
+        </activity>
     </application>
 
 </manifest>
