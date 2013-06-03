@@ -13,7 +13,6 @@ import com.example.cs110.R.menu;
 import com.example.cs110.controller.education.Education;
 import com.example.cs110.model.data.DBAdapter;
 
-
 import android.R.string;
 import android.os.Bundle;
 import android.app.Activity;
@@ -37,94 +36,94 @@ public class WishlistActivity extends Activity {
 	private int call_display;
 	DBAdapter db;
 	private ArrayList<Integer> keys_list;
-    
 
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_search_wines);
-		  keys_list = new ArrayList<Integer>();
-		  // keys_list.clear();
-		    ArrayList<String> list;
-		    list = new ArrayList<String>();
-		    db = new DBAdapter(this);
-		    db.open();
-		    Cursor c = db.getAllWines();
-		    c.moveToFirst();
-		    while(c.moveToNext())
-		    {
-		    	if(c.getInt(6)==1){
-		      list.add(c.getString(1)+" - "+c.getString(2));
-		      keys_list.add(c.getInt(0));
-		    	}
-		    }
-		    if(list.isEmpty()){
-		    list.add("YOUR LIST IS EMPTY FUCKER");
-		    }
-		    displayList(list);
-		    
-		    
-		    
-		    db.close();
+		keys_list = new ArrayList<Integer>();
+		// keys_list.clear();
+		ArrayList<String> list;
+		list = new ArrayList<String>();
+		db = new DBAdapter(this);
+		db.open();
+		Cursor c = db.getAllWines();
+		c.moveToFirst();
+		while (c.moveToNext()) {
+			if (c.getInt(6) == 1) {
+				list.add(c.getString(1) + " - " + c.getString(2));
+				keys_list.add(c.getInt(0));
+			}
+		}
+		if (list.isEmpty()) {
+			list.add("YOUR LIST IS EMPTY");
+		}
+		displayList(list);
+
+		db.close();
 	}
-	
-public void displayList(final ArrayList<String> list) {
-	 final ListView listview = (ListView) findViewById(R.id.listviewMy);
 
-    final StableArrayAdapter adapter = new StableArrayAdapter(this, android.R.layout.simple_list_item_1, list);
-    listview.setAdapter(adapter);
+	public void displayList(final ArrayList<String> list) {
+		final ListView listview = (ListView) findViewById(R.id.listviewMy);
 
-    listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+		final StableArrayAdapter adapter = new StableArrayAdapter(this,
+				android.R.layout.simple_list_item_1, list);
+		listview.setAdapter(adapter);
 
-      @Override
-      public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
-        final String item = (String) parent.getItemAtPosition(position);
-        view.animate().setDuration(1000).translationX(1000).withEndAction(new Runnable() {
-              @Override
-              public void run() {
-            	  Intent view_wine = new Intent(WishlistActivity.this, ViewWishWine.class);
-                view_wine.putExtra("rowId", keys_list.get(list.indexOf(item))+"");
-                if(!keys_list.isEmpty()){
-                startActivity (view_wine);
-                }
-            	/*  list.remove(item);
-                adapter.notifyDataSetChanged();
-                view.setAlpha(1);*/
-              }
-            });
-      }
+		listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-    });
-  }
+			@Override
+			public void onItemClick(AdapterView<?> parent, final View view,
+					int position, long id) {
+				final String item = (String) parent.getItemAtPosition(position);
+				view.animate().setDuration(1000).translationX(1000)
+						.withEndAction(new Runnable() {
+							@Override
+							public void run() {
+								Intent view_wine = new Intent(
+										WishlistActivity.this,
+										ViewWishWine.class);
+								view_wine.putExtra("rowId",
+										keys_list.get(list.indexOf(item)) + "");
+								if (!keys_list.isEmpty()) {
+									startActivity(view_wine);
+								}
+								/*
+								 * list.remove(item);
+								 * adapter.notifyDataSetChanged();
+								 * view.setAlpha(1);
+								 */
+							}
+						});
+			}
 
-  private class StableArrayAdapter extends ArrayAdapter<String> {
+		});
+	}
 
-    HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
+	private class StableArrayAdapter extends ArrayAdapter<String> {
 
-    public StableArrayAdapter(Context context, int textViewResourceId,
-        List<String> objects) {
-      super(context, textViewResourceId, objects);
-      for (int i = 0; i < objects.size(); ++i) {
-        mIdMap.put(objects.get(i), i);
-      }
-    }
+		HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
 
-    @Override
-    public long getItemId(int position) {
-      String item = getItem(position);
-      return mIdMap.get(item);
-    }
+		public StableArrayAdapter(Context context, int textViewResourceId,
+				List<String> objects) {
+			super(context, textViewResourceId, objects);
+			for (int i = 0; i < objects.size(); ++i) {
+				mIdMap.put(objects.get(i), i);
+			}
+		}
 
-    @Override
-    public boolean hasStableIds() {
-      return true;
-    }
+		@Override
+		public long getItemId(int position) {
+			String item = getItem(position);
+			return mIdMap.get(item);
+		}
 
-}
+		@Override
+		public boolean hasStableIds() {
+			return true;
+		}
 
-
-	
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -134,29 +133,31 @@ public void displayList(final ArrayList<String> list) {
 	}
 
 	@Override
-	  public boolean onOptionsItemSelected(MenuItem item) {
-	    switch (item.getItemId()) {
-	    case R.id.action_back:
-	      Intent intent=new Intent(this, WineLibrariesActivity.class);
-	      startActivity(intent);
-	      break;
-	    case R.id.action_home:
-		  Intent intent2=new Intent(this, MainActivity.class);
-		  startActivity(intent2);
-	      break;
-	    case R.id.action_search_wines:
-	    	searchWineDialog();
-   		 //Toast.makeText(this, "FART", Toast.LENGTH_LONG).show();
-	    	
-		    break;
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.action_back:
+			Intent intent = new Intent(this, WineLibrariesActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.action_home:
+			Intent intent2 = new Intent(this, MainActivity.class);
+			startActivity(intent2);
+			break;
+		case R.id.action_search_wines:
+			searchWineDialog();
+			// Toast.makeText(this, "FART", Toast.LENGTH_LONG).show();
 
-	    default:
-	      break;
-	    }
+			break;
 
-	    return true;
-	  }
+		default:
+			break;
+		}
+
+		return true;
+	}
+
 	String search_input;
+
 	private void searchWineDialog() {
 		// TODO Auto-generated method stub
 		call_display = 0;
@@ -165,51 +166,53 @@ public void displayList(final ArrayList<String> list) {
 		alert.setTitle("Search for Wines");
 		alert.setMessage("Enter varietal, color, or region");
 
-		// Set an EditText view to get user input 
+		// Set an EditText view to get user input
 		final EditText input = new EditText(this);
 		alert.setView(input);
 
-		alert.setPositiveButton("Search", new DialogInterface.OnClickListener() {
-		public void onClick(DialogInterface dialog, int whichButton) {
-		    
-		  search_input = input.getText().toString();
-		  displayList(SearchResults1(search_input));
-		  }
-		});
+		alert.setPositiveButton("Search",
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int whichButton) {
 
-		alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-		  public void onClick(DialogInterface dialog, int whichButton) {
-		    // Canceled.
-				
-		  }
-		});
-		
+						search_input = input.getText().toString();
+						displayList(SearchResults1(search_input));
+					}
+				});
+
+		alert.setNegativeButton("Cancel",
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int whichButton) {
+						// Canceled.
+
+					}
+				});
+
 		alert.show();
-		
+
 	}
 
-
-public ArrayList<String> SearchResults1(String searched){
-	keys_list.clear();
-	ArrayList<String> search_list = new ArrayList<String>();
-	db = new DBAdapter(this);
-	db.open();
-	Cursor c = db.getAllWines();
-	c.moveToFirst();
-	while(c.moveToNext()) {
-		for(int i = 1; i <=3; i++) {
-			String s2 = c.getString(i).toLowerCase();
-/*			Toast.makeText(this, 
-	                "SEARCHED:"+searched+"S2"+s2,
-	                Toast.LENGTH_LONG).show();*/
-			if(c.getInt(6)==1 && s2.contains(searched.toLowerCase())) {
-				search_list.add(c.getString(1)+" - "+c.getString(2));
-				keys_list.add(c.getInt(0));
+	public ArrayList<String> SearchResults1(String searched) {
+		keys_list.clear();
+		ArrayList<String> search_list = new ArrayList<String>();
+		db = new DBAdapter(this);
+		db.open();
+		Cursor c = db.getAllWines();
+		c.moveToFirst();
+		while (c.moveToNext()) {
+			for (int i = 1; i <= 3; i++) {
+				String s2 = c.getString(i).toLowerCase();
+				/*
+				 * Toast.makeText(this, "SEARCHED:"+searched+"S2"+s2,
+				 * Toast.LENGTH_LONG).show();
+				 */
+				if (c.getInt(6) == 1 && s2.contains(searched.toLowerCase())) {
+					search_list.add(c.getString(1) + " - " + c.getString(2));
+					keys_list.add(c.getInt(0));
+				}
 			}
 		}
-	}
-	db.close();
-	return search_list;
+		db.close();
+		return search_list;
 
 	}
 }

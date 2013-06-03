@@ -10,6 +10,18 @@
     tools:context=".Tools" >
 
     <!-- Test -->
+    <ImageView
+        android:id="@+id/glass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bacButton"
+        android:layout_alignLeft="@+id/textView1"
+        android:baselineAlignBottom="false"
+        android:layout_marginBottom="55dp"
+        android:contentDescription="@string/glass"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:src="@drawable/glass" />
 
     <TextView
         android:id="@+id/textView1"
@@ -26,18 +38,6 @@
         android:minHeight="42dip"
         android:onClick="goLocations"
         android:text="@string/location" />
-
-    <ImageView
-        android:id="@+id/glass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_alignParentTop="true"
-        android:baselineAlignBottom="false"
-        android:contentDescription="@string/glass"
-        android:cropToPadding="false"
-        android:scaleType="fitCenter"
-        android:src="@drawable/glass" />
 
     <Button
         android:id="@+id/pairingsButton"
@@ -68,5 +68,7 @@
         android:minHeight="42dip"
         android:onClick="goWineLibraries"
         android:text="@string/button_WineLibraries" />
+
+    
 
 </RelativeLayout>

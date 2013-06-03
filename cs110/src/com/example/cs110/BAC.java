@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class BAC extends Activity {
 
@@ -77,21 +78,20 @@ public class BAC extends Activity {
     	String BACstring=String.format("%.3g%n", fullBAC);
     	result.setText(BACstring);
     	//TODO fix the warning system
-    	if (fullBAC<.08)
+    	if (fullBAC>=.08)
     	{
-    		warning.setText("DO NOT DRIVE");
-    		warning.setTextColor(0xFF0000);
-    		return;
+    		Toast.makeText(this, "DO NOT DRIVE.", 
+            		Toast.LENGTH_LONG).show();
     	}
-    	else if (fullBAC>0)
+    	else if (fullBAC>0&&fullBAC<.08)
     	{
-    		warning.setText("Impaired");
-    		warning.setTextColor(0xFFFF00);
+    		Toast.makeText(this, "GIRL YOU TIPSY!\n¯\\_(-.-)_/¯", 
+            		Toast.LENGTH_LONG).show();
     	}
     	else
     	{
-    		warning.setText("Sober");
-    		warning.setTextColor(0x00FF00);
+    		Toast.makeText(this, "SOMETHING IS WRONG. YOU ARE SOBER.", 
+            		Toast.LENGTH_LONG).show();
     	}
 
     }
