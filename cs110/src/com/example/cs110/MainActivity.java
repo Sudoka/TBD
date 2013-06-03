@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.cs110.controller.education.Education;
@@ -18,9 +20,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*ImageView tbd = (ImageView) findViewById(R.id.tbd);
+		tbd.getBackground().setAlpha(180);
+		ImageView forwine = (ImageView) findViewById(R.id.forwine);
+		forwine.getBackground().setAlpha(120);*/
         DBAdapter db = new DBAdapter(this);
         UserAdapter udb = new UserAdapter(this);
-        
         udb.open();
         db.open();
         Cursor c = db.getAllWines();
