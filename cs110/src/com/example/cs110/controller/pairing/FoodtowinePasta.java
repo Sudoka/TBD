@@ -3,6 +3,7 @@ package com.example.cs110.controller.pairing;
 
 import com.example.cs110.MainActivity;
 import com.example.cs110.R;
+import com.example.cs110.Tools;
 import com.example.cs110.R.id;
 import com.example.cs110.R.layout;
 import com.example.cs110.R.menu;
@@ -27,6 +28,7 @@ public class FoodtowinePasta extends Activity {
 		// Show the Up button in the action bar.
 		setupActionBar();
 	}
+	
 	public void pickTomato(View view){
 		EditText display = (EditText) findViewById(R.id.Pasta);
 
@@ -57,26 +59,27 @@ public class FoodtowinePasta extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.foodtowine_meat, menu);
+		getMenuInflater().inflate(R.menu.home, menu);
 		return true;
 	}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-		case android.R.id.home:
-			// This ID represents the Home or Up button. In the case of this
-			// activity, the Up button is shown. Use NavUtils to allow users
-			// to navigate up one level in the application structure. For
-			// more details, see the Navigation pattern on Android Design:
-			//
-			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
-			//
-			NavUtils.navigateUpFromSameTask(this);
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
-	
+	 @Override
+	  public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	    case R.id.action_back:
+	      Intent intent=new Intent(this, FoodtoWine.class);
+	      startActivity(intent);
+	      break;
+	    case R.id.action_home:
+		  Intent intent2=new Intent(this, MainActivity.class);
+		  startActivity(intent2);
+	      break;
+
+	    default:
+	      break;
+	    }
+
+	    return true;
+	  }
 
 }

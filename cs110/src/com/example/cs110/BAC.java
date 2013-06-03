@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class BAC extends Activity {
 
@@ -96,6 +97,7 @@ public class BAC extends Activity {
     	if (w==0){BACstring="0.00";}
     	result.setText(BACstring);
     	//TODO fix the warning system
+<<<<<<< HEAD
     	if (fullBAC>.08)
     	{
     		warning.setText("DO NOT DRIVE");
@@ -111,6 +113,22 @@ public class BAC extends Activity {
     	{
     		warning.setText("Sober");
     		warning.setTextColor(Color.GREEN);
+=======
+    	if (fullBAC>=.08)
+    	{
+    		Toast.makeText(this, "DO NOT DRIVE.", 
+            		Toast.LENGTH_LONG).show();
+    	}
+    	else if (fullBAC>0&&fullBAC<.08)
+    	{
+    		Toast.makeText(this, "GIRL YOU TIPSY!\n¯\\_(-.-)_/¯", 
+            		Toast.LENGTH_LONG).show();
+    	}
+    	else
+    	{
+    		Toast.makeText(this, "SOMETHING IS WRONG. YOU ARE SOBER.", 
+            		Toast.LENGTH_LONG).show();
+>>>>>>> e83511399e872a11eb5aeaa3eafea5f73c0fb597
     	}
 
     }
