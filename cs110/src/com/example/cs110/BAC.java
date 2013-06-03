@@ -3,13 +3,10 @@ package com.example.cs110;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -65,7 +62,6 @@ public class BAC extends Activity {
     	EditText weight = (EditText) findViewById(R.id.editWeight);
         EditText hours = (EditText) findViewById(R.id.editHours);
         TextView result = (TextView) findViewById(R.id.result);
-        TextView warning= (TextView) findViewById(R.id.BACwarning);
         RadioButton r=(RadioButton) findViewById(R.id.male);
     	boolean male=r.isChecked();
 
@@ -96,49 +92,32 @@ public class BAC extends Activity {
     	String BACstring=String.format("%.3g%n", fullBAC);
     	if (w==0){BACstring="0.00";}
     	result.setText(BACstring);
-    	//TODO fix the warning system
-<<<<<<< HEAD
-    	if (fullBAC>.08)
-    	{
-    		warning.setText("DO NOT DRIVE");
-    		warning.setTextColor(Color.RED);
-    		return;
-    	}
-    	else if (fullBAC>0.01)
-    	{
-    		warning.setText("Impaired");
-    		warning.setTextColor(Color.YELLOW);
-    	}
-    	else
-    	{
-    		warning.setText("Sober");
-    		warning.setTextColor(Color.GREEN);
-=======
-    	if (fullBAC>=.08)
-    	{
-    		Toast.makeText(this, "DO NOT DRIVE.", 
-            		Toast.LENGTH_LONG).show();
-    	}
+    	
+		if (fullBAC>=.08)
+		{
+			Toast.makeText(this, "DO NOT DRIVE.", 
+    		Toast.LENGTH_LONG).show();
+		}
     	else if (fullBAC>0&&fullBAC<.08)
     	{
-    		Toast.makeText(this, "GIRL YOU TIPSY!\n¯\\_(-.-)_/¯", 
+    		Toast.makeText(this, "You are impaired.", 
             		Toast.LENGTH_LONG).show();
     	}
     	else
     	{
-    		Toast.makeText(this, "SOMETHING IS WRONG. YOU ARE SOBER.", 
+    		Toast.makeText(this, "You are probably sober.", 
             		Toast.LENGTH_LONG).show();
->>>>>>> e83511399e872a11eb5aeaa3eafea5f73c0fb597
     	}
 
-    }
-    	private double calculateBAC(int weight, int drinks, int hours, boolean male)
-    	{
-    		double r;
-    		if (male) r=.73; else r=.66;
-    		double bac=drinks*.6*5.14/(weight*r) -.015*hours;
-    		if (bac<0.001) return 0.0; else return bac;
     	}
+    	
+    private double calculateBAC(int weight, int drinks, int hours, boolean male)
+    {
+    	double r;
+    	if (male) r=.73; else r=.66;
+    	double bac=drinks*.6*5.14/(weight*r) -.015*hours;
+    	if (bac<0.001) return 0.0; else return bac;
+    }
     	
     	
     	
