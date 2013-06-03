@@ -200,6 +200,14 @@
             android:name="com.example.cs110.controller.library.AddWine"
             android:label="@string/title_activity_add_wine" >
         </activity>
+        <activity
+            android:name="com.example.cs110.controller.education.HistoryQuiz"
+            android:label="@string/title_activity_history_quiz" >
+        </activity>
+        <activity
+            android:name="com.example.cs110.controller.education.ProductionQuiz"
+            android:label="@string/title_activity_production_quiz" >
+        </activity>
     </application>
 
 </manifest>

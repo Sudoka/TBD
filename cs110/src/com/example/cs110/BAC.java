@@ -77,7 +77,7 @@ public class BAC extends Activity {
     	String BACstring=String.format("%.3g%n", fullBAC);
     	result.setText(BACstring);
     	//TODO fix the warning system
-    	/*if (fullBAC<.08)
+    	if (fullBAC<.08)
     	{
     		warning.setText("DO NOT DRIVE");
     		warning.setTextColor(0xFF0000);
@@ -92,16 +92,14 @@ public class BAC extends Activity {
     	{
     		warning.setText("Sober");
     		warning.setTextColor(0x00FF00);
-    	}*/
+    	}
 
     }
     	private double calculateBAC(int weight, int drinks, int hours, boolean male)
     	{
-    		//TODO Fucker still doesnt calculate the right number.
     		double r;
     		if (male) r=.73; else r=.66;
-    		//double bac=(drinks*0.06*100*(1.055/(weight*r))-(0.015*hours));
-    		double bac=drinks*.6*5.14/weight*r -.015*hours;
+    		double bac=drinks*.6*5.14/(weight*r) -.015*hours;
     		if (bac<0.001) return 0.0; else return bac;
     	}
     	

@@ -29,21 +29,17 @@ public class Quiz extends Activity {
     	startActivity (intent);
     }
 	public void goHistoryQuiz(View view){
-    	/*Intent intent=new Intent (this, HistoryQuiz.class);
-    	startActivity (intent);*/
+    	Intent intent=new Intent (this, HistoryQuiz.class);
+    	startActivity (intent);
     }
 	public void goTypesQuiz(View view){
     	Intent intent=new Intent (this, TypesQuiz.class);
     	startActivity (intent);
     }
-	public void goPricingQuiz(View view){
-    	/*Intent intent=new Intent(this, PricingQuiz.class);
-    	startActivity (intent);*/
-    }
 	
 	public void goProductionQuiz(View view){
-		/*Intent intent = new Intent (this, ProductionQuiz.class);
-		startActivity (intent);*/
+		Intent intent = new Intent (this, ProductionQuiz.class);
+		startActivity (intent);
 	}
 	
 	public void goFoodPairingsQuiz(View view) {

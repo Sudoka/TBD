@@ -52,18 +52,11 @@
         android:id="@+id/historyButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/pricingsButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="46dp"
         android:onClick="goHistoryQuiz"
         android:text="@string/history" />
 
-    <Button
-        android:id="@+id/pricingsButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/historyButton"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="46dp"
-        android:onClick="goPricingQuiz"
-        android:text="@string/Pricing" />
+ 
 
 </RelativeLayout>

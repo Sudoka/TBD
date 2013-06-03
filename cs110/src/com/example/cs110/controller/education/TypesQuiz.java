@@ -70,6 +70,8 @@ public class TypesQuiz extends Activity {
 		Random r=new Random();
 		int index=r.nextInt(c.getCount());
 		c.moveToPosition(index);
+		if(c.getString(1).equalsIgnoreCase("rose"))
+			getRandomWine();
 	}
 	
 	/*

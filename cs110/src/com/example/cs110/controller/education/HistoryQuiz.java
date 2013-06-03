@@ -22,11 +22,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class EtiquetteQuiz extends Activity {
+public class HistoryQuiz extends Activity {
 
 	static int number=0;
 	public static int score=0;
-	String answer="42-45F (6-10C)";//HERE
+	String answer="Georgia";//HERE
 	DBAdapter db;
 	Cursor c;
 	public final static String SCORE_MESSAGE = "com.example.cs110.MESSAGE";
@@ -34,7 +34,7 @@ public class EtiquetteQuiz extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_etiquette_quiz);
+		setContentView(R.layout.activity_history_quiz);
 		
 		db = new DBAdapter(this);
 		db.open();
@@ -139,84 +139,84 @@ public class EtiquetteQuiz extends Activity {
 		switch(number)
 		{
 		case 0:
-			wineDisplay.setText("What's the best temperature for serving sparkling wine?");
-			answer="42-45F (6-10C)";
-			b1.setText("42-45F (6-10C)");
-			b2.setText("48-54F (9-12C)");
-			b3.setText("48-58F (9-14C)");
-			b4.setText("57-68F (13-20C)");
+			wineDisplay.setText("Where was the earliest example of wine found?");
+			answer="Georgia";
+			b1.setText("Georgia");
+			b2.setText("America");
+			b3.setText("France");
+			b4.setText("Japan");
 			break;
 		case 1:
-			wineDisplay.setText("How long should you let red wine breath?");
-			answer="1 hour";
-			b1.setText("0 hours");
-			b2.setText("1 hour");
-			b3.setText("2 hours");
-			b4.setText("3 hours");
+			wineDisplay.setText("Which country popularlized wine production?");
+			answer="Roman Empire";
+			b1.setText("Roman Empire");
+			b2.setText("France");
+			b3.setText("Ottoman Empire");
+			b4.setText("Wallachia");
 			break;
 		case 2:
-			wineDisplay.setText("What's the best temperature for serving red wine?");
-			answer="57-68F (13-20C)";
-			b1.setText("42-45F (6-10C)");
-			b2.setText("48-54F (9-12C)");
-			b3.setText("48-58F (9-14C)");
-			b4.setText("57-68F (13-20C)");
+			wineDisplay.setText("Where was the oldest winery found?");
+			answer="Armenia";
+			b1.setText("Armenia");
+			b2.setText("France");
+			b3.setText("Italy");
+			b4.setText("Germany");
 			break;
 		case 3:
-			wineDisplay.setText("Which of these is it a bad idea to decant?");
-			answer="Young white wine";
-			b1.setText("Red wine");
-			b2.setText("Young white wine");
-			b3.setText("Vintage Champagne");
-			b4.setText("Port");
+			wineDisplay.setText("What was the first winery in California?");
+			answer="Sonoma Valley";
+			b1.setText("Sonoma Valley");
+			b2.setText("Napa");
+			b3.setText("Champagne");
+			b4.setText("Santa Cruz");
 			break;
 		case 4:
-			wineDisplay.setText("Which of these do you pour down the side of the glass?");
-			answer="Sparkling wine";
-			b1.setText("Sparkling wine");
-			b2.setText("Red wine");
-			b3.setText("White wine");
-			b4.setText("Port");
+			wineDisplay.setText("What did the Chinese create wine out of?");
+			answer="Rice";
+			b1.setText("Persimmons");
+			b2.setText("Dragonfruit");
+			b3.setText("Ponzu");
+			b4.setText("Rice");
 			break;
 		case 5:
-			wineDisplay.setText("What's the best temperature for serving white wine?");
-			answer="48-58F (9-14C)";
-			b1.setText("42-45F (6-10C)");
-			b2.setText("48-54F (9-12C)");
-			b3.setText("48-58F (9-14C)");
-			b4.setText("57-68F (13-20C)");
+			wineDisplay.setText("What is the oldest wine grape?");
+			answer="Muscat";
+			b1.setText("Diamond");
+			b2.setText("Cabernet");
+			b3.setText("Concord");
+			b4.setText("Muscat");
 			break;
 		case 6:
-			wineDisplay.setText("Which glass is good for white wine?");
-			answer="Narrow, thin tapered glass";
-			b1.setText("Pear-shaped glass");
-			b2.setText("Narrow, thin tapered glass");
-			b3.setVisibility(View.GONE);
-			b4.setVisibility(View.GONE);
+			wineDisplay.setText("Wine regions with a long history are \"Old World\"");
+			answer="True";
+			b1.setText("True");
+			b2.setText("False");
+			b3.setVisibility(View.INVISIBLE);
+			b4.setVisibility(View.INVISIBLE);
 			break;
 		case 7:
-			wineDisplay.setText("Which glass is good for red wine?");
-			answer="Pear-shaped glass";
-			b1.setText("Pear-shaped glass");
-			b2.setText("Narrow, thin tapered glass");
+			wineDisplay.setText("Wine is a modern beverage");
+			answer="False";
+			b1.setText("True");
+			b2.setText("False");
 			break;
 		case 8:
-			wineDisplay.setText("Which is not one of the \"Four S's\" of wine tasting?");
-			answer="Swallow";
-			b1.setText("See");
-			b2.setText("Smell");
+			wineDisplay.setText("Who was the Roman god of wine?");
+			answer="Bacchus";
+			b1.setText("Dionysius");
+			b2.setText("Saturn");
 			b3.setVisibility(View.VISIBLE);
 			b4.setVisibility(View.VISIBLE);
-			b3.setText("Swirl");
-			b4.setText("Swallow");
+			b3.setText("Bacchus");
+			b4.setText("Diana");
 			break;
 		default:
-			wineDisplay.setText("What's the best temperature for serving dark sherry?");
-			answer="57-68F (13-20C)";
-			b1.setText("42-45F (6-10C)");
-			b2.setText("48-54F (9-12C)");
-			b3.setText("48-58F (9-14C)");
-			b4.setText("57-68F (13-20C)");
+			wineDisplay.setText("What did ancient Romans dissolve in wine to improve their health?");
+			answer="Pearls";
+			b1.setText("Dung");
+			b2.setText("Pearls");
+			b3.setText("Sulphur");
+			b4.setText("Salt");
 			break;
 			
 		}

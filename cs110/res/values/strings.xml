@@ -129,5 +129,7 @@
     <string name="title_activity_regions_quiz">RegionsQuiz</string>
     <string name="title_activity_etiquette_quiz">EtiquetteQuiz</string>
     <string name="title_activity_add_wine">AddWine</string>
+    <string name="title_activity_history_quiz">HistoryQuiz</string>
+    <string name="title_activity_production_quiz">ProductionQuiz</string>
 
 </resources>
