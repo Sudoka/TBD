@@ -192,13 +192,13 @@ public ArrayList<String> SearchResults1(String searched){
 	c.moveToFirst();
 	while(c.moveToNext()) {
 		for(int i = 1; i <=3; i++) {
+			
 			String s2 = c.getString(i).toLowerCase();
-/*			Toast.makeText(this, 
-	                "SEARCHED:"+searched+"S2"+s2,
-	                Toast.LENGTH_LONG).show();*/
+			
 			if(s2.contains(searched.toLowerCase())) {
-				search_list.add(c.getString(1)+" - "+c.getString(2));
+				search_list.add(c.getString(1)+"  -  "+c.getString(2));
 				keys_list.add(c.getInt(0));
+				break;
 			}
 		}
 	}

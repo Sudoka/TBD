@@ -68,10 +68,10 @@
     <string name="green">Chardonnay</string>
     <string name="mush">Pinot Noir</string>
     <string name="bleu">Sauternes or Port</string>
-    <string name="hard">Cabernet Sauvignon or parmigiano Reggiano</string>
-    <string name="soft">Chardonnay, Pinto Grigio, Sauvignon Blanc, or Pinot Noir</string>
+    <string name="hard">Cabernet Sauvignon or Parmigiano Reggiano</string>
+    <string name="soft">Chardonnay, Pinot Grigio, Sauvignon Blanc, or Pinot Noir</string>
     <string name="title_activity_foodtowine__veggie">Find Wine</string>
-    <string name="title_activity_foodtowine_cheese">Food Wine</string>
+    <string name="title_activity_foodtowine_cheese">Find Wine</string>
     <string name="title_activity_wineto_food">Find Food</string>
     <string name="chardonnay">Poultry and game birds, veal and pork, rabbit fish and pasta preparations which feature cream and/or butter, mushrooms.</string>
     <string name="sauvignon">First courses, seafood, ethnic dishes—pastas, curries, salsas, spicy sausages, vegetable dishes, luncheon salads, olive-oil based dishes, tomato sauces, goat cheese.</string>
