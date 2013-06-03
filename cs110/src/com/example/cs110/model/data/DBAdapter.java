@@ -976,6 +976,43 @@ public class DBAdapter
         db.insert(DATABASE_TABLE, null, initialValues);
         initialValues.clear();
         
+        initialValues.put(KEY_NAME, "Merlot");
+        initialValues.put(KEY_TYPE, "Red");
+        initialValues.put(KEY_ORIGIN, "Bordeaux");
+        initialValues.put(KEY_DESCRIPTION, "A range of fresh flavors such as plums, cherries, blueberries and blackberries mixed with cocoa and blackpepper tones, often dominate this type of red wine. The tannin levels are typically lower than say a Cab and the fruit flavors are typically forward - making this a prime wine candidate for consumers just getting into red wines.");
+        initialValues.put(KEY_FAVORITES, 0);
+        initialValues.put(KEY_WISH, 0);
+        db.insert(DATABASE_TABLE, null, initialValues);
+        initialValues.clear();
+        
+        initialValues.put(KEY_NAME, "Sangiovese");
+        initialValues.put(KEY_TYPE, "Red");
+        initialValues.put(KEY_ORIGIN, "Italy");
+        initialValues.put(KEY_DESCRIPTION, "Typically Sangiovese grapes make medium to full-bodied wines with tannin structure ranging from medium-soft to firm. Dominate flavors associated with Sangiovese derived wines include: cherry, plum, strawberry, cinnamon and vanilla. There is often a herbaceous quality associated with Sangiovese wines. As for acidity levels, Sangiovese leans towards medium to high acidity content.");
+        initialValues.put(KEY_FAVORITES, 0);
+        initialValues.put(KEY_WISH, 0);
+        db.insert(DATABASE_TABLE, null, initialValues);
+        initialValues.clear();
+        
+        initialValues.put(KEY_NAME, "Chianti");
+        initialValues.put(KEY_TYPE, "Red");
+        initialValues.put(KEY_ORIGIN, "Italy");
+        initialValues.put(KEY_DESCRIPTION, "Floral, cherry and light nutty notes are characteristic aromas with the wines expressing more notes on the mid-palate and finish than at the front of the mouth.");
+        initialValues.put(KEY_FAVORITES, 0);
+        initialValues.put(KEY_WISH, 0);
+        db.insert(DATABASE_TABLE, null, initialValues);
+        initialValues.clear();
+        
+        initialValues.put(KEY_NAME, "Port");
+        initialValues.put(KEY_TYPE, "Red");
+        initialValues.put(KEY_ORIGIN, "Portugal");
+        initialValues.put(KEY_DESCRIPTION, "Port can be split into two distinct categories: Wood Aged or Bottle Aged. The only true bottle aged port is a Vintage Port, while the other Ports are all Wood Aged to some extent. In general, Port starts life as a red wine (unless of course it is a “white Port”) and then it's typically aged in wood casks or in the bottle");
+        initialValues.put(KEY_FAVORITES, 0);
+        initialValues.put(KEY_WISH, 0);
+        db.insert(DATABASE_TABLE, null, initialValues);
+        initialValues.clear();
+        
+        
         // RED
         // ======================
         // WHITE
@@ -1555,6 +1592,96 @@ public class DBAdapter
         initialValues.put(KEY_WISH, 0);
         db.insert(DATABASE_TABLE, null, initialValues);
         initialValues.clear();
+        
+		initialValues.put(KEY_NAME, "Chardonnay");
+        initialValues.put(KEY_TYPE, "White");
+        initialValues.put(KEY_ORIGIN, "France");
+        initialValues.put(KEY_DESCRIPTION, "Chardonnay is the most common and well known variety of white grape in wine production today. The most prominent flavor in Chardonnay wine comes from oak used in the wine production process. Other flavors and aromas include fruit, lemon, melon, grass, and vanilla. Some other characteristics of Chardonnay wines are high acidity, golden colors, and a velvety feel in the mouth.");
+        initialValues.put(KEY_FAVORITES, 0);
+        initialValues.put(KEY_WISH, 0);
+        db.insert(DATABASE_TABLE, null, initialValues);
+        initialValues.clear();
+        
+        initialValues.put(KEY_NAME, "Moscato");
+        initialValues.put(KEY_TYPE, "White");
+        initialValues.put(KEY_ORIGIN, "Italy");
+        initialValues.put(KEY_DESCRIPTION, "Moscato tends to be a popular white wine among new wine lovers and enjoys a significant following with seasoned wine enthusiasts who enjoy a lighter-styled wine with brunch, dessert or on its own as a capable aperitif.");
+        initialValues.put(KEY_FAVORITES, 0);
+        initialValues.put(KEY_WISH, 0);
+        db.insert(DATABASE_TABLE, null, initialValues);
+        initialValues.clear();
+        
+        initialValues.put(KEY_NAME, "Viognier");
+        initialValues.put(KEY_TYPE, "White");
+        initialValues.put(KEY_ORIGIN, "France");
+        initialValues.put(KEY_DESCRIPTION, "Viognier wines are well known for their floral aromas, due to terpenes, which are also found in Muscat and Riesling wines. There are also many other powerful flower and fruit aromas which can be perceived in these wines depending on where they were grown, the weather conditions and how old the vines were.");
+        initialValues.put(KEY_FAVORITES, 0);
+        initialValues.put(KEY_WISH, 0);
+        db.insert(DATABASE_TABLE, null, initialValues);
+        initialValues.clear();
+        
+        initialValues.put(KEY_NAME, "Pedro Ximenez");
+        initialValues.put(KEY_TYPE, "White");
+        initialValues.put(KEY_ORIGIN, "Spain");
+        initialValues.put(KEY_DESCRIPTION, "PX is made by drying the grapes under the hot Spanish sun, concentrating the sweetness, which are then used to create a thick, black liquid with a strong taste of raisins and molasses that is fortified and aged in solera.");
+        initialValues.put(KEY_FAVORITES, 0);
+        initialValues.put(KEY_WISH, 0);
+        db.insert(DATABASE_TABLE, null, initialValues);
+        initialValues.clear();
+
+        initialValues.put(KEY_NAME, "Vidal Blanc");
+        initialValues.put(KEY_TYPE, "White");
+        initialValues.put(KEY_ORIGIN, "France");
+        initialValues.put(KEY_DESCRIPTION, "The wine produced from Vidal blanc tends to be very fruity, with aroma notes of grapefruit and pineapple. Due to its high acidity and sugar potential it is particularly suited to sweeter, dessert wines.");
+        initialValues.put(KEY_FAVORITES, 0);
+        initialValues.put(KEY_WISH, 0);
+        db.insert(DATABASE_TABLE, null, initialValues);
+        initialValues.clear();
+        
+        initialValues.put(KEY_NAME, "Sherry");
+        initialValues.put(KEY_TYPE, "White");
+        initialValues.put(KEY_ORIGIN, "Spain");
+        initialValues.put(KEY_DESCRIPTION, "Sherry is produced in a variety of dry styles made primarily from the Palomino grape, ranging from light versions similar to white table wines, such as Manzanilla and Fino, to darker and heavier versions that have been allowed to oxidise as they age in barrel, such as Amontillado and Oloroso.");
+        initialValues.put(KEY_FAVORITES, 0);
+        initialValues.put(KEY_WISH, 0);
+        db.insert(DATABASE_TABLE, null, initialValues);
+        initialValues.clear();
+        
+        initialValues.put(KEY_NAME, "Almond Champagne");
+        initialValues.put(KEY_TYPE, "White");
+        initialValues.put(KEY_ORIGIN, "Champagne");
+        initialValues.put(KEY_DESCRIPTION, "This white sparkling wine is fermented naturally in the tradtional Champagne method with just a hint of pure almond added to give it a creamy, nutty almost sweet taste.");
+        initialValues.put(KEY_FAVORITES, 0);
+        initialValues.put(KEY_WISH, 0);
+        db.insert(DATABASE_TABLE, null, initialValues);
+        initialValues.clear();
+        
+        initialValues.put(KEY_NAME, "Symphony");
+        initialValues.put(KEY_TYPE, "White");
+        initialValues.put(KEY_ORIGIN, "California");
+        initialValues.put(KEY_DESCRIPTION, "It is slightly dry and an anomaly of a moderately strong white of 12% alcohol with a light addictive taste of grapefruit and wildflowers.");
+        initialValues.put(KEY_FAVORITES, 0);
+        initialValues.put(KEY_WISH, 0);
+        db.insert(DATABASE_TABLE, null, initialValues);
+        initialValues.clear();
+        
+        initialValues.put(KEY_NAME, "Chenin Blanc");
+        initialValues.put(KEY_TYPE, "White");
+        initialValues.put(KEY_ORIGIN, "France");
+        initialValues.put(KEY_DESCRIPTION, " This white wine can range from dry to very sweet depending on the time of harvest, producing flavors that vary from apple, melon, lime and pear with hints of vanilla and honey.");
+        initialValues.put(KEY_FAVORITES, 0);
+        initialValues.put(KEY_WISH, 0);
+        db.insert(DATABASE_TABLE, null, initialValues);
+        initialValues.clear();
+        
+        initialValues.put(KEY_NAME, "Scheurebe");
+        initialValues.put(KEY_TYPE, "White");
+        initialValues.put(KEY_ORIGIN, "Germany");
+        initialValues.put(KEY_DESCRIPTION, "Full body, pronounced acidity and a bouquet and taste reminiscent of black currants.");
+        initialValues.put(KEY_FAVORITES, 0);
+        initialValues.put(KEY_WISH, 0);
+        db.insert(DATABASE_TABLE, null, initialValues);
+        initialValues.clear();
 		
 		// WHITE
 		// ===========================
@@ -1659,6 +1786,17 @@ public class DBAdapter
         db.insert(DATABASE_TABLE, null, initialValues);
         initialValues.clear();
 		
+        initialValues.put(KEY_NAME, "White Zinfandel");
+        initialValues.put(KEY_TYPE, "Rose");
+        initialValues.put(KEY_ORIGIN, "California");
+        initialValues.put(KEY_DESCRIPTION, "White Zinfandel, often abbreviated as White Zin, is an off-dry to sweet, pink-colored blush wine. White Zinfandel is made from the Zinfandel wine grape, which would otherwise produce a bold and spicy red wine. As such, it is not a grape variety but a method of processing Zinfandel grapes.");
+        initialValues.put(KEY_FAVORITES, 0);
+        initialValues.put(KEY_WISH, 0);
+        db.insert(DATABASE_TABLE, null, initialValues);
+        initialValues.clear();
+        
+        
+        
 		// ROSE
 
     }
