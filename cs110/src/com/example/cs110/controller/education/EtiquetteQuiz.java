@@ -11,6 +11,7 @@ import java.util.Random;
 import com.example.cs110.MainActivity;
 import com.example.cs110.R;
 import com.example.cs110.model.data.DBAdapter;
+import com.example.cs110.model.data.UserAdapter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -90,7 +91,7 @@ public class EtiquetteQuiz extends Activity {
 		if (9 < number)
 		{
 			Intent intent=new Intent (this, QuizResult.class);
-	    	String message=scoreDisplay.getText().toString();
+	    	String message = "" + score;
 	    	intent.putExtra(SCORE_MESSAGE,message);
 	    	number = score = 0;
 	    	startActivity (intent);
@@ -197,8 +198,8 @@ public class EtiquetteQuiz extends Activity {
 			answer="Narrow, thin tapered glass";
 			b1.setText("Pear-shaped glass");
 			b2.setText("Narrow, thin tapered glass");
-			b3.setVisibility(View.GONE);
-			b4.setVisibility(View.GONE);
+			b3.setVisibility(View.INVISIBLE);
+			b4.setVisibility(View.INVISIBLE);
 			break;
 		case 7:
 			wineDisplay.setText("Which glass is good for red wine?");

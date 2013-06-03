@@ -6,13 +6,16 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/types"
     tools:context=".Education" >
     
     <TextView
         android:id="@+id/education_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/education_text"/>
+        android:hint="@string/education_text"
+        android:textColor="@color/Black"
+        android:textColorHint="@color/Black" />
     
     <Button
         android:id="@+id/learning_button"

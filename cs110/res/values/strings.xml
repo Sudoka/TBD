@@ -132,5 +132,6 @@
     <string name="title_activity_history_quiz">HistoryQuiz</string>
     <string name="title_activity_production_quiz">ProductionQuiz</string>
     <string name="title_activity_user_stats">UserStats</string>
+    <string name="userStats">User Stats</string>
 
 </resources>

@@ -26,7 +26,15 @@ public class MainActivity extends Activity {
 		forwine.getBackground().setAlpha(120);*/
         DBAdapter db = new DBAdapter(this);
         UserAdapter udb = new UserAdapter(this);
+        
+        //make temp userdb just to store quiz info...
         udb.open();
+        udb.insertUser(
+                "Guest",
+                "0",
+                "0");
+        
+        
         db.open();
         Cursor c = db.getAllWines();
         if(!c.moveToFirst()){
@@ -107,9 +115,15 @@ public class MainActivity extends Activity {
     	Intent intent=new Intent (this, Tools.class);
     	startActivity (intent);
     }
-    
+    /*
     public void goSettings(View view){
     	Intent intent=new Intent (this, Settings.class);
+    	startActivity (intent);
+    }
+    */
+    
+    public void goUserStats(View view){
+    	Intent intent=new Intent (this, UserStats.class);
     	startActivity (intent);
     }
     

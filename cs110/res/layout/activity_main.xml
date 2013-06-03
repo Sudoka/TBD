@@ -11,18 +11,18 @@
     tools:context=".MainActivity" >
 
         <Button
-            android:id="@+id/settingsButton"
+            android:id="@+id/userStatsButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:onClick="goSettings"
-            android:text="@string/settings" />
+            android:onClick="goUserStats"
+            android:text="@string/userStats" />
         
          <Button
             android:id="@+id/educationButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@id/settingsButton"
+            android:layout_above="@id/userStatsButton"
             android:onClick="goEducation"
             android:text="@string/education" />
 
@@ -39,8 +39,8 @@
             android:id="@+id/tbd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/settingsButton"
-            android:layout_alignParentRight="true"
+            android:layout_alignLeft="@+id/settingsButton"
+            android:layout_centerVertical="true"
             android:padding="40dp"
             android:src="@drawable/logo" />
 
@@ -48,10 +48,9 @@
             android:id="@+id/imageView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/toolsButton"
             android:layout_alignLeft="@+id/tbd"
-            android:layout_marginBottom="40dp"
-            android:layout_marginLeft="16dp"
+            android:layout_alignTop="@+id/tbd"
+            android:layout_marginLeft="19dp"
             android:src="@drawable/forwinewine3" />
 
 </RelativeLayout>

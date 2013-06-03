@@ -160,7 +160,7 @@ public class RegionsQuiz extends Activity {
 		if (9 < number)
 		{
 			Intent intent=new Intent (this, QuizResult.class);
-	    	String message=scoreDisplay.getText().toString();
+	    	String message = "" + score;
 	    	intent.putExtra(SCORE_MESSAGE,message);
 	    	number = score = 0;
 	    	startActivity (intent);

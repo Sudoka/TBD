@@ -81,14 +81,13 @@ public class TypesQuiz extends Activity {
 	 */
 	private void nextQuestion()
 	{
-		TextView scoreDisplay=(TextView) findViewById(R.id.scoreDisplay);
 		TextView wineDisplay=(TextView) findViewById(R.id.wineDisplay);
 		TextView questionDisplay=(TextView) findViewById(R.id.questionDisplay);
 		
 		if (9 < number)
 		{
 			Intent intent=new Intent (this, QuizResult.class);
-	    	String message=scoreDisplay.getText().toString();
+	    	String message = "" + score;
 	    	intent.putExtra(SCORE_MESSAGE,message);
 	    	number = score = 0;
 	    	startActivity (intent);

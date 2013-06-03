@@ -7,6 +7,7 @@ import com.example.cs110.model.data.UserAdapter;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,10 +23,21 @@ public class QuizResult extends Activity {
 		Intent intent = getIntent();
 	    String message = intent.getStringExtra("com.example.cs110.MESSAGE");
 	    
-	    UserAdapter u=new UserAdapter(this);
-	    
 		TextView scoreView=(TextView) findViewById(R.id.scoreDisplay);
 	    scoreView.setText(message);
+
+	    UserAdapter udb = new UserAdapter(this);
+    	udb.open();
+    	Cursor u = udb.getAllUsers();
+    	
+    	if(u.moveToFirst()) {
+    		int newanswered = u.getInt(2) + 10;
+    		int newscore = u.getInt(3) + Integer.parseInt(message.toString());
+    		udb.updateUser(u.getInt(0), u.getString(1), ""+newanswered, ""+newscore);
+    	}
+    	udb.close();
+
+	    
 	}
 
 	@Override
