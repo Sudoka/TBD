@@ -23,10 +23,12 @@ public class MainActivity extends Activity {
         
         udb.open();
         db.open();
-        db.deleteAllWines();
-        db.populateDatabase();
-        
         Cursor c = db.getAllWines();
+        if(!c.moveToFirst()){
+                    db.populateDatabase();
+        }
+        
+        c = db.getAllWines();
         if (c.moveToFirst())  {      
             displayWine(c);
         	c.moveToNext();

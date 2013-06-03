@@ -80,7 +80,7 @@ public void displayList(final ArrayList<String> list) {
       @Override
       public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
         final String item = (String) parent.getItemAtPosition(position);
-        view.animate().setDuration(1000).alpha(0).withEndAction(new Runnable() {
+        view.animate().setDuration(1000).translationX(1000).withEndAction(new Runnable() {
               @Override
               public void run() {
             	  Intent view_wine = new Intent(WishlistActivity.this, ViewWishWine.class);
