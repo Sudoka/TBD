@@ -68,7 +68,7 @@ public class AddWine extends Activity {
         int onWish = wishlist.isChecked()?1:0;
         int onFav = favorites.isChecked()?1:0;
         if((wine_name.getText().toString().isEmpty()||wine_region.getText().toString().isEmpty()||wine_description.getText().toString().isEmpty())){
-        	Toast.makeText(this, "SOMETHING IS EMPTY SO YOU FILL IT IN WHAT ARE YOU RETARDED", 
+        	Toast.makeText(this, "SOMETHING IS EMPTY", 
             		Toast.LENGTH_LONG).show();
         }
         else
