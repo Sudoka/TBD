@@ -78,7 +78,7 @@ public class WishlistActivity extends Activity {
 			public void onItemClick(AdapterView<?> parent, final View view,
 					int position, long id) {
 				final String item = (String) parent.getItemAtPosition(position);
-				if((list.contains("List is Empty!"))||(list.contains("No search Results found"))){
+				if((list.contains("List is Empty!"))||(list.contains("No search results found"))){
           		  list.add("List is still Empty!");
           		  displayList(list);
           	  }
@@ -198,7 +198,7 @@ public class WishlistActivity extends Activity {
 				}
 			}
 		if(search_list.isEmpty()){
-			search_list.add("No search Results found");
+			search_list.add("No search results found");
 		}
 
 		}

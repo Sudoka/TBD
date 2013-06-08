@@ -4,6 +4,7 @@ package com.example.cs110;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -95,18 +96,24 @@ public class BAC extends Activity {
     	
 		if (fullBAC>=.08)
 		{
+			for(int i = 0;i<100;i++){
 			Toast.makeText(this, "DO NOT DRIVE.", 
     		Toast.LENGTH_LONG).show();
+			}
 		}
     	else if (fullBAC>0&&fullBAC<.08)
     	{
+			for(int i = 0;i<100;i++){
     		Toast.makeText(this, "You are impaired.", 
             		Toast.LENGTH_LONG).show();
+			}
     	}
     	else
     	{
+			for(int i = 0;i<100;i++){
     		Toast.makeText(this, "You are probably sober.", 
             		Toast.LENGTH_LONG).show();
+			}
     	}
 
     	}
