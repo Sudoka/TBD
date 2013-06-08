@@ -7,31 +7,6 @@
     android:columnCount="1"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="76dp"
-        android:background="@color/Tan"
-        android:onClick="goMap"
-        android:text="Find Winery Near Here!" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:background="@color/Tan"
-        android:ems="10"
-        android:inputType="number" >
-
-        <requestFocus />
-    </EditText>
-
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -42,5 +17,27 @@
         android:background="@color/Tan"
         android:text="Enter a ZIP Code"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="159dp"
+        android:background="@color/Tan"
+        android:onClick="goMap"
+        android:text="Find Winery Near Here!" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="39dp"
+        android:background="@color/Tan"
+        android:ems="10"
+        android:inputType="number" />
 
 </RelativeLayout>
