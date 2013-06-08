@@ -10,6 +10,7 @@ import com.example.cs110.model.data.DBAdapter;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -55,20 +56,24 @@ public class AddWine extends Activity {
         CheckBox wishlist = (CheckBox) findViewById(R.id.wishlist);
         CheckBox favorites = (CheckBox) findViewById(R.id.favorite);
 
-        
-        String color;
+        boolean noColor = true;
+        String color="Not color";
         if(red.isChecked()){
+        	noColor=false;
         	color="Red";
-        }
+        	}
         else if(rose.isChecked()){
-        
+        	noColor=false;
         	color="Rose";
-        }
-        else {color="White";}
+            }
+        else if(white.isChecked()) {
+        	noColor=false;
+        	color="White";
+        	}
         int onWish = wishlist.isChecked()?1:0;
         int onFav = favorites.isChecked()?1:0;
-        if((wine_name.getText().toString().isEmpty()||wine_region.getText().toString().isEmpty()||wine_description.getText().toString().isEmpty())){
-        	Toast.makeText(this, "SOMETHING IS EMPTY", 
+        if((noColor||wine_name.getText().toString().isEmpty()||wine_region.getText().toString().isEmpty()||wine_description.getText().toString().isEmpty())){
+        	Toast.makeText(this, "Something is missing. Please fill in all fields.", 
             		Toast.LENGTH_LONG).show();
         }
         else
