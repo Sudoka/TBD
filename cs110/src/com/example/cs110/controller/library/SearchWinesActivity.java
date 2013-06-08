@@ -79,9 +79,7 @@ public void displayList(final ArrayList<String> list) {
       @Override
       public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
         final String item = (String) parent.getItemAtPosition(position);
-        view.animate().setDuration(250).translationX(500).withEndAction(new Runnable() {
-              @Override
-              public void run() {
+             
             	  if((list.contains("List is Empty!"))||(list.contains("No search Results found"))){
             		  list.add("List is still Empty!");
             		  displayList(list);
@@ -91,8 +89,8 @@ public void displayList(final ArrayList<String> list) {
                       view_wine.putExtra("rowId", keys_list.get(list.indexOf(item))+"");
                       startActivity (view_wine);
             	  }
-              }
-            });
+              
+ 
       }
 
     });

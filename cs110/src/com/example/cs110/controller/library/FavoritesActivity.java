@@ -32,9 +32,6 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class FavoritesActivity extends Activity {
-
-	private String search_term;
-	private int call_display;
 	DBAdapter db;
 	private ArrayList<Integer> keys_list;
     
@@ -81,22 +78,15 @@ public void displayList(final ArrayList<String> list) {
       @Override
       public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
         final String item = (String) parent.getItemAtPosition(position);
-        view.animate().setDuration(500).translationX(500)
-            .withEndAction(new Runnable() {
-              @Override
-              public void run() {
-            	  
-            	  if((list.contains("List is Empty!"))||(list.contains("No search Results found"))){
-            		  list.add("List is still Empty!");
-            		  displayList(list);
-            	  }
-            	  else{
-            		  Intent view_wine = new Intent(FavoritesActivity.this, ViewFavWine.class);
-                      view_wine.putExtra("rowId", keys_list.get(list.indexOf(item))+"");
-                      startActivity (view_wine);
-            	  }
-              }
-            });
+        if((list.contains("List is Empty!"))||(list.contains("No search Results found"))){
+  		  list.add("List is still Empty!");
+  		  displayList(list);
+  	  }
+  	  else{
+  		  Intent view_wine = new Intent(FavoritesActivity.this, ViewFavWine.class);
+            view_wine.putExtra("rowId", keys_list.get(list.indexOf(item))+"");
+            startActivity (view_wine);
+  	  }
       }
 
     });
@@ -162,8 +152,6 @@ public void displayList(final ArrayList<String> list) {
 	  }
 	String search_input;
 	private void searchWineDialog() {
-		// TODO Auto-generated method stub
-		call_display = 0;
 		AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
 		alert.setTitle("Search for Wines");

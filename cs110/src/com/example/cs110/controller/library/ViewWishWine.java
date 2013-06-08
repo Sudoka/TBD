@@ -80,6 +80,8 @@ private int rowId;
 	    db.open();
 	    Cursor c = db.getWine(rowId);
 	    db.updateWine(rowId, c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getInt(5), 1);
+	    Toast.makeText(this, "Added to Wishlist!", 
+        		Toast.LENGTH_LONG).show();
 	    db.close();
     }
 	public void addtoFav(View view){
@@ -92,6 +94,8 @@ private int rowId;
 	    db.open();
 	    Cursor c = db.getWine(rowId);
 	    db.updateWine(rowId, c.getString(1), c.getString(2), c.getString(3), c.getString(4), 1, c.getInt(6));
+	    Toast.makeText(this, "Added to Favorites!", 
+        		Toast.LENGTH_LONG).show();
 	    db.close();
     }
 	public void removeFav(View view){
@@ -104,6 +108,8 @@ private int rowId;
 	    db.open();
 	    Cursor c = db.getWine(rowId);
 	    db.updateWine(rowId, c.getString(1), c.getString(2), c.getString(3), c.getString(4), 0, c.getInt(6));
+	    Toast.makeText(this, "Removed from Favorites!", 
+        		Toast.LENGTH_LONG).show();
 	    db.close();
     }
 	public void removeWish(View view){
@@ -116,6 +122,8 @@ private int rowId;
 	    db.open();
 	    Cursor c = db.getWine(rowId);
 	    db.updateWine(rowId, c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getInt(5), 0);
+	    Toast.makeText(this, "Removed from Favorites!", 
+        		Toast.LENGTH_LONG).show();
 	    db.close();
     }
 
