@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 
 public class Locations extends Activity {
 
@@ -24,9 +25,11 @@ public class Locations extends Activity {
 	}
 	
 	public void goMap(View view){
-		String uri = "google.navigation:q=MCNAMARA+TERMINAL+ROMULUS+MI+48174";
+		EditText address = (EditText) findViewById(R.id.zipcode);
+		String zipcode = address.getText().toString();
+		String uri = "google.navigation:q=wineries+near+me";
 	    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
-	    startActivity(i); 
+	    startActivity(i);
     }
 	
 	@Override
