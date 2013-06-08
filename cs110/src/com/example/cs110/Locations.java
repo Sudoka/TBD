@@ -27,7 +27,7 @@ public class Locations extends Activity {
 	public void goMap(View view){
 		EditText address = (EditText) findViewById(R.id.zipcode);
 		String zipcode = address.getText().toString();
-		String uri = "google.navigation:q=wineries+near+me";
+		String uri = "geo:0,0?q=winery+near"+zipcode;
 	    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
 	    startActivity(i);
     }

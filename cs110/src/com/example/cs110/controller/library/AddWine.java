@@ -87,6 +87,8 @@ public class AddWine extends Activity {
 	    wine_name.setText("");
 	    wine_description.setText("");
 	    wine_region.setText("");
+	    Toast.makeText(this, "Wine has been successfully added!", 
+        		Toast.LENGTH_LONG).show();
         }
         
     }
