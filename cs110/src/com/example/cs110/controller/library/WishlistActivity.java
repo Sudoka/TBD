@@ -55,11 +55,13 @@ public class WishlistActivity extends Activity {
 				keys_list.add(c.getInt(0));
 			}
 		}
-		if (list.isEmpty()) {
-			list.add("YOUR LIST IS EMPTY");
-		}
-		displayList(list);
-
+		if(list.isEmpty()){
+		    list.add("List is Empty!");
+		    displayList(list);
+		    }
+		    else{
+		    displayList(list);
+		    }
 		db.close();
 	}
 
@@ -76,23 +78,19 @@ public class WishlistActivity extends Activity {
 			public void onItemClick(AdapterView<?> parent, final View view,
 					int position, long id) {
 				final String item = (String) parent.getItemAtPosition(position);
-				view.animate().setDuration(1000).translationX(1000)
+				view.animate().setDuration(1000).translationX(500)
 						.withEndAction(new Runnable() {
 							@Override
 							public void run() {
-								Intent view_wine = new Intent(
-										WishlistActivity.this,
-										ViewWishWine.class);
-								view_wine.putExtra("rowId",
-										keys_list.get(list.indexOf(item)) + "");
-								if (!keys_list.isEmpty()) {
-									startActivity(view_wine);
-								}
-								/*
-								 * list.remove(item);
-								 * adapter.notifyDataSetChanged();
-								 * view.setAlpha(1);
-								 */
+								if((list.contains("List is Empty!"))||(list.contains("No search Results found"))){
+				            		  list.add("List is still Empty!");
+				            		  displayList(list);
+				            	  }
+				            	  else{
+				            		  Intent view_wine = new Intent(WishlistActivity.this, ViewWishWine.class);
+				                      view_wine.putExtra("rowId", keys_list.get(list.indexOf(item))+"");
+				                      startActivity (view_wine);
+				            	  }
 							}
 						});
 			}
@@ -173,7 +171,6 @@ public class WishlistActivity extends Activity {
 		alert.setPositiveButton("Search",
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int whichButton) {
-
 						search_input = input.getText().toString();
 						displayList(SearchResults1(search_input));
 					}
@@ -201,15 +198,15 @@ public class WishlistActivity extends Activity {
 		while (c.moveToNext()) {
 			for (int i = 1; i <= 3; i++) {
 				String s2 = c.getString(i).toLowerCase();
-				/*
-				 * Toast.makeText(this, "SEARCHED:"+searched+"S2"+s2,
-				 * Toast.LENGTH_LONG).show();
-				 */
 				if (c.getInt(6) == 1 && s2.contains(searched.toLowerCase())) {
 					search_list.add(c.getString(1) + " - " + c.getString(2));
 					keys_list.add(c.getInt(0));
 				}
 			}
+		if(search_list.isEmpty()){
+			search_list.add("No search Results found");
+		}
+
 		}
 		db.close();
 		return search_list;

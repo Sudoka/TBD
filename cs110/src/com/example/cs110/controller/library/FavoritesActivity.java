@@ -59,9 +59,13 @@ public class FavoritesActivity extends Activity {
 				keys_list.add(c.getInt(0));
 		    	}
 		    }
-		    displayList(list);
-		    
-		    
+		    if(list.isEmpty()){
+			    list.add("List is Empty!");
+			    displayList(list);
+			    }
+			    else{
+			    displayList(list);
+			    }
 		    
 		    db.close();
 	}
@@ -77,17 +81,20 @@ public void displayList(final ArrayList<String> list) {
       @Override
       public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
         final String item = (String) parent.getItemAtPosition(position);
-        view.animate().setDuration(1000).translationX(1000)
+        view.animate().setDuration(500).translationX(500)
             .withEndAction(new Runnable() {
               @Override
               public void run() {
-            	  Intent view_wine = new Intent(FavoritesActivity.this, ViewFavWine.class);
-                view_wine.putExtra("rowId", keys_list.get(list.indexOf(item))+"");
-                
-                startActivity (view_wine);
-            	/*  list.remove(item);
-                adapter.notifyDataSetChanged();
-                view.setAlpha(1);*/
+            	  
+            	  if((list.contains("List is Empty!"))||(list.contains("No search Results found"))){
+            		  list.add("List is still Empty!");
+            		  displayList(list);
+            	  }
+            	  else{
+            		  Intent view_wine = new Intent(FavoritesActivity.this, ViewFavWine.class);
+                      view_wine.putExtra("rowId", keys_list.get(list.indexOf(item))+"");
+                      startActivity (view_wine);
+            	  }
               }
             });
       }
@@ -204,6 +211,9 @@ public ArrayList<String> SearchResults1(String searched){
 				keys_list.add(c.getInt(0));
 			}
 		}
+	}
+	if(search_list.isEmpty()){
+		search_list.add("No search Results found");
 	}
 	db.close();
 	return search_list;
