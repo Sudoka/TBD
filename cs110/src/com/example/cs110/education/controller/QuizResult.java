@@ -2,7 +2,7 @@ package com.example.cs110.education.controller;
 
 import com.example.cs110.MainActivity;
 import com.example.cs110.R;
-import com.example.cs110.model.data.UserAdapter;
+import com.example.cs110.model.data.UserDAO;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -27,7 +27,7 @@ public class QuizResult extends Activity {
 		TextView scoreView=(TextView) findViewById(R.id.scoreDisplay);
 	    scoreView.setText(message);
 
-	    UserAdapter udb = new UserAdapter(this);
+	    UserDAO udb = new UserDAO(this);
     	udb.open();
     	Cursor u = udb.getAllUsers();
     	

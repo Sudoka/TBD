@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-public class MyListAdapter
+public class ListAdapterDAO
 {
     public static final String KEY_ROWID = "_id";
     public static final String KEY_NAME = "name";
@@ -34,7 +34,7 @@ public class MyListAdapter
     private DatabaseHelper DBHelper;
     private SQLiteDatabase db;
 
-    public MyListAdapter(Context ctx) 
+    public ListAdapterDAO(Context ctx) 
     {
         this.context = ctx;
         DBHelper = new DatabaseHelper(context);
@@ -66,7 +66,7 @@ public class MyListAdapter
     }    
     
     //opens the database
-    public MyListAdapter open() throws SQLException 
+    public ListAdapterDAO open() throws SQLException 
     {
         db = DBHelper.getWritableDatabase();
         return this;

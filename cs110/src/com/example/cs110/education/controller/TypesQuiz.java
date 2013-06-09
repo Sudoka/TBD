@@ -4,7 +4,7 @@ import java.util.Random;
 
 import com.example.cs110.MainActivity;
 import com.example.cs110.R;
-import com.example.cs110.model.data.DBAdapter;
+import com.example.cs110.model.data.WineDAO;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -20,7 +20,7 @@ public class TypesQuiz extends Activity {
 	
 	static int number=0;
 	public static int score=0;
-	DBAdapter db;
+	WineDAO db;
 	Cursor c;
 	public final static String SCORE_MESSAGE = "com.example.cs110.MESSAGE";
 
@@ -32,7 +32,7 @@ public class TypesQuiz extends Activity {
 		
 		number=0;
 		score=0;
-		db = new DBAdapter(this);
+		db = new WineDAO(this);
 		db.open();
 		c = db.getAllWines();
         getRandomWine();

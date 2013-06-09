@@ -4,7 +4,7 @@ import com.example.cs110.MainActivity;
 import com.example.cs110.R;
 import com.example.cs110.R.layout;
 import com.example.cs110.R.menu;
-import com.example.cs110.model.data.DBAdapter;
+import com.example.cs110.model.data.WineDAO;
 import com.example.cs110.tools.controller.Tools;
 
 import android.os.Bundle;
@@ -78,8 +78,8 @@ public class AddWine extends Activity {
         }
         else
         {
-        DBAdapter db;
-		db = new DBAdapter(this);
+        WineDAO db;
+		db = new WineDAO(this);
 	    db.open();
 	    db.insertWine(wine_name.getText().toString(), color, wine_region.getText().toString(), wine_description.getText().toString()
 	    		, onFav, onWish);

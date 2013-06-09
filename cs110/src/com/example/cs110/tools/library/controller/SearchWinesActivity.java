@@ -11,7 +11,7 @@ import com.example.cs110.R.id;
 import com.example.cs110.R.layout;
 import com.example.cs110.R.menu;
 import com.example.cs110.education.controller.Education;
-import com.example.cs110.model.data.DBAdapter;
+import com.example.cs110.model.data.WineDAO;
 
 import android.R.string;
 import android.os.Bundle;
@@ -34,7 +34,7 @@ public class SearchWinesActivity extends Activity {
 
 	private String search_term;
 	private int call_display;
-	DBAdapter db;
+	WineDAO db;
 	private ArrayList<Integer> keys_list;
     
 
@@ -47,7 +47,7 @@ public class SearchWinesActivity extends Activity {
 		  // keys_list.clear();
 		    ArrayList<String> list;
 		    list = new ArrayList<String>();
-		    db = new DBAdapter(this);
+		    db = new WineDAO(this);
 		    db.open();
 		    Cursor c = db.getAllWines();
 		    c.moveToFirst();
@@ -190,7 +190,7 @@ public void displayList(final ArrayList<String> list) {
 public ArrayList<String> SearchResults1(String searched){
 	keys_list.clear();
 	ArrayList<String> search_list = new ArrayList<String>();
-	db = new DBAdapter(this);
+	db = new WineDAO(this);
 	db.open();
 	Cursor c = db.getAllWines();
 	c.moveToFirst();

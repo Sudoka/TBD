@@ -23,7 +23,7 @@ public class RegionsQuiz extends Activity {
 	
 	static int number=0;
 	public static int score=0;
-	private DBAdapter db;
+	private WineDAO db;
 	private Cursor c;
 	public final static String SCORE_MESSAGE = "com.example.cs110.MESSAGE";
 	private HashSet<String> usedRegions = new HashSet<String>();
@@ -35,7 +35,7 @@ public class RegionsQuiz extends Activity {
 		
 		number=0;
 		score=0;
-		db = new DBAdapter(this);
+		db = new WineDAO(this);
 		db.open();
 		c = db.getAllWines();
 

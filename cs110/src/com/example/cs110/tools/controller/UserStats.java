@@ -5,7 +5,7 @@ import com.example.cs110.R;
 import com.example.cs110.R.id;
 import com.example.cs110.R.layout;
 import com.example.cs110.R.menu;
-import com.example.cs110.model.data.UserAdapter;
+import com.example.cs110.model.data.UserDAO;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -24,7 +24,7 @@ public class UserStats extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_user_stats);
 		
-		UserAdapter udb = new UserAdapter(this);
+		UserDAO udb = new UserDAO(this);
 		udb.open();
 		Cursor u = udb.getAllUsers();
 			if(u.moveToFirst()){
@@ -36,7 +36,7 @@ public class UserStats extends Activity {
 	    udb.close();
 	}
 	public void scoreReset(View view){
-	UserAdapter udb = new UserAdapter(this);
+	UserDAO udb = new UserDAO(this);
 	udb.open();
 	Cursor u = udb.getAllUsers();
 		u.moveToFirst();

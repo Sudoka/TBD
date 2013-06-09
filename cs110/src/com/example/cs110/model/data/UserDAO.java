@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-public class UserAdapter 
+public class UserDAO 
 {
     public static final String KEY_ROWID = "_id";
     public static final String KEY_USER = "user";
@@ -30,7 +30,7 @@ public class UserAdapter
     private DatabaseHelper DBHelper;
     private SQLiteDatabase db;
 
-    public UserAdapter(Context ctx) 
+    public UserDAO(Context ctx) 
     {
         this.context = ctx;
         DBHelper = new DatabaseHelper(context);
@@ -62,7 +62,7 @@ public class UserAdapter
     }    
     
     //opens the database
-    public UserAdapter open() throws SQLException 
+    public UserDAO open() throws SQLException 
     {
         db = DBHelper.getWritableDatabase();
         return this;

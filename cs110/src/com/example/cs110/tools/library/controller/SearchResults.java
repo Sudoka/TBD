@@ -6,7 +6,7 @@ import com.example.cs110.MainActivity;
 import com.example.cs110.R;
 import com.example.cs110.R.layout;
 import com.example.cs110.R.menu;
-import com.example.cs110.model.data.DBAdapter;
+import com.example.cs110.model.data.WineDAO;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -18,8 +18,8 @@ import android.widget.Toast;
 
 public class SearchResults {
   private String s1;
-  DBAdapter db;
-  public SearchResults(String s1, DBAdapter db) { 
+  WineDAO db;
+  public SearchResults(String s1, WineDAO db) { 
 		
 		s1 = s1.toLowerCase();
 		this.db = db;

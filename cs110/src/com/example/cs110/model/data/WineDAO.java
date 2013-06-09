@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-public class DBAdapter 
+public class WineDAO 
 {
     public static final String KEY_ROWID = "_id";
     public static final String KEY_NAME = "name";
@@ -34,7 +34,7 @@ public class DBAdapter
     private DatabaseHelper DBHelper;
     private SQLiteDatabase db;
 
-    public DBAdapter(Context ctx) 
+    public WineDAO(Context ctx) 
     {
         this.context = ctx;
         DBHelper = new DatabaseHelper(context);
@@ -66,7 +66,7 @@ public class DBAdapter
     }    
     
     //opens the database
-    public DBAdapter open() throws SQLException 
+    public WineDAO open() throws SQLException 
     {
         db = DBHelper.getWritableDatabase();
         return this;
@@ -1006,7 +1006,7 @@ public class DBAdapter
         initialValues.put(KEY_NAME, "Port");
         initialValues.put(KEY_TYPE, "Red");
         initialValues.put(KEY_ORIGIN, "Portugal");
-        initialValues.put(KEY_DESCRIPTION, "Port can be split into two distinct categories: Wood Aged or Bottle Aged. The only true bottle aged port is a Vintage Port, while the other Ports are all Wood Aged to some extent. In general, Port starts life as a red wine (unless of course it is a “white Port”) and then it's typically aged in wood casks or in the bottle");
+        initialValues.put(KEY_DESCRIPTION, "Port can be split into two distinct categories: Wood Aged or Bottle Aged. The only true bottle aged port is a Vintage Port, while the other Ports are all Wood Aged to some extent. In general, Port starts life as a red wine (unless of course it is a ï¿½white Portï¿½) and then it's typically aged in wood casks or in the bottle");
         initialValues.put(KEY_FAVORITES, 0);
         initialValues.put(KEY_WISH, 0);
         db.insert(DATABASE_TABLE, null, initialValues);

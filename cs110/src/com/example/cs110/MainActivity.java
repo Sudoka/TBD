@@ -27,8 +27,8 @@ public class MainActivity extends Activity {
 		tbd.getBackground().setAlpha(180);
 		ImageView forwine = (ImageView) findViewById(R.id.forwine);
 		forwine.getBackground().setAlpha(120);*/
-        DBAdapter db = new DBAdapter(this);
-        UserAdapter udb = new UserAdapter(this);
+        WineDAO db = new WineDAO(this);
+        UserDAO udb = new UserDAO(this);
         
         //make temp userdb just to store quiz info...
         udb.open();
