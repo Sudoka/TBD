@@ -68,7 +68,7 @@
     <string name="green">Chardonnay</string>
     <string name="mush">Pinot Noir</string>
     <string name="bleu">Sauternes or Port</string>
-    <string name="hard">Cabernet Sauvignon or Parmigiano Reggiano</string>
+    <string name="hard">Cabernet Sauvignon</string>
     <string name="soft">Chardonnay, Pinot Grigio, Sauvignon Blanc, or Pinot Noir</string>
     <string name="title_activity_foodtowine__veggie">Find Wine</string>
     <string name="title_activity_foodtowine_cheese">Find Wine</string>

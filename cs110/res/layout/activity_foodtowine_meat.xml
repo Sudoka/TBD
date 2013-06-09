@@ -84,6 +84,7 @@
         android:textColor="@color/maroon"
         android:textColorLink="@color/maroon"
         android:textStyle="italic"
+        android:focusable="false"
         android:typeface="serif" />
 
 </RelativeLayout>
