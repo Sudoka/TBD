@@ -23,9 +23,8 @@
         android:textColor="@color/maroon"
         android:textColorLink="@color/maroon"
         android:textStyle="italic"
-        android:typeface="serif" >
-
-        <requestFocus />
+        android:typeface="serif"
+ android:focusable="false" >
     </EditText>
 
     <Button

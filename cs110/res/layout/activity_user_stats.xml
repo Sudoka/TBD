@@ -62,4 +62,15 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/AntiqueWhite" />
 
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/questions_answered"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:textColor="@color/AntiqueWhite"
+        android:onClick="scoreReset"
+        android:text="Reset Score" />
+
 </RelativeLayout>

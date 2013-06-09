@@ -29,10 +29,10 @@ public class MainActivity extends Activity {
         
         //make temp userdb just to store quiz info...
         udb.open();
-        /*udb.insertUser(
+        udb.insertUser(
                 "Guest",
                 "0",
-                "0");*/
+                "0");
         
         
         db.open();

@@ -3,6 +3,7 @@ package com.example.cs110;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -93,27 +94,33 @@ public class BAC extends Activity {
     	String BACstring=String.format("%.3g%n", fullBAC);
     	if (w==0){BACstring="0.00";}
     	result.setText(BACstring);
-    	
+    	TextView warning=(TextView) findViewById(R.id.BACwarning);
 		if (fullBAC>=.08)
 		{
-			for(int i = 0;i<100;i++){
+			warning.setText("DO NOT DRIVE");
+			warning.setTextColor(Color.RED);
+			/*for(int i = 0;i<100;i++){
 			Toast.makeText(this, "DO NOT DRIVE.", 
     		Toast.LENGTH_LONG).show();
-			}
+			}*/
 		}
-    	else if (fullBAC>0&&fullBAC<.08)
+    	else if (fullBAC>0.1&&fullBAC<.08)
     	{
-			for(int i = 0;i<100;i++){
+			warning.setText("You are Impaired");
+			//warning.setTextColor(Color.);
+    		/*for(int i = 0;i<100;i++){
     		Toast.makeText(this, "You are impaired.", 
             		Toast.LENGTH_LONG).show();
-			}
+			}*/
     	}
     	else
     	{
-			for(int i = 0;i<100;i++){
+    		warning.setText("You are sober");
+    		//warning.setTextColor(Color.GREEN);
+			/*for(int i = 0;i<100;i++){
     		Toast.makeText(this, "You are probably sober.", 
             		Toast.LENGTH_LONG).show();
-			}
+			}*/
     	}
 
     	}

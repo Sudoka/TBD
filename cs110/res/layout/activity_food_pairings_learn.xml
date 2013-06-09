@@ -12,8 +12,7 @@
     <WebView
         android:id="@+id/webview"
         android:layout_width="0dp"
-        android:layout_height="0dp" 
-        android:layout_above="@+id/foodpairingsinfo" />
+        android:layout_height="0dp"  />
 
     <Button
         android:id="@+id/foodpairings_url_button"

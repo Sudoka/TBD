@@ -122,7 +122,7 @@ private int rowId;
 	    db.open();
 	    Cursor c = db.getWine(rowId);
 	    db.updateWine(rowId, c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getInt(5), 0);
-	    Toast.makeText(this, "Removed from Favorites!", 
+	    Toast.makeText(this, "Removed from Wishlist!", 
         		Toast.LENGTH_LONG).show();
 	    db.close();
     }

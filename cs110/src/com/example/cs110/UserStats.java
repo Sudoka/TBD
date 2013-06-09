@@ -8,7 +8,9 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class UserStats extends Activity {
 
@@ -27,6 +29,21 @@ public class UserStats extends Activity {
 				scoreView.setText(u.getString(3));
 			}
 	    udb.close();
+	}
+	public void scoreReset(View view){
+	UserAdapter udb = new UserAdapter(this);
+	udb.open();
+	Cursor u = udb.getAllUsers();
+		if(u.moveToFirst()){
+			udb.updateUser(u.getInt(0), u.getString(1), "0", "0");
+			TextView answeredView=(TextView) findViewById(R.id.answeredDisplay);
+			answeredView.setText(u.getString(2));
+			TextView scoreView=(TextView) findViewById(R.id.scoreTotal);
+			scoreView.setText(u.getString(3));
+		}
+		Toast.makeText(this, "Score Reset", 
+        		Toast.LENGTH_LONG).show();
+    udb.close();
 	}
 
 	@Override
