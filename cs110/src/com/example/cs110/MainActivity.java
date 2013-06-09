@@ -10,8 +10,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.cs110.controller.education.Education;
+import com.example.cs110.education.controller.Education;
 import com.example.cs110.model.data.*;
+import com.example.cs110.tools.controller.BAC;
+import com.example.cs110.tools.controller.Tools;
+import com.example.cs110.tools.controller.UserStats;
 
 public class MainActivity extends Activity {
 	public final static String EXTRA_MESSAGE="com.example.myfirstapp.MESSAGE";
