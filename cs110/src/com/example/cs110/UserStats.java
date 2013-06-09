@@ -34,12 +34,13 @@ public class UserStats extends Activity {
 	UserAdapter udb = new UserAdapter(this);
 	udb.open();
 	Cursor u = udb.getAllUsers();
+		u.moveToFirst();
 		if(u.moveToFirst()){
 			udb.updateUser(u.getInt(0), u.getString(1), "0", "0");
 			TextView answeredView=(TextView) findViewById(R.id.answeredDisplay);
-			answeredView.setText(u.getString(2));
+			answeredView.setText("0");
 			TextView scoreView=(TextView) findViewById(R.id.scoreTotal);
-			scoreView.setText(u.getString(3));
+			scoreView.setText("0");
 		}
 		Toast.makeText(this, "Score Reset", 
         		Toast.LENGTH_LONG).show();
